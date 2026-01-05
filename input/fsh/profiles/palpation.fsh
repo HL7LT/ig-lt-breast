@@ -1,0 +1,19 @@
+Instance: example-palpation-procedure
+InstanceOf: ProcedureEuImaging
+Title: "Example of Palpation Procedure"
+Usage: #example
+* status = #completed
+* code = $sct#113011001 "Palpation (procedure)"
+* subject = Reference(Patient/example)
+* encounter = Reference(example-palpation-encounter)
+* occurrenceDateTime = "2023-08-01T10:20:00Z"
+
+// Specifying the body site (e.g., Breast)
+* bodySite = $sct#76752008 "Breast structure (body structure)"
+
+// Linking to the reason (e.g., a palpable mass found by patient)
+* statusReason = $sct#274390008 "Abdominal palpation - tender (finding)" 
+
+// If a practitioner performed it, add a performer
+* performer.actor = Reference(Practitioner/example-doctor)
+* performer.function = $sct#394577000 "Medical practitioner (occupation)"
