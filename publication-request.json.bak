@@ -1,0 +1,14 @@
+{
+   "package-id" : "lt.hl7.fhir.breast",
+   "version" : "0.0.1",
+   "path" : "https://hl7.lt/fhir/breast/0.0.1",
+   "mode" : "milestone",
+   "status" : "draft",
+   "sequence" : "DSTU1",
+   "desc" : "Initial release as LT Breast IG.",
+   "first" : true,
+   "title" : "Lithuanian Breast FHIR Implementation Guide",
+   "ci-build" : "http://build.fhir.org/ig/HL7LT/ig-lt-breast/branches/main/index.html",
+   "category" : "Diagnostics",
+   "introduction" : "A set of the reusable breast related resources."
+}
