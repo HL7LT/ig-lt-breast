@@ -51,3 +51,39 @@ Title: "Example Body Structure – Multisite"
 * includedStructure[0].structure = $sct#110501003 "Upper outer quadrant of breast"
 * includedStructure[+].laterality = $sct#24028007 "Right"
 * includedStructure[=].structure = $sct#110494001 "Lower outer quadrant of breast"
+
+
+// Left UOQ
+Instance: bs-left-uoq
+InstanceOf: BodyStructureLtBreast
+Usage: #example
+Title: "Left Breast Upper Outer Quadrant"
+* patient = Reference(example-patient)
+* includedStructure[0].laterality = $sct#7771000 "Left"
+* includedStructure[0].structure = $sct#110501003 "Upper outer quadrant of breast"
+
+// Right LIQ
+Instance: bs-right-liq
+InstanceOf: BodyStructureLtBreast
+Usage: #example
+Title: "Right Breast Lower Inner Quadrant"
+* patient = Reference(example-patient)
+* includedStructure[0].laterality = $sct#24028007 "Right"
+* includedStructure[0].structure = $sct#110495000 "Lower inner quadrant of breast"
+
+// Bilateral UIQ examples
+Instance: bs-bilateral-uiq
+InstanceOf: BodyStructureLtBreast
+Usage: #example
+* patient = Reference(example-patient)
+* includedStructure[0].structure = $sct#110499006 "Upper inner quadrant of breast"
+* includedStructure[=].laterality = $sct#7771000 "Left"
+* includedStructure[+].structure = $sct#110499006 "Upper inner quadrant of breast"
+* includedStructure[=].laterality = $sct#24028007 "Right"
+
+// Bilateral UIQ examples
+Instance: bs-bilateral
+InstanceOf: BodyStructure
+Usage: #example
+* patient = Reference(example-patient)
+* includedStructure[0].structure = $sct#181131000 "Entire breast"
