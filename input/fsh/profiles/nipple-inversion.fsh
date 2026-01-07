@@ -13,8 +13,8 @@ Description: "Observation representing nipple inversion assessment in a patient 
 * subject 1..1
 * effective[x] 1..1
 * effective[x] only dateTime
-* bodyStructure 1..1
-* bodyStructure only Reference(BodyStructureLtBreast)
+* bodySite 1..1 MS
+* bodySite from BreastStructure (required)
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from NippleAppearanceFinding (preferred)
@@ -32,6 +32,5 @@ Description: "An example instance of a nipple inversion observation."
 * encounter = Reference(Encounter/example-palpation-encounter)
 * subject = Reference(Patient/example-patient)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
-* contained[0] = breast-body-structure-right-upper-outer-example
-* bodyStructure.reference = "#breast-body-structure-right-upper-outer-example"
+* bodySite = $sct#181131000 "Entire breast"
 * valueCodeableConcept = $sct#271955004 "Retraction of nipple (finding)"
