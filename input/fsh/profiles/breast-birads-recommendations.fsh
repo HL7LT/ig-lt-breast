@@ -1,15 +1,15 @@
-Profile: LTBiradsRecommendation
-Parent: LTBaseObservation
-Id: lt-birads-recommendation
-Title: "BI-RADS Recommendation"
-Description: "Observation representing a clinical recommendation generated from a BI-RADS Assessment."
+// Profile: LTBiradsRecommendation
+// Parent: LTBaseObservation
+// Id: lt-birads-recommendation
+// Title: "BI-RADS Recommendation"
+// Description: "Observation representing a clinical recommendation generated from a BI-RADS Assessment."
 
-* category = $observation-category#exam "Exam"
-* code = $sct#185389009 "Follow-up visit (procedure)"
+// * category = $observation-category#exam "Exam"
+// * code = $sct#185389009 "Follow-up visit (procedure)"
 
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from BiradsRecommendationService (required)
+// * value[x] only CodeableConcept
+// * valueCodeableConcept 1..1
+// * valueCodeableConcept from BiradsRecommendationService (required)
 
 
 Profile: BIRADSRecommendation
@@ -19,6 +19,7 @@ Title: "BI-RADS Assessment Recommendation"
 Description: "A profile of ServiceRequest used to capture a clinical recommendation (e.g., follow-up ultrasound, surgical referral) resulting directly from a BI-RADS assessment category."
 * status MS
 * subject 1..1
+* subject only Reference(LTBasePatient)
 * code 1..1
 * code from BiradsRecommendationService (required)
 // Reason Code: The BI-RADS result that necessitated the recommendation is mandatory.

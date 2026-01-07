@@ -13,6 +13,12 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * effective[x] 1..1
 * effective[x] only dateTime
 * value[x] 0..0
+* bodySite 1..1 MS
+* bodySite from BreastStructure (required)
+* note 0..*
+* note ^short = "Lesion characteristics"
+* note ^definition = "Free text description of shape, contour, echogenicity, homogeneity, vascularity, and elasticity."
+
 
 //component rules
 * component ^slicing.discriminator.type = #value 
@@ -26,17 +32,6 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[lesion].code = $sct#364636000 "Lesion observable"
 * component[lesion].value[x] only CodeableConcept
 * component[lesion].valueCodeableConcept from UltrasoundLesionFinding (required)
-
-//breast side
-* component contains side 1..1
-* component[side] ^short = "Laterality of breast"
-* component[side] ^definition = "The side of the body (left or right) where the breast lesion is located."
-* component[side].code = $sct#272741003 "Laterality" 
-* component[side].value[x] only CodeableConcept
-* component[side].valueCodeableConcept from BreastQuadrant (required)
-
-//https://build.fhir.org/valueset-bodystructure-laterality
-
 
 //clocks
 * component contains clock-position 1..1
@@ -66,12 +61,6 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[width-mm].valueQuantity.system = "http://unitsofmeasure.org"
 * component[width-mm].valueQuantity.code = #mm
 
-//description
-* component contains description 0..1
-* component[description] ^short = "Lesion characteristics"
-* component[description] ^definition = "Free text description of shape, contour, echogenicity, homogeneity, vascularity, and elasticity."
-* component[description].code = $sct#300577008 "Finding of lesion (finding)"
-* component[description].value[x] only string
 
 // found example https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html
 /*
@@ -111,12 +100,12 @@ Description: "Ultrasound finding of a cyst in the right breast at 10 o'clock."
 * status = #final
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
+* bodySite = $sct#361715005 "Entire right breast (body structure)"
 * component[lesion].valueCodeableConcept = $sct#399294002 "Cyst of breast (disorder)"
-* component[side].valueCodeableConcept = $sct#24028007 "Right"
 * component[clock-position].valueCodeableConcept = $sct#260322009 "10 o'clock position (qualifier value)"
 * component[length-mm].valueQuantity = 12 'mm'
 * component[width-mm].valueQuantity = 7 'mm'
-* component[description].valueString = "Smooth, round shape"
+* note.text = "Smooth, round shape"
 
 // Example 2: Left breast, 3 o'clock, Fibroadenoma
 Instance: example-lesion-left-3-oclock-fibroadenoma
@@ -127,12 +116,12 @@ Description: "Ultrasound finding of a fibroadenoma in the left breast at 3 o'clo
 * status = #final
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
+* bodySite = $sct#361716006 "Entire left breast (body structure)"
 * component[lesion].valueCodeableConcept = $sct#254845004 "Fibroadenoma of breast (disorder)"
-* component[side].valueCodeableConcept = $sct#7771000 "Left"
 * component[clock-position].valueCodeableConcept = $sct#260330005 "3 o'clock position (qualifier value)"
 * component[length-mm].valueQuantity = 8 'mm'
 * component[width-mm].valueQuantity = 5 'mm'
-* component[description].valueString = "Oval shape"
+* note.text = "Oval shape"
 
 // Example 3: Right breast, 6 o'clock, Malignant tumor
 Instance: example-lesion-right-6-oclock-malignant-tumor
@@ -143,9 +132,9 @@ Description: "Ultrasound finding of a malignant tumor in the right breast at 6 o
 * status = #final
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
+* bodySite = $sct#361715005 "Entire right breast (body structure)"
 * component[lesion].valueCodeableConcept = $sct#254837009 "Malignant neoplasm of breast (disorder)"
-* component[side].valueCodeableConcept = $sct#24028007 "Right"
 * component[clock-position].valueCodeableConcept = $sct#260337008 "6 o'clock position (qualifier value)"
 * component[length-mm].valueQuantity = 15 'mm'
 * component[width-mm].valueQuantity = 10 'mm'
-* component[description].valueString = "Irregular shape"
+* note.text = "Irregular shape"

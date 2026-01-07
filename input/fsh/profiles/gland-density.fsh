@@ -21,7 +21,6 @@ Description: "Gland density observation according to ACR BI-RADS classification.
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from GlandDensityACR (required)
-// Components (optional side of breast)
 * component 0..0
 
 

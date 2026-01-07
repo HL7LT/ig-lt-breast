@@ -3,12 +3,15 @@ Profile: LTBiradsAssessment
 Parent: ObservationFindingEuImaging
 Id: lt-birads-assessment
 Title: "BI-RADS Assessment"
-Description: "Final radiological diagnostic conclusion according to BI-RADS (0–5)." //Each breast is assigned a BI-RADS category, which recommends further actions?
+Description: "Final radiological diagnostic conclusion according to BI-RADS classification." //Each breast is assigned a BI-RADS category, which recommends further actions?
 * category = $observation-category#imaging "Imaging"    
 * code = $sct#146611000146107 "Breast Imaging Reporting and Data System assessment category (observable entity)"
-* effectiveDateTime 1..1 MS
+* subject 1..1 MS
+* subject only Reference(LTBasePatient)
+* effective[x] 1..1 MS
+* effective[x] only dateTime
+* value[x] 1..1 MS
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..1
 * valueCodeableConcept from BiradsCategory (required)
 
 // Examples
