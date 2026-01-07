@@ -10,13 +10,3 @@ Description: "Quadrants of the breast."
 * $sct#110495000 "Lower inner quadrant of breast"
 * $sct#110494001 "Lower outer quadrant of breast"
 
-
-ValueSet: BreastStructure
-Id: breast-structure
-Title: "Breast Structure"
-Description: "Entire breast and quadrants."
-* ^status = #active
-* ^experimental = false
-* ^language = #en
-* $sct#181131000 "Entire breast"
-* include codes from valueset BreastQuadrant
