@@ -3,9 +3,9 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: lt.hl7.fhir.breast-diagnostics
-canonical: https://hl7.lt/fhir/breast-diagnostics
-name: LTBreastDiagnostics
+id: lt.hl7.fhir.breast
+canonical: https://hl7.lt/fhir/breast
+name: LTBreast
 title: Lithuanian Breast Diagnostics Implementation Guide
 description: Lithuanian Breast Diagnostics Implementation Guide
 status: draft # draft | active | retired | unknown
@@ -21,13 +21,17 @@ publisher:
   email: info@medicinosnk.lt
 
 dependencies:
-  lt.hl7.fhir.base: dev
+  lt.hl7.fhir.base: current
   hl7.fhir.eu.base-r5: 0.1.0
   hl7.fhir.eu.extensions: current
   hl7.fhir.eu.imaging-r5: current
   lt.hl7.fhir.vitalsigns: 0.0.1 
   
-# hl7.fhir.eu.imaging-r5: 0.1.0  # HL7 Europe Imaging FHIR IG (https://build.fhir.org/ig/hl7-eu/imaging-r5) not published yeat :(
+# hl7.fhir.eu.imaging-r5: 0.1.0  
+# HL7 Europe Imaging FHIR IG (https://build.fhir.org/ig/hl7-eu/imaging-r5) not published yeat :(
+# instead of that we use copy https://build.fhir.org/ig/oijauregui/ehdsimaging-r5/en
+
+
 # hl7.fhir.uv.dicom-r5: 4.0.0
 # hl7.fhir.uv.breast-r5: 4.0.0
 # hl7.fhir.uv.breast-radiology-r5: 4.0
