@@ -88,3 +88,4 @@ Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation
 
 // LtBase
 Alias: $lt-base-patient = https://hl7.lt/fhir/base/StructureDefinition/lt-patient
+Alias: $lt-patient = https://hl7.lt/fhir/base/StructureDefinition/lt-patient

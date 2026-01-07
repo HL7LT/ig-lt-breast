@@ -7,7 +7,7 @@ Expression: "(component.where(code.coding.code='248530000').exists()) implies (c
 
 // Observation for mammographic breast changes
 Profile: MammographicExamination
-Parent: LTBaseObservation
+Parent: ObservationFindingEuImaging
 Id: lt-mammographic-examination
 Title: "Mammographic Examination"
 Description: "Observation representing mammographic breast changes using BodyStructure."
@@ -20,9 +20,9 @@ Description: "Observation representing mammographic breast changes using BodyStr
 * effective[x] only dateTime
 * obeys mammo-diameter-only-for-mass
 * value[x] ..0
-// * focus 0..*
-// * focus only Reference(BodyStructureLtBreast)
-* focus ^short = "Breast side + quadrant represented via BodyStructure"
+* bodyStructure MS
+* bodyStructure only Reference(BodyStructureLtBreast)
+* bodyStructure ^short = "Breast side and breast quadrants involved in finding"
 // Structured components
 * component 0..*
 * component ^short = "Details of mammographic finding"

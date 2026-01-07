@@ -18,3 +18,4 @@ Alias: $EndpointImageIidViewerEuImagingUrl     = http://hl7.eu/fhir/imaging-r5/S
 Alias: $DocumentReferenceKeyImageEuImagingUrl  = http://hl7.eu/fhir/imaging-r5/StructureDefinition/DocumentReferenceKeyImageEuImaging
 Alias: $BundleReportEuImagingUrl                     = http://hl7.eu/fhir/imaging-r5/StructureDefinition/BundleReportEuImaging
 Alias: $ImagingStudyEuImagingManifestUrl       = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImagingStudyEuImagingManifest
+
