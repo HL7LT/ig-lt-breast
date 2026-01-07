@@ -49,7 +49,7 @@ The modelling approach is based on the following core principles:
 This guide provides:
 
 * **FHIR profiles and extensions** for breast imaging, assessment, and diagnosis,
-* **terminology bindings** using **SNOMED CT, LOINC, ICD-10-AM, and ICD-O-3**,
+* **terminology bindings** using **SNOMED CT, LOINC and ICD-10-AM**,
 * structured **example instances** illustrating real clinical scenarios,
 * mappings from **clinical programme datasets to interoperable FHIR artefacts**,
 * and identification of gaps and future development needs.
