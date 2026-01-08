@@ -14,7 +14,7 @@ Description: "Observation representing nipple inversion assessment in a patient 
 * effective[x] 1..1
 * effective[x] only dateTime
 * bodySite 1..1 MS
-* bodySite from BreastStructure (required)
+* bodySite from BreastBodySite (required)
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from NippleAppearanceFinding (preferred)

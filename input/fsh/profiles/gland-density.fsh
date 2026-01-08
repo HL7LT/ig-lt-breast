@@ -21,6 +21,10 @@ Description: "Gland density observation according to ACR BI-RADS classification.
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from GlandDensityACR (required)
+* bodyStructure MS
+* bodyStructure only Reference(BodyStructureLtBreast)
+* bodySite MS
+* bodySite from BreastBodySite (required)
 * component 0..0
 
 
@@ -34,5 +38,5 @@ Title: "Example – Breast Density: Fatty"
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#129716005 "Almost entirely fat breast composition (finding)"
-* bodyStructure = Reference(bs-bilateral)
+* bodySite = $sct#76752008 "Breast structure (body structure)"
 * note.text = "Mammography shows predominantly fatty breast density."

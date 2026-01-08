@@ -88,9 +88,9 @@ Usage: #example
 * includedStructure[+].structure = $sct#110499006 "Upper inner quadrant of breast"
 * includedStructure[=].laterality = $sct#24028007 "Right"
 
-// Bilateral UIQ examples
-Instance: bs-bilateral
-InstanceOf: BodyStructure
-Usage: #example
-* patient = Reference(example-patient)
-* includedStructure[0].structure = $sct#181131000 "Entire breast"
+// // Bilateral UIQ examples
+// Instance: bs-bilateral
+// InstanceOf: BodyStructure
+// Usage: #example
+// * patient = Reference(example-patient)
+// * includedStructure[0].structure = $sct#181131000 "Entire breast"

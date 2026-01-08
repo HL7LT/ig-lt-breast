@@ -1,37 +1,28 @@
-// Profile: LTBiradsRecommendation
-// Parent: LTBaseObservation
-// Id: lt-birads-recommendation
-// Title: "BI-RADS Recommendation"
-// Description: "Observation representing a clinical recommendation generated from a BI-RADS Assessment."
-
-// * category = $observation-category#exam "Exam"
-// * code = $sct#185389009 "Follow-up visit (procedure)"
-
-// * value[x] only CodeableConcept
-// * valueCodeableConcept 1..1
-// * valueCodeableConcept from BiradsRecommendationService (required)
-
-
-Profile: BIRADSRecommendation
+Profile: BreastServiceRequest
 Parent: ServiceRequestOrderEuImaging
-Id: birads-recommendation
-Title: "BI-RADS Assessment Recommendation"
-Description: "A profile of ServiceRequest used to capture a clinical recommendation (e.g., follow-up ultrasound, surgical referral) resulting directly from a BI-RADS assessment category."
+Id: breast-service-request
+Title: "Service request for breast examination"
+Description: "A profile of ServiceRequest used to capture a clinical recommendation (e.g., follow-up ultrasound, surgical referral)."
 * status MS
 * subject 1..1
 * subject only Reference(LTBasePatient)
 * code 1..1
-* code from BiradsRecommendationService (required)
+* code from BreastAssessment (required)
 // Reason Code: The BI-RADS result that necessitated the recommendation is mandatory.
 * reason 1..* MS
 * reason from BiradsCategory (required)
 // Requester (The Clinician/Report Author) is mandatory.
 * requester 1..1
+* requester only Reference(LTBasePractitioner or LTBasePractitionerRole or LTBaseOrganization)
 // Occurrence: Details when the action should happen (e.g., in 6 months, immediately).
 * occurrence[x] 1..1
+* bodyStructure MS
+* bodyStructure only Reference(BodyStructureLtBreast)
+* bodySite MS
+* bodySite from BreastBodySite (required)
 
-Instance: example-birads-referral-cat4
-InstanceOf: BIRADSRecommendation
+Instance: example-birads-recommendation-referral-cat4
+InstanceOf: BreastServiceRequest
 Title: "Example BI-RADS Category 4 Referral"
 Description: "A ServiceRequest instance recommending a referral to a breast surgeon due to a Category 4 (suspicious) BI-RADS finding."
 

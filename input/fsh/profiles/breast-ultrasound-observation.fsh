@@ -13,8 +13,10 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * effective[x] 1..1
 * effective[x] only dateTime
 * value[x] 0..0
-* bodySite 1..1 MS
-* bodySite from BreastStructure (required)
+* bodyStructure MS
+* bodyStructure only Reference(BodyStructureLtBreast)
+* bodySite MS
+* bodySite from BreastBodySite (required)
 * note 0..*
 * note ^short = "Lesion characteristics"
 * note ^definition = "Free text description of shape, contour, echogenicity, homogeneity, vascularity, and elasticity."

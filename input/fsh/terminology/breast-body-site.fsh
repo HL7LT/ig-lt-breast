@@ -1,7 +1,7 @@
-ValueSet: BreastStructure
-Id: breast-structure
-Title: "Breast Structure"
-Description: "Entire breast and quadrants."
+ValueSet: BreastBodySite
+Id: breast-body-site
+Title: "Breast Body Site"
+Description: "Entire breast and left/right breasts."
 * ^status = #active
 * ^experimental = false
 * ^language = #en
