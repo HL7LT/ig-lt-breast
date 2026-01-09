@@ -1,9 +1,9 @@
 // Profile: LT Gland Density
-Profile: LTGlandDensity
+Profile: BreastGlandDensity
 Parent: LTBaseObservation
-Id: lt-gland-density
-Title: "Gland Density"
-Description: "Gland density observation according to ACR BI-RADS classification."
+Id: breast-gland-density
+Title: "Breast Gland Density"
+Description: "Breast gland density observation according to ACR BI-RADS classification."
 * ^status = #draft
 * ^language = #en
 * ^version = "1.0.0"
@@ -20,7 +20,7 @@ Description: "Gland density observation according to ACR BI-RADS classification.
 // Value
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from GlandDensityACR (required)
+* valueCodeableConcept from BreastGlandDensityACR (required)
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
 * bodySite MS
@@ -31,7 +31,7 @@ Description: "Gland density observation according to ACR BI-RADS classification.
 
 // Example
 Instance: example-gland-density-fatty
-InstanceOf: LTGlandDensity
+InstanceOf: BreastGlandDensity
 Usage: #example
 Title: "Example – Breast Density: Fatty"
 * status = #final

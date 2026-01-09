@@ -1,7 +1,7 @@
-Profile: BreastUltrasoundObservation
+Profile: BreastUltrasoundFinding
 Parent: LTBaseObservation
-Id: breast-ultrasound-observation
-Title: "Breast Ultrasound"
+Id: breast-ultrasound-finding
+Title: "Breast Ultrasound Findings"
 Description: "A radiology observation representing one specific ultrasound lesion with localization, dimensions, and characteristics."
 * ^status = #active
 * ^publisher = "HL7 Lithuania"
@@ -95,7 +95,7 @@ Description:  "Records the one to three dimensions of a tumor"
 
 // Example 1: Right breast, 10 o'clock, Cyst
 Instance: example-lesion-right-10-oclock-cyst
-InstanceOf: BreastUltrasoundObservation
+InstanceOf: BreastUltrasoundFinding
 Usage: #example
 Title: "Breast Lesion - Right Cyst"
 Description: "Ultrasound finding of a cyst in the right breast at 10 o'clock."
@@ -111,7 +111,7 @@ Description: "Ultrasound finding of a cyst in the right breast at 10 o'clock."
 
 // Example 2: Left breast, 3 o'clock, Fibroadenoma
 Instance: example-lesion-left-3-oclock-fibroadenoma
-InstanceOf: BreastUltrasoundObservation
+InstanceOf: BreastUltrasoundFinding
 Usage: #example
 Title: "Example Lesion - Left Fibroadenoma"
 Description: "Ultrasound finding of a fibroadenoma in the left breast at 3 o'clock."
@@ -127,7 +127,7 @@ Description: "Ultrasound finding of a fibroadenoma in the left breast at 3 o'clo
 
 // Example 3: Right breast, 6 o'clock, Malignant tumor
 Instance: example-lesion-right-6-oclock-malignant-tumor
-InstanceOf: BreastUltrasoundObservation
+InstanceOf: BreastUltrasoundFinding
 Usage: #example
 Title: "Example Lesion - Right Malignant Tumor"
 Description: "Ultrasound finding of a malignant tumor in the right breast at 6 o'clock."

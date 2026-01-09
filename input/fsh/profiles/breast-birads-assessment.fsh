@@ -1,7 +1,7 @@
 // BI-RADS assessment profile
-Profile: LTBiradsAssessment
+Profile: BiradsAssessment
 Parent: LTBaseObservation
-Id: lt-birads-assessment
+Id: birads-assessment
 Title: "BI-RADS Assessment"
 Description: "Final radiological diagnostic conclusion according to BI-RADS classification." //Each breast is assigned a BI-RADS category, which recommends further actions?
 * category = $observation-category#imaging "Imaging"    
@@ -13,10 +13,14 @@ Description: "Final radiological diagnostic conclusion according to BI-RADS clas
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
 * valueCodeableConcept from BiradsCategory (required)
+* bodyStructure MS
+* bodyStructure only Reference(BodyStructureLtBreast)
+* bodySite MS
+* bodySite from BreastBodySite (required)
 
 // Examples
 Instance: example-birads-1-negative
-InstanceOf: LTBiradsAssessment
+InstanceOf: BiradsAssessment
 Title: "Example BI-RADS 1 – Negative"
 Usage: #example
 * status = #final
@@ -26,7 +30,7 @@ Usage: #example
 * valueCodeableConcept = $sct#397140005 "Mammography assessment (Category 1) - Negative (finding)"
 
 Instance: example-birads-cat4
-InstanceOf: LTBiradsAssessment
+InstanceOf: BiradsAssessment
 Title: "Example BI-RADS 4 – Suspicious Abnormality"
 Usage: #example
 * status = #final

@@ -6,10 +6,10 @@ Expression: "(component.where(code.coding.code='248530000').exists()) implies (c
 
 
 // Observation for mammographic breast changes
-Profile: MammographicExamination
+Profile: MammographicExaminationFinding
 Parent: LTBaseObservation
 Id: lt-mammographic-examination
-Title: "Mammographic Examination"
+Title: "Mammographic Examination Findings"
 Description: "Observation representing mammographic breast changes using BodyStructure."
 * ^status = #active
 * category = $observation-category#exam "Exam"
@@ -22,6 +22,8 @@ Description: "Observation representing mammographic breast changes using BodyStr
 * value[x] ..0
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
+* bodySite MS
+* bodySite from BreastBodySite (required)
 * bodyStructure ^short = "Breast side and breast quadrants involved in finding"
 // Structured components
 * component 0..*
@@ -55,7 +57,7 @@ Description: "Observation representing mammographic breast changes using BodyStr
 
 // Example 1 — Mass, left UOQ, with diameter
 Instance: example-mammo-change-left-uoq-mass
-InstanceOf: MammographicExamination
+InstanceOf: MammographicExaminationFinding
 Usage: #example
 Title: "Mammographic Mass – Left UOQ (12 mm)"
 * status = #final
@@ -72,7 +74,7 @@ Title: "Mammographic Mass – Left UOQ (12 mm)"
 
 // Example 2 — Calcification, right LIQ
 Instance: example-mammo-change-right-liq-calc
-InstanceOf: MammographicExamination
+InstanceOf: MammographicExaminationFinding
 Usage: #example
 Title: "Mammographic Calcification – Right LIQ"
 * status = #final
@@ -84,7 +86,7 @@ Title: "Mammographic Calcification – Right LIQ"
 
 // Example 3 — No finding
 Instance: example-mammo-change-no-distortion
-InstanceOf: MammographicExamination
+InstanceOf: MammographicExaminationFinding
 Usage: #example
 Title: "No Mammographic Architectural Distortion"
 * status = #final
@@ -94,7 +96,7 @@ Title: "No Mammographic Architectural Distortion"
 
 // Example 4 — Asymmetric tissue in bilateral UIQ
 Instance: example-mammo-change-bilateral-uiq-asym
-InstanceOf: MammographicExamination
+InstanceOf: MammographicExaminationFinding
 Usage: #example
 Title: "Asymmetric Tissue – Bilateral UIQ"
 * status = #final

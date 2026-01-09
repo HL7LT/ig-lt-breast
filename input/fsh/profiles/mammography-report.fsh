@@ -22,11 +22,11 @@ Description: "A Diagnostic Report for Mammography imaging studies (EU)."
 * result ^slicing.rules = #open
 
 * result contains birads 0..*
-* result[birads] only Reference(LTBiradsAssessment)
+* result[birads] only Reference(BiradsAssessment)
 * result[birads] ^short = "Reference to the standardized BI-RADS Assessment Observation."
 
 * result contains examination 0..*
-* result[examination] only Reference(MammographicExamination)
+* result[examination] only Reference(MammographicExaminationFinding)
 * result[examination] ^short = "Reference to the observation of the Mammographic Examination."
 
 // * result contains radiation 0..1

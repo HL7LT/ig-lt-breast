@@ -15,7 +15,9 @@ Description: "Breast observation findings."
 * valueCodeableConcept 1..1
 * valueCodeableConcept from BreastFinding (preferred)
 // location of the finding
-* bodyStructure 0..1
+* bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
+* bodySite MS
+* bodySite from BreastBodySite (required)
 * bodyStructure ^short = "Breast side and quadrant represented using BodyStructure"
 

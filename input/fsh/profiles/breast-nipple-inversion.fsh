@@ -1,7 +1,7 @@
-Profile: NippleInversion
+Profile: BreastNippleInversion
 Parent: LTBaseObservation
-Id: nipple-inversion
-Title: "Nipple Inversion"
+Id: breast-nipple-inversion
+Title: "Breast Nipple Inversion"
 Description: "Observation representing nipple inversion assessment in a patient summary."
 * ^status = #draft
 * ^language = #en
@@ -17,17 +17,17 @@ Description: "Observation representing nipple inversion assessment in a patient 
 * bodySite from BreastBodySite (required)
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from NippleAppearanceFinding (preferred)
+* valueCodeableConcept from BreastNippleAppearanceFinding (preferred)
 * component ..0
 
 
 
 // Example Observation
-Instance: nipple-inversion-example
-InstanceOf: NippleInversion
+Instance: breast-nipple-inversion-example
+InstanceOf: BreastNippleInversion
 Usage: #example
-Title: "Example Nipple Inversion Observation"
-Description: "An example instance of a nipple inversion observation."
+Title: "Example Breast Nipple Inversion Observation"
+Description: "An example instance of a breast nipple inversion observation."
 * status = #final
 * encounter = Reference(Encounter/example-palpation-encounter)
 * subject = Reference(Patient/example-patient)
