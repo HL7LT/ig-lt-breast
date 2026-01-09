@@ -1,6 +1,6 @@
 
 Instance: ExampleBreastPalpation
-InstanceOf: ProcedureEuImaging
+InstanceOf: ImProcedure
 Usage: #example
 Title: "Example – Breast Palpation Procedure"
 * status = #completed

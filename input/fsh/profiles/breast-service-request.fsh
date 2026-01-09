@@ -1,7 +1,7 @@
 Profile: BreastServiceRequest
 Parent: ImOrder
 Id: breast-service-request
-Title: "Service request for breast examination"
+Title: "Breast Examination Order"
 Description: "A profile of ServiceRequest used to capture a clinical recommendation (e.g., follow-up ultrasound, surgical referral)."
 * status MS
 * subject 1..1 MS

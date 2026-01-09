@@ -1,12 +1,11 @@
 Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $sct = http://snomed.info/sct
-Alias: $im-imaging-device-type = http://hl7.eu/fhir/imaging-r5/ValueSet/im-imaging-device-type
+Alias: $organization-eu = http://hl7.eu/fhir/base-r5/StructureDefinition/organization-eu
 
-Profile: ImImagingDevice
-Parent: Device
-Id: ImImagingDevice
-Title: "IM Imaging Device"
-Description: "The device the made the image."
+Profile: EndpointEu
+Parent: Endpoint
+Id: EndpointEu
+Title: "EU Endpoint"
+Description: "The FHIR endpoint resource with EU specific references."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
@@ -20,13 +19,5 @@ Description: "The device the made the image."
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingDevice"
-* status 1..
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.ordered = false
-* category ^slicing.rules = #open
-* category contains imaging 1..1
-* category[imaging] = $sct#314789007 "Diagnostic imaging equipment"
-* type from $im-imaging-device-type (extensible)
-
+* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/EndpointEu"
+* managingOrganization only Reference($organization-eu)

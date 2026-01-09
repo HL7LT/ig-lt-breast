@@ -1,12 +1,11 @@
 Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $sct = http://snomed.info/sct
-Alias: $im-imaging-device-type = http://hl7.eu/fhir/imaging-r5/ValueSet/im-imaging-device-type
+Alias: $codesystem-missing-dicom-terminology = http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-missing-dicom-terminology
 
-Profile: ImImagingDevice
-Parent: Device
-Id: ImImagingDevice
-Title: "IM Imaging Device"
-Description: "The device the made the image."
+Profile: ImStudyInstanceUidIdentifier
+Parent: Identifier
+Id: im-study-instance-uid-identifier
+Title: "Study Instance UID Identifier"
+Description: "This profile on Identifier represents the Study Instance UID (0020,000D) for the Imaging Order."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
@@ -20,13 +19,7 @@ Description: "The device the made the image."
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingDevice"
-* status 1..
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.ordered = false
-* category ^slicing.rules = #open
-* category contains imaging 1..1
-* category[imaging] = $sct#314789007 "Diagnostic imaging equipment"
-* type from $im-imaging-device-type (extensible)
-
+* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/im-study-instance-uid-identifier"
+* type = $codesystem-missing-dicom-terminology#0020000D "Study Instance UID"
+* system = "urn:dicom:uid"
+* value 1..

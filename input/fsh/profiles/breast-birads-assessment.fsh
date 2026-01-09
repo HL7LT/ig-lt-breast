@@ -1,6 +1,6 @@
 // BI-RADS assessment profile
 Profile: LTBiradsAssessment
-Parent: ObservationFindingEuImaging
+Parent: LTBaseObservation
 Id: lt-birads-assessment
 Title: "BI-RADS Assessment"
 Description: "Final radiological diagnostic conclusion according to BI-RADS classification." //Each breast is assigned a BI-RADS category, which recommends further actions?

@@ -7,7 +7,7 @@ Expression: "(component.where(code.coding.code='248530000').exists()) implies (c
 
 // Observation for mammographic breast changes
 Profile: MammographicExamination
-Parent: ObservationFindingEuImaging
+Parent: LTBaseObservation
 Id: lt-mammographic-examination
 Title: "Mammographic Examination"
 Description: "Observation representing mammographic breast changes using BodyStructure."
