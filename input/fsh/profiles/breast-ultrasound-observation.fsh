@@ -102,7 +102,7 @@ Description: "Ultrasound finding of a cyst in the right breast at 10 o'clock."
 * status = #final
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
-* bodySite = $sct#361715005 "Entire right breast (body structure)"
+* bodySite = $sct#73056007 "Right breast"
 * component[lesion].valueCodeableConcept = $sct#399294002 "Cyst of breast (disorder)"
 * component[clock-position].valueCodeableConcept = $sct#260322009 "10 o'clock position (qualifier value)"
 * component[length-mm].valueQuantity = 12 'mm'
@@ -118,7 +118,7 @@ Description: "Ultrasound finding of a fibroadenoma in the left breast at 3 o'clo
 * status = #final
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
-* bodySite = $sct#361716006 "Entire left breast (body structure)"
+* bodySite = $sct#80248007 "Left breast"
 * component[lesion].valueCodeableConcept = $sct#254845004 "Fibroadenoma of breast (disorder)"
 * component[clock-position].valueCodeableConcept = $sct#260330005 "3 o'clock position (qualifier value)"
 * component[length-mm].valueQuantity = 8 'mm'
@@ -134,7 +134,7 @@ Description: "Ultrasound finding of a malignant tumor in the right breast at 6 o
 * status = #final
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
-* bodySite = $sct#361715005 "Entire right breast (body structure)"
+* bodySite = $sct#73056007 "Right breast"
 * component[lesion].valueCodeableConcept = $sct#254837009 "Malignant neoplasm of breast (disorder)"
 * component[clock-position].valueCodeableConcept = $sct#260337008 "6 o'clock position (qualifier value)"
 * component[length-mm].valueQuantity = 15 'mm'

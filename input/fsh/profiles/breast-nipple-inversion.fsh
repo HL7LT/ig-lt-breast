@@ -32,5 +32,5 @@ Description: "An example instance of a breast nipple inversion observation."
 * encounter = Reference(Encounter/example-palpation-encounter)
 * subject = Reference(Patient/example-patient)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
-* bodySite = $sct#181131000 "Entire breast"
+* bodySite = $sct#76752008 "Breast"
 * valueCodeableConcept = $sct#271955004 "Retraction of nipple (finding)"

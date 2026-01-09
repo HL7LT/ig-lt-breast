@@ -38,5 +38,5 @@ Title: "Example – Breast Density: Fatty"
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#129716005 "Almost entirely fat breast composition (finding)"
-* bodySite = $sct#76752008 "Breast structure (body structure)"
+* bodySite = $sct#76752008 "Breast"
 * note.text = "Mammography shows predominantly fatty breast density."

@@ -5,6 +5,6 @@ Description: "Entire breast and left/right breasts."
 * ^status = #active
 * ^experimental = false
 * ^language = #en
-* $sct#181131000 "Entire breast"
-* $sct#361716006 "Entire left breast (body structure)"
-* $sct#361715005 "Entire right breast (body structure)"
+* $sct#76752008 "Breast"
+* $sct#80248007 "Left breast"
+* $sct#73056007 "Right breast"

@@ -22,12 +22,20 @@ Description: "A Diagnostic Report for Mammography imaging studies (EU)."
 * result ^slicing.rules = #open
 
 * result contains birads 0..*
-* result[birads] only Reference(BiradsAssessment)
+* result[birads] only Reference(BiradsAssessment) 
 * result[birads] ^short = "Reference to the standardized BI-RADS Assessment Observation."
 
-* result contains examination 0..*
-* result[examination] only Reference(MammographicExaminationFinding)
-* result[examination] ^short = "Reference to the observation of the Mammographic Examination."
+* result contains observation 0..*
+* result[observation] only Reference(BreastObservationFinding)
+* result[observation] ^short = "Reference to the observation of the breast observation."
+
+* result contains mammographic 0..*
+* result[mammographic] only Reference(MammographicExaminationFinding)
+* result[mammographic] ^short = "Reference to the observation of the Mammographic Examination."
+
+* result contains ultrasound 0..*
+* result[ultrasound] only Reference(BreastUltrasoundFinding)
+* result[ultrasound] ^short = "Reference to the observation of the Breast Ultrasound Finding."
 
 // * result contains radiation 0..1
 // * result[radiation] only Reference($radiation-dose)
