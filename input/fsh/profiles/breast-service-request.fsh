@@ -1,15 +1,15 @@
 Profile: BreastServiceRequest
-Parent: ServiceRequestOrderEuImaging
+Parent: ImOrder
 Id: breast-service-request
 Title: "Service request for breast examination"
 Description: "A profile of ServiceRequest used to capture a clinical recommendation (e.g., follow-up ultrasound, surgical referral)."
 * status MS
-* subject 1..1
+* subject 1..1 MS
 * subject only Reference(LTBasePatient)
-* code 1..1
+* code 1..1 MS
 * code from BreastAssessment (required)
 // Reason Code: The BI-RADS result that necessitated the recommendation is mandatory.
-* reason 1..* MS
+* reason MS
 * reason from BiradsCategory (required)
 // Requester (The Clinician/Report Author) is mandatory.
 * requester 1..1
@@ -21,14 +21,12 @@ Description: "A profile of ServiceRequest used to capture a clinical recommendat
 * bodySite MS
 * bodySite from BreastBodySite (required)
 
-Instance: example-birads-recommendation-referral-cat4
+Instance: birads-referral-cat4
 InstanceOf: BreastServiceRequest
 Title: "Example BI-RADS Category 4 Referral"
 Description: "A ServiceRequest instance recommending a referral to a breast surgeon due to a Category 4 (suspicious) BI-RADS finding."
 
-// Resource Identity
-* id = "birads-referral-cat4"
-
+// * category[imaging] = $sct#363679005 "Imaging (procedure)"
 // Core elements
 * status = #active
 * intent = #order

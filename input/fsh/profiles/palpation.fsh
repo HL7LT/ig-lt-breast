@@ -5,7 +5,7 @@ Usage: #example
 * status = #completed
 * code = $sct#113011001 "Palpation (procedure)"
 * subject = Reference(Patient/example)
-* encounter = Reference(example-palpation-encounter)
+* encounter = Reference(Encounter/example-encounter1)
 * occurrenceDateTime = "2023-08-01T10:20:00Z"
 
 // Specifying the body site (e.g., Breast)
