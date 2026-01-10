@@ -1,16 +1,3 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $loinc = http://loinc.org
-Alias: $Hl7EuDocumentTypes = http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes
-Alias: $codesystem-diagnostic-report-support-info = http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info
-Alias: $ImOrder = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImOrder
-Alias: $im-accession-number-identifier = http://hl7.eu/fhir/imaging-r5/StructureDefinition/im-accession-number-identifier
-Alias: $ImPatient = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImPatient
-Alias: $practitionerRole-eu = http://hl7.eu/fhir/base-r5/StructureDefinition/practitionerRole-eu
-Alias: $ImImagingStudy = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy
-Alias: $ImProcedure = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImProcedure
-Alias: $ImComposition = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImComposition
-Alias: $valueset-diagnosticreport-report-support-info = http://hl7.eu/fhir/imaging-r5/ValueSet/valueset-diagnosticreport-report-support-info
-
 Profile: ImDiagnosticReport
 Parent: DiagnosticReport
 Id: ImDiagnosticReport
@@ -29,8 +16,8 @@ Description: "Diagnostic Report profile for Imaging Reports. This document repre
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImDiagnosticReport"
-* extension contains http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0 named artifactVersion 0..1
+* ^url = $DiagnosticReportEuImagingUrl
+* extension contains http://hl7.org/fhir/StructureDefinition/artifact-version named artifactVersion 0..1
 * identifier ^short = "Report identifier"
 * identifier ^definition = "Identifiers assigned to this Imaging Report by the performer or other systems. It shall be common to several report versions"
 * identifier ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
@@ -39,9 +26,9 @@ Description: "Diagnostic Report profile for Imaging Reports. This document repre
 * basedOn ^slicing.ordered = false
 * basedOn ^slicing.rules = #open
 * basedOn contains imorderaccession 0..1
-* basedOn[imorderaccession] only Reference($ImOrder)
+* basedOn[imorderaccession] only Reference($OrderEuImagingUrl)
 * basedOn[imorderaccession].identifier 1..
-* basedOn[imorderaccession].identifier only $im-accession-number-identifier
+* basedOn[imorderaccession].identifier only $AccessionNumberIdentifierEuImagingUrl
 * status ^short = "Status of the Report"
 * status ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
 * category ^slicing.discriminator.type = #value
@@ -64,14 +51,14 @@ Description: "Diagnostic Report profile for Imaging Reports. This document repre
 * performer ^slicing.ordered = false
 * performer ^slicing.rules = #open
 * performer contains author 1..*
-* performer[author] only Reference($practitionerRole-eu)
+* performer[author] only Reference($EuPractitionerRoleUrl)
 * resultsInterpreter ^slicing.discriminator.type = #profile
 * resultsInterpreter ^slicing.discriminator.path = "resolve()"
 * resultsInterpreter ^slicing.ordered = false
 * resultsInterpreter ^slicing.rules = #open
 * resultsInterpreter contains author 0..*
-* resultsInterpreter[author] only Reference($practitionerRole-eu)
-* study only Reference($ImImagingStudy)
+* resultsInterpreter[author] only Reference($EuPractitionerRoleUrl)
+* study only Reference($ImagingStudyEuImagingUrl)
 * supportingInfo ^slicing.discriminator.type = #value
 * supportingInfo ^slicing.discriminator.path = "reference"
 * supportingInfo ^slicing.ordered = false
@@ -79,8 +66,7 @@ Description: "Diagnostic Report profile for Imaging Reports. This document repre
 * supportingInfo.type from $valueset-diagnosticreport-report-support-info (extensible)
 * supportingInfo contains procedure 0..*
 * supportingInfo[procedure].type = $codesystem-diagnostic-report-support-info#imaging-procedure
-* supportingInfo[procedure].reference only Reference($ImProcedure)
+* supportingInfo[procedure].reference only Reference($ProcedureEuImagingUrl)
 * composition 1..
-//* composition only Reference($ImComposition)
-* composition only Reference(Composition)
+* composition only Reference($CompositionEuImagingUrl)
 * composition ^short = "Imaging Diagnostic Report"

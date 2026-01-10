@@ -17,6 +17,7 @@ Alias: $icd03 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
 Alias: $loinc =  http://loinc.org
 Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
+Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
 Alias: $medicalDevice-cs = urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6 // ===> to be checked <====
 Alias: $niaid = http://niaid.nih.gov
 Alias: $nibsc = http://nibsc.org
@@ -46,3 +47,24 @@ Alias: $oid = urn:ietf:rfc:1155
 Alias: $uri = urn:ietf:rfc:3986
 
 //=========================
+// --- IM CodeSystem
+Alias: $Hl7EuDocumentTypes = http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes
+Alias: $codesystem-diagnostic-report-support-info = http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info
+Alias: $codesystem-endpoint-terminology = http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-endpoint-terminology
+Alias: $codesystem-missing-dicom-terminology = http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-missing-dicom-terminology
+Alias: $endpoint-connection-type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type
+Alias: $codesystem-missing-dicom-terminology = http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-missing-dicom-terminology
+Alias: $composition-attestation-mode = http://hl7.org/fhir/composition-attestation-mode
+Alias: $sect_CID_33.html = https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html
+
+// --- IM ValueSet
+Alias: $im-imaging-device-type = http://hl7.eu/fhir/imaging-r5/ValueSet/im-imaging-device-type
+Alias: $valueset-diagnosticreport-report-support-info = http://hl7.eu/fhir/imaging-r5/ValueSet/valueset-diagnosticreport-report-support-info
+Alias: $im-imaging-study-performer-type = http://hl7.eu/fhir/imaging-r5/ValueSet/im-imaging-study-performer-type
+Alias: $pregnancy-status-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
+Alias: $im-procedure-type = http://hl7.eu/fhir/imaging-r5/ValueSet/im-procedure-type
+Alias: $media-view = http://hl7.eu/fhir/imaging-r5/ValueSet/media-view
+
+Alias: $ImImagingReportTypesEuVS = http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingReportTypesEuVS
+Alias: $valueset-procedure-reason.html = https://www.hl7.org/fhir/valueset-procedure-reason.html
+Alias: $ImSectionEmptyReason = http://hl7.eu/fhir/imaging-r5/ValueSet/ImSectionEmptyReason

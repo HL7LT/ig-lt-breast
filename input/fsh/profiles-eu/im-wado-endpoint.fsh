@@ -1,9 +1,5 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $endpoint-connection-type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type
-Alias: $EndpointEu = http://hl7.eu/fhir/imaging-r5/StructureDefinition/EndpointEu
-
 Profile: ImWadoEndpoint
-Parent: $EndpointEu
+Parent: $EuEndpoint
 Id: ImWadoEndpoint
 Title: "IM WADO Endpoint"
 Description: "This profile defines the WADO endpoint for accessing imaging study content."
@@ -15,7 +11,7 @@ Description: "This profile defines the WADO endpoint for accessing imaging study
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImWadoEndpoint"
+* ^url = $EndpointWadoEuImagingUrl
 * connectionType ^slicing.discriminator.type = #value
 * connectionType ^slicing.discriminator.path = "coding"
 * connectionType ^slicing.ordered = false

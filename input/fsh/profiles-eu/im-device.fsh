@@ -1,7 +1,3 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $sct = http://snomed.info/sct
-Alias: $im-imaging-device-type = http://hl7.eu/fhir/imaging-r5/ValueSet/im-imaging-device-type
-
 Profile: ImImagingDevice
 Parent: Device
 Id: ImImagingDevice
@@ -20,7 +16,7 @@ Description: "The device the made the image."
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingDevice"
+* ^url = $ImagingDeviceEuImagingUrl
 * status 1..
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"

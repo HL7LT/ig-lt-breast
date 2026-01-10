@@ -1,6 +1,3 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $patient-eu = http://hl7.eu/fhir/base-r5/StructureDefinition/patient-eu
-
 Profile: ProcedureEu
 Parent: Procedure
 Id: ProcedureEu
@@ -19,8 +16,8 @@ Description: "A procedure profile for the EU."
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ProcedureEu"
-* subject only Reference($patient-eu)
+* ^url = $EuProcedureUrl
+* subject only Reference($EuPatientUrl)
 * bodySite.extension contains BodyStructureReference named bodyStructure 0..1
 * used ^slicing.discriminator.type = #type
 * used ^slicing.discriminator.path = "concept"

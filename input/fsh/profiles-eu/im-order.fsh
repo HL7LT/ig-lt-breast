@@ -1,8 +1,3 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $sct = http://snomed.info/sct
-Alias: $im-accession-number-identifier = http://hl7.eu/fhir/imaging-r5/StructureDefinition/im-accession-number-identifier
-Alias: $pregnancy-status-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
-
 Profile: ImOrder
 Parent: ServiceRequest
 Id: ImOrder
@@ -21,13 +16,13 @@ Description: "This profile on ServiceRequest represents the order for the Imagin
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImOrder"
+* ^url = $OrderEuImagingUrl
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.ordered = false
 * identifier ^slicing.rules = #open
 * identifier contains accessionNumber 0..1
-* identifier[accessionNumber] only $im-accession-number-identifier
+* identifier[accessionNumber] only $AccessionNumberIdentifierEuImagingUrl
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.ordered = false

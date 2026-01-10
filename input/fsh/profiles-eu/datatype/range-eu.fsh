@@ -1,9 +1,11 @@
-Profile: EndpointEu
-Parent: Endpoint
-Id: EndpointEu
-Title: "EU Endpoint"
-Description: "The FHIR endpoint resource with EU specific references."
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+Profile: RangeEu
+Parent: Range
+Id: range-eu
+Title: "EU Range"
+Description: "A range profile for the EU."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics"
+* ^extension[=].valueCode = #can-bind
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
@@ -16,5 +18,6 @@ Description: "The FHIR endpoint resource with EU specific references."
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = $EuEndpointUrl
-* managingOrganization only Reference($EuOrganizationUrl)
+* ^url = $EuRangeUrl 
+* low only $EuSimpleQuantity
+* high only $EuSimpleQuantity

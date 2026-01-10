@@ -1,9 +1,5 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $codesystem-endpoint-terminology = http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-endpoint-terminology
-Alias: $EndpointEu = http://hl7.eu/fhir/imaging-r5/StructureDefinition/EndpointEu
-
 Profile: ImImageIidViewerEndpoint
-Parent: $EndpointEu
+Parent: $EuEndpoint
 Id: ImImageIidViewerEndpoint
 Title: "IM Image Viewer Endpoint"
 Description: """This profile defines a placeholder for an Endpoint for a viewer that can be used to access the study, serie it is present on.
@@ -16,7 +12,7 @@ The application is based on [IHE-IID](https://www.ihe.net/uploadedFiles/Document
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImageIidViewerEndpoint"
+* ^url = $EndpointImageIidViewerEuImagingUrl
 * connectionType ^slicing.discriminator.type = #value
 * connectionType ^slicing.discriminator.path = "coding"
 * connectionType ^slicing.ordered = false

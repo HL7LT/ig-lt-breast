@@ -1,10 +1,7 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-
 Profile: ImAccessionNumberIdentifier
 Parent: Identifier
 Id: im-accession-number-identifier
-Title: "Imaging Accession Number Identifier"
+Title: "IM Imaging Accession Number Identifier"
 Description: "This profile on Identifier represents the Accession Number for the Imaging Order."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
@@ -19,7 +16,7 @@ Description: "This profile on Identifier represents the Accession Number for the
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/im-accession-number-identifier"
+* ^url = $AccessionNumberIdentifierEuImagingUrl
 * type 1..
 * type = $v2-0203#ACSN
 * system 1..

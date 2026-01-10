@@ -1,10 +1,7 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $codesystem-missing-dicom-terminology = http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-missing-dicom-terminology
-
 Profile: ImStudyInstanceUidIdentifier
 Parent: Identifier
 Id: im-study-instance-uid-identifier
-Title: "Study Instance UID Identifier"
+Title: "IM Study Instance UID Identifier"
 Description: "This profile on Identifier represents the Study Instance UID (0020,000D) for the Imaging Order."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
@@ -19,7 +16,7 @@ Description: "This profile on Identifier represents the Study Instance UID (0020
 * ^contact.telecom.value = "http://hl7.eu"
 * ^jurisdiction = $m49.htm#150 "Europe"
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/im-study-instance-uid-identifier"
+* ^url = $StudyInstanceUidIdentifierEuImagingUrl
 * type = $codesystem-missing-dicom-terminology#0020000D "Study Instance UID"
 * system = "urn:dicom:uid"
 * value 1..

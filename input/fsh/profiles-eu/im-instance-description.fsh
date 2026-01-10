@@ -1,8 +1,6 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-
 Extension: ImImagingStudyInstanceDescription
 Id: instance-description
-Title: "Instance Description"
+Title: "IM Instance Description"
 Description: "A description of the instance in an ImagingStudy."
 Context: ImagingStudy.series.instance
 * ^version = "0.1.0-ballot"
@@ -16,5 +14,5 @@ Context: ImagingStudy.series.instance
 * ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
 * . ^short = "Instance Description"
 * . ^definition = "A description of the instance in an ImagingStudy."
-* ^url = "http://hl7.eu/fhir/imaging-r5/StructureDefinition/instance-description"
+* ^url = $ImagingStudyInstanceDescriptionEuImagingUrl
 * value[x] only string
