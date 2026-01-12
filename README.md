@@ -43,22 +43,67 @@ The overall workflow is modelled as a **multi-step, decision-driven, multidiscip
 - Node.js
 - SUSHI (`npm install -g fsh-sushi`)
 
-### Build steps
+### Basic workflow
+
+Before building, make sure your local repository is up to date:
+
+```bash
+git pull
+```
+
+After making changes, remember to commit and push:
+
+```bash
+git add .
+git commit -m "Update IG content"
+git push
+```
+
+---
+
+### Build steps — Windows
+
+Run:
+
+```bat
+_genonce.bat
+```
+
+When the build completes, open the generated guide:
+
+```bat
+start output\index.html
+```
+
+---
+
+### Build steps — macOS / Linux
 
 1. Generate FHIR resources from FSH:
+
 ```bash
 sushi .
 ```
 
-2. Run the IG Publisher (macOS/Linux):
+2. Run the IG Publisher:
+
+```bash
+./_genonce.sh
+```
+
+If `_genonce.sh` is not available, use:
+
 ```bash
 ./_build.sh
 ```
 
-or on Windows:
-```bat
-_build.bat
+When the build completes, open the generated guide:
+
+```bash
+open output/index.html
 ```
+
+---
 
 The generated site will appear in the `output/` folder.
 
