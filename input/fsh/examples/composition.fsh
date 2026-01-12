@@ -1,45 +1,80 @@
-// Example: Breast ADP Diagnostic Process Summary (Composition)
 Instance: breast-adp-process-composition-example
-InstanceOf: Composition
+InstanceOf: ImComposition
 Usage: #example
 Title: "Example – Breast Cancer ADP Diagnostic Process Summary"
-Description: "An example Composition summarizing the diagnostic process of the Breast Cancer Prevention Program episode."
+Description: "ImComposition example summarizing the breast cancer diagnostic process."
+
+* identifier.system = "http://example.org/documents"
+* identifier.value = "BREAST-ADP-2026-0001"
 
 * status = #final
-* type = $loinc#34133-9 "Summary of episode note"
-* subject = Reference(example-patient)
 * date = "2026-01-10T10:00:00+02:00"
 * title = "Breast Cancer Prevention Program – Diagnostic Process Summary"
-* author = Reference(Organization/example-hospital)
 
-// Screening Mammogram
-* section[+].title = "Screening Mammogram"
-* section[=].code = $sct#71651007 "Mammography (procedure)"
-* section[=].entry[+] = Reference(mammogram-diagnosticreport-example)
+* subject = Reference(example-patient)
+* author[author] = Reference(PractitionerRole/example-radiologist)
+* custodian = Reference(Organization/example-hospital)
 
-// Additional Imaging
-* section[+].title = "Additional Imaging"
+// Required extension
+* extension[diagnosticreport-reference].valueReference = Reference(mammogram-diagnosticreport-example)
 
-// Tomosynthesis
-* section[=].section[+].title = "Tomosynthesis"
-* section[=].section[=].entry[+] = Reference(tomosynthesis-diagnosticreport-example)
+// Required events
+* event[imagingstudy].detail.concept = $dcm#MG "Mammography"
+* event[procedure].detail.concept = $sct#71651007 "Mammography (procedure)"
 
-// Ultrasound
-* section[=].section[+].title = "Ultrasound Examination"
-* section[=].section[=].entry[+] = Reference(ultrasound-diagnosticreport-example)
 
-// Biopsy
-* section[+].title = "Biopsy"
-* section[=].code = $sct#44578009 "Core needle biopsy of breast (procedure)"
-* section[=].entry[+] = Reference(biopsy-procedure-example)
-* section[=].entry[+] = Reference(pathology-servicerequest-example)
+// Required sections
 
-// Pathological Examination
-* section[+].title = "Pathological Examination"
-* section[=].code = $sct#252416005 "Histopathology test (procedure)"
-* section[=].entry[+] = Reference(pathology-diagnosticreport-example)
+// Imaging Study
+* section[imagingstudy].title = "Imaging Study"
+* section[imagingstudy].text.status = #generated
+* section[imagingstudy].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Imaging study performed.</div>"
+* section[imagingstudy].entry[imagingstudy][+] = Reference(breast-imagingstudy-example)
 
-// Conclusion & Recommendations
-* section[+].title = "Conclusion and Recommendations"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Suspicious lesion detected in right breast. Biopsy confirmed invasive ductal carcinoma. Referral to oncology recommended.</div>"
+
+// Order
+* section[order].title = "Order"
+* section[order].text.status = #generated
+* section[order].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Imaging order.</div>"
+* section[order].entry[order][+] = Reference(breast-imaging-order-example)
+
+
+// History
+* section[history].title = "History"
+* section[history].text.status = #generated
+* section[history].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Relevant clinical history.</div>"
+
+
+// Procedure
+* section[procedure].title = "Procedure"
+* section[procedure].text.status = #generated
+* section[procedure].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Imaging procedure performed.</div>"
+* section[procedure].entry[procedure][+] = Reference(breast-imaging-procedure-example)
+
+
+// Comparison
+* section[comparison].title = "Comparison"
+* section[comparison].text.status = #generated
+* section[comparison].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Compared with prior study.</div>"
+* section[comparison].entry[comparedstudy][+] = Reference(previous-breast-imagingstudy-example)
+
+
+// Findings
+* section[findings].title = "Findings"
+* section[findings].text.status = #generated
+* section[findings].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Key imaging findings.</div>"
+* section[findings].entry[finding][+] = Reference(breast-finding-example)
+
+
+// Impression
+* section[impression].title = "Impression"
+* section[impression].text.status = #generated
+* section[impression].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Overall impression.</div>"
+* section[impression].entry[impression][+] = Reference(breast-impression-condition-example)
+
+
+// Recommendation
+* section[recommendation].title = "Recommendation"
+* section[recommendation].text.status = #generated
+* section[recommendation].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Follow-up recommended.</div>"
+* section[recommendation].entry[careplan][+] = Reference(breast-followup-careplan-example)
