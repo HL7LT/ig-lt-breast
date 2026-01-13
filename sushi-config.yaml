@@ -82,6 +82,12 @@ dependencies:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 
+pages:
+  index.md:
+    title: Home
+  workflow.md:
+    title: Breast cancer screening and diagnostic workflow
+
 
 parameters:
   special-url-base: https://hl7.lt/fhir
@@ -115,6 +121,7 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Workflow: workflow.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
