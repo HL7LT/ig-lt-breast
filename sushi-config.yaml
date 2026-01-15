@@ -86,7 +86,7 @@ pages:
   index.md:
     title: Home
   workflow.md:
-    title: Breast cancer screening and diagnostic workflow
+    title: Workflow
 
 
 parameters:
