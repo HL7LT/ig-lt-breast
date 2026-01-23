@@ -19,7 +19,7 @@ Description: "Observation representing mammographic breast changes using BodyStr
 * effective[x] 1..1
 * effective[x] only dateTime
 * obeys mammo-diameter-only-for-mass
-* value[x] ..0
+// * value[x] ..0
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
 * bodySite MS
@@ -41,10 +41,9 @@ Description: "Observation representing mammographic breast changes using BodyStr
 * component[Type] ^short = "Mammographic finding"
 // Slice: Diameter of Lump (Size)
 * component[Diameter].code = $sct#248530000 "Diameter of lump (observable entity)"
-* component[Diameter].value[x] only Quantity
-* component[Diameter].valueQuantity.system = "http://unitsofmeasure.org"
-* component[Diameter].valueQuantity.code = #mm
-* component[Diameter].valueQuantity.unit = "mm"
+* component[Diameter].value[x] only $EuQuantity
+* component[Diameter].valueQuantity = $ucum#mm 
+// = $ucum#mm "mm"
 * component[Diameter] ^short = "Diameter in mm (only for masses)"
 // Slice: Evolution of finding
 * component[evolution].code = $sct#288531002 "Finding status values"
@@ -69,8 +68,8 @@ Title: "Mammographic Mass – Left UOQ (12 mm)"
 // Location via BodyStructure
 * bodyStructure = Reference(bs-left-uoq)
 // Diameter
-* component[Diameter].valueQuantity.value = 12
-* component[Diameter].valueQuantity.unit = "mm"
+* component[Diameter].valueQuantity = 12 'mm'
+* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
 
 // Example 2 — Calcification, right LIQ
 Instance: example-mammo-change-right-liq-calc
@@ -82,6 +81,7 @@ Title: "Mammographic Calcification – Right LIQ"
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#260388006 "No status change"
 * component[Type].valueCodeableConcept = $sct#697944008 "Mammographic calcification of breast"
+* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
 * bodyStructure = Reference(bs-right-liq)
 
 // Example 3 — No finding
@@ -93,6 +93,7 @@ Title: "No Mammographic Architectural Distortion"
 * subject = Reference(example-patient)
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#373572006 "Clinical finding absent"
+* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
 
 // Example 4 — Asymmetric tissue in bilateral UIQ
 Instance: example-mammo-change-bilateral-uiq-asym
@@ -104,4 +105,5 @@ Title: "Asymmetric Tissue – Bilateral UIQ"
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#35105006 "Increased"
 * component[Type].valueCodeableConcept = $sct#129789007 "Focal asymmetric breast tissue finding"
+* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
 * bodyStructure = Reference(bs-bilateral-uiq)

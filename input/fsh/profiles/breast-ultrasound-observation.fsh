@@ -12,7 +12,7 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * subject only Reference(LTBasePatient)
 * effective[x] 1..1
 * effective[x] only dateTime
-* value[x] 0..0
+//* value[x] 0..0
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
 * bodySite MS
@@ -48,20 +48,16 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[length-mm] ^short = "Longest lesion dimension"
 * component[length-mm] ^definition = "The longest dimension of the lesion measured via ultrasound, typically in mm."
 * component[length-mm].code = $sct#439932008 "Length of structure by imaging measurement"
-* component[length-mm].value[x] only Quantity
-* component[length-mm].valueQuantity.unit = "mm"
-* component[length-mm].valueQuantity.system = "http://unitsofmeasure.org"
-* component[length-mm].valueQuantity.code = #mm
+* component[length-mm].value[x] only $EuQuantity
+* component[length-mm].valueQuantity = $ucum#mm
 
 //Width (mm)
 * component contains width-mm 0..1
 * component[width-mm] ^short = "Width of lesion"
 * component[width-mm] ^definition = "The width of the lesion measured via ultrasound, typically in mm."
 * component[width-mm].code = $sct#440357003 "Width of structure by imaging measurement"
-* component[width-mm].value[x] only Quantity
-* component[width-mm].valueQuantity.unit = "mm"
-* component[width-mm].valueQuantity.system = "http://unitsofmeasure.org"
-* component[width-mm].valueQuantity.code = #mm
+* component[width-mm].value[x] only $EuQuantity
+* component[width-mm].valueQuantity = $ucum#mm
 
 
 // found example https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html
@@ -108,6 +104,7 @@ Description: "Ultrasound finding of a cyst in the right breast at 10 o'clock."
 * component[length-mm].valueQuantity = 12 'mm'
 * component[width-mm].valueQuantity = 7 'mm'
 * note.text = "Smooth, round shape"
+* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
 
 // Example 2: Left breast, 3 o'clock, Fibroadenoma
 Instance: example-lesion-left-3-oclock-fibroadenoma
@@ -124,6 +121,7 @@ Description: "Ultrasound finding of a fibroadenoma in the left breast at 3 o'clo
 * component[length-mm].valueQuantity = 8 'mm'
 * component[width-mm].valueQuantity = 5 'mm'
 * note.text = "Oval shape"
+* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
 
 // Example 3: Right breast, 6 o'clock, Malignant tumor
 Instance: example-lesion-right-6-oclock-malignant-tumor
@@ -140,3 +138,4 @@ Description: "Ultrasound finding of a malignant tumor in the right breast at 6 o
 * component[length-mm].valueQuantity = 15 'mm'
 * component[width-mm].valueQuantity = 10 'mm'
 * note.text = "Irregular shape"
+* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
