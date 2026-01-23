@@ -16,7 +16,7 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * custodian = Reference(Organization/example-hospital)
 
 // Required extension
-* extension[diagnosticreport-reference].valueReference = Reference(mammogram-diagnosticreport-example)
+* extension[diagnosticreport-reference].valueReference = Reference(DiagnosticReport/mammogram-diagnosticreport-example)
 
 // Required events
 * event[imagingstudy].detail.concept = $dcm#MG "Mammography"
@@ -38,7 +38,7 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * section[order].title = "Order"
 * section[order].text.status = #generated
 * section[order].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Screening mammography ordered.</div>"
-* section[order].entry[order][+] = Reference(breast-imaging-order-example)
+* section[order].entry[order][+] = Reference(breast-screening-request)
 
 
 // History
@@ -58,14 +58,15 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * section[comparison].title = "Comparison"
 * section[comparison].text.status = #generated
 * section[comparison].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Compared with prior mammogram from 2024.</div>"
-* section[comparison].entry[comparedstudy][+] = Reference(previous-breast-imagingstudy-example)
+* section[comparison].entry[comparedstudy][+] = Reference(breast-imagingstudy-previos-example)
 
 
 // Findings
 * section[findings].title = "Findings"
 * section[findings].text.status = #generated
 * section[findings].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Suspicious lesion in left breast.</div>"
-* section[findings].entry[finding][+] = Reference(breast-finding-example)
+* section[findings].entry[finding][+] = Reference(breast-scar-example)
+* section[findings].entry[finding][+] = Reference(breast-skin-formation-example)
 
 
 // Impression (BI-RADS here)
