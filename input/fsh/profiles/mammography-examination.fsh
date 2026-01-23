@@ -41,7 +41,7 @@ Description: "Observation representing mammographic breast changes using BodyStr
 * component[Type] ^short = "Mammographic finding"
 // Slice: Diameter of Lump (Size)
 * component[Diameter].code = $sct#248530000 "Diameter of lump (observable entity)"
-* component[Diameter].value[x] only $EuQuantity
+* component[Diameter].value[x] only $EuQuantityUrl
 * component[Diameter].valueQuantity = $ucum#mm 
 // = $ucum#mm "mm"
 * component[Diameter] ^short = "Diameter in mm (only for masses)"

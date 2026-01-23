@@ -48,7 +48,7 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[length-mm] ^short = "Longest lesion dimension"
 * component[length-mm] ^definition = "The longest dimension of the lesion measured via ultrasound, typically in mm."
 * component[length-mm].code = $sct#439932008 "Length of structure by imaging measurement"
-* component[length-mm].value[x] only $EuQuantity
+* component[length-mm].value[x] only $EuQuantityUrl
 * component[length-mm].valueQuantity = $ucum#mm
 
 //Width (mm)
@@ -56,7 +56,7 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[width-mm] ^short = "Width of lesion"
 * component[width-mm] ^definition = "The width of the lesion measured via ultrasound, typically in mm."
 * component[width-mm].code = $sct#440357003 "Width of structure by imaging measurement"
-* component[width-mm].value[x] only $EuQuantity
+* component[width-mm].value[x] only $EuQuantityUrl
 * component[width-mm].valueQuantity = $ucum#mm
 
 
