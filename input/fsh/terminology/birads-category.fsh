@@ -4,6 +4,7 @@ Title: "BI-RADS Category"
 Description: "Categories of Breast Imaging Reporting and Data System."
 * ^language = #en
 * ^status = #active
+* ^experimental = true
 * ^publisher = "HL7 Lithuania"
 * $sct#397138000 "Mammography assessment (Category 0) - Need additional imaging evaluation (finding)"
 * $sct#397140005 "Mammography assessment (Category 1) - Negative (finding)"
