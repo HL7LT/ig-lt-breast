@@ -1,5 +1,5 @@
 Profile: BreastUltrasoundFinding
-Parent: LTBaseObservation
+Parent: Observation
 Id: breast-ultrasound-finding
 Title: "Breast Ultrasound Findings"
 Description: "A radiology observation representing one specific ultrasound lesion with localization, dimensions, and characteristics."
@@ -23,7 +23,7 @@ Description: "A radiology observation representing one specific ultrasound lesio
 
 
 //component rules
-* component ^slicing.discriminator.type = #value 
+* component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 
@@ -32,6 +32,8 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[lesion] ^short = "Lesion finding"
 * component[lesion] ^definition = "The side of the body (left or right) where the breast lesion is located."
 * component[lesion].code = $sct#364636000 "Lesion observable"
+
+* component[lesion].value[x] 1..1
 * component[lesion].value[x] only CodeableConcept
 * component[lesion].valueCodeableConcept from UltrasoundLesionFinding (required)
 
@@ -40,6 +42,8 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[clock-position] ^short = "Clock position"
 * component[clock-position] ^definition = "The location of the lesion described using the clock face position."
 * component[clock-position].code = $sct#272485000 "Clockface position (qualifier value)"
+
+* component[clock-position].value[x] 1..1
 * component[clock-position].value[x] only CodeableConcept
 * component[clock-position].valueCodeableConcept from BreastClockPosition (required)
 
@@ -48,6 +52,8 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[length-mm] ^short = "Longest lesion dimension"
 * component[length-mm] ^definition = "The longest dimension of the lesion measured via ultrasound, typically in mm."
 * component[length-mm].code = $sct#439932008 "Length of structure by imaging measurement"
+
+* component[length-mm].value[x] 1..1
 * component[length-mm].value[x] only $EuQuantityUrl
 * component[length-mm].valueQuantity = $ucum#mm
 
@@ -56,6 +62,8 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[width-mm] ^short = "Width of lesion"
 * component[width-mm] ^definition = "The width of the lesion measured via ultrasound, typically in mm."
 * component[width-mm].code = $sct#440357003 "Width of structure by imaging measurement"
+
+* component[width-mm].value[x] 1..1
 * component[width-mm].value[x] only $EuQuantityUrl
 * component[width-mm].valueQuantity = $ucum#mm
 
@@ -104,7 +112,7 @@ Description: "Ultrasound finding of a cyst in the right breast at 10 o'clock."
 * component[length-mm].valueQuantity = 12 'mm'
 * component[width-mm].valueQuantity = 7 'mm'
 * note.text = "Smooth, round shape"
-* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable
 
 // Example 2: Left breast, 3 o'clock, Fibroadenoma
 Instance: example-lesion-left-3-oclock-fibroadenoma
@@ -121,7 +129,7 @@ Description: "Ultrasound finding of a fibroadenoma in the left breast at 3 o'clo
 * component[length-mm].valueQuantity = 8 'mm'
 * component[width-mm].valueQuantity = 5 'mm'
 * note.text = "Oval shape"
-* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable
 
 // Example 3: Right breast, 6 o'clock, Malignant tumor
 Instance: example-lesion-right-6-oclock-malignant-tumor
@@ -138,4 +146,4 @@ Description: "Ultrasound finding of a malignant tumor in the right breast at 6 o
 * component[length-mm].valueQuantity = 15 'mm'
 * component[width-mm].valueQuantity = 10 'mm'
 * note.text = "Irregular shape"
-* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable
