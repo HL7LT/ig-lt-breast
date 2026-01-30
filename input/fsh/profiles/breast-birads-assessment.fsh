@@ -1,6 +1,6 @@
 // BI-RADS assessment profile
 Profile: BiradsAssessment
-Parent: LTBaseObservation
+Parent: Observation
 Id: birads-assessment
 Title: "BI-RADS Assessment"
 Description: "Final radiological diagnostic conclusion according to BI-RADS classification." //Each breast is assigned a BI-RADS category, which recommends further actions?
@@ -24,7 +24,8 @@ InstanceOf: BiradsAssessment
 Title: "Example BI-RADS 1 – Negative"
 Usage: #example
 * status = #final
-* subject = Reference(Patient/example)
+* subject = Reference(Patient/example-patient)
+* performer = Reference(Practitioner/example-practitioner)
 * code = $sct#146611000146107 "Breast Imaging Reporting and Data System assessment category (observable entity)"
 * effectiveDateTime = "2023-08-01T10:00:00Z"
 * valueCodeableConcept = $sct#397140005 "Mammography assessment (Category 1) - Negative (finding)"
@@ -34,7 +35,8 @@ InstanceOf: BiradsAssessment
 Title: "Example BI-RADS 4 – Suspicious Abnormality"
 Usage: #example
 * status = #final
-* subject = Reference(Patient/example)
+* subject = Reference(Patient/example-patient)
+* performer = Reference(Practitioner/example-practitioner)
 * code = $sct#146611000146107 "Breast Imaging Reporting and Data System assessment category (observable entity)"
 * effectiveDateTime = "2023-08-01T10:00:00Z"
 * valueCodeableConcept = $sct#397144001 "Mammography assessment (Category 4) - Suspicious abnormality, biopsy should be considered (finding)"
