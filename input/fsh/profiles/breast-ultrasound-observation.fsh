@@ -23,7 +23,7 @@ Description: "A radiology observation representing one specific ultrasound lesio
 
 
 //component rules
-* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 
