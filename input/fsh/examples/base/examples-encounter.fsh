@@ -33,3 +33,18 @@ Usage: #example
 //   * end = "2024-06-15T10:00:00+03:00"
 // * serviceProvider = Reference(example-organization)
 
+Instance: example-palpation-encounter
+InstanceOf: LTBaseEncounter
+Usage: #example
+Title: "Example – Palpation Encounter"
+Description: "The specific encounter where the breast history and palpation were performed."
+* status = #completed
+* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
+* subject = Reference(Patient/example-patient) // Ensure this matches the patient used in your other examples
+* participant
+  * type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#ATND "attender"
+  * actor = Reference(Practitioner/example-practitioner)
+* actualPeriod
+  * start = "2024-01-15T10:00:00+02:00"
+  * end = "2024-01-15T10:30:00+02:00"
+* serviceProvider = Reference(Organization/example-organization)
