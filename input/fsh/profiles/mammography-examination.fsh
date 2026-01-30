@@ -7,7 +7,7 @@ Expression: "(component.where(code.coding.code='248530000').exists()) implies (c
 
 // Observation for mammographic breast changes
 Profile: MammographicExaminationFinding
-Parent: LTBaseObservation
+Parent: Observation
 Id: lt-mammographic-examination
 Title: "Mammographic Examination Findings"
 Description: "Observation representing mammographic breast changes using BodyStructure."
@@ -61,6 +61,7 @@ Usage: #example
 Title: "Mammographic Mass – Left UOQ (12 mm)"
 * status = #final
 * subject = Reference(example-patient)
+* performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#7147002 "New"
 // Type
@@ -69,7 +70,7 @@ Title: "Mammographic Mass – Left UOQ (12 mm)"
 * bodyStructure = Reference(bs-left-uoq)
 // Diameter
 * component[Diameter].valueQuantity = 12 'mm'
-* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable
 
 // Example 2 — Calcification, right LIQ
 Instance: example-mammo-change-right-liq-calc
@@ -78,10 +79,11 @@ Usage: #example
 Title: "Mammographic Calcification – Right LIQ"
 * status = #final
 * subject = Reference(example-patient)
+* performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#260388006 "No status change"
 * component[Type].valueCodeableConcept = $sct#697944008 "Mammographic calcification of breast"
-* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable
 * bodyStructure = Reference(bs-right-liq)
 
 // Example 3 — No finding
@@ -91,9 +93,10 @@ Usage: #example
 Title: "No Mammographic Architectural Distortion"
 * status = #final
 * subject = Reference(example-patient)
+* performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#373572006 "Clinical finding absent"
-* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable
 
 // Example 4 — Asymmetric tissue in bilateral UIQ
 Instance: example-mammo-change-bilateral-uiq-asym
@@ -102,8 +105,9 @@ Usage: #example
 Title: "Asymmetric Tissue – Bilateral UIQ"
 * status = #final
 * subject = Reference(example-patient)
+* performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#35105006 "Increased"
 * component[Type].valueCodeableConcept = $sct#129789007 "Focal asymmetric breast tissue finding"
-* valueCodeableConcept.extension[dataAbsentReason].valueCode = #not-applicable
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable
 * bodyStructure = Reference(bs-bilateral-uiq)

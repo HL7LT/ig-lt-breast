@@ -1,5 +1,5 @@
 Profile: BreastNippleInversion
-Parent: LTBaseObservation
+Parent: Observation
 Id: breast-nipple-inversion
 Title: "Breast Nipple Inversion"
 Description: "Observation representing nipple inversion assessment in a patient summary."
@@ -31,6 +31,7 @@ Description: "An example instance of a breast nipple inversion observation."
 * status = #final
 * encounter = Reference(Encounter/example-palpation-encounter)
 * subject = Reference(Patient/example-patient)
+* performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
 * bodySite = $sct#76752008 "Breast"
 * valueCodeableConcept = $sct#271955004 "Retraction of nipple (finding)"
