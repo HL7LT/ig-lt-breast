@@ -10,5 +10,5 @@ Title: "Example – Breast Palpation Procedure"
 * occurrenceDateTime = "2024-06-15T09:40:00+03:00"
 * performer[performer]
   * actor = Reference(Practitioner/example-practitioner)
-  * function = $sct#223366009 "Healthcare professional (occupation)"
+  * function = $sct#223366009 "Healthcare professional"
 

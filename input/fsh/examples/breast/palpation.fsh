@@ -4,7 +4,7 @@ Title: "Example of Palpation Procedure"
 Usage: #example
 * status = #completed
 * code = $sct#113011001 "Palpation (procedure)"
-* subject = Reference(Patient/example)
+* subject = Reference(Patient/example-patient)
 * encounter = Reference(Encounter/example-encounter1)
 * occurrenceDateTime = "2023-08-01T10:20:00Z"
 
@@ -16,4 +16,4 @@ Usage: #example
 
 // If a practitioner performed it, add a performer
 * performer.actor = Reference(Practitioner/example-doctor)
-* performer.function = $sct#158965000 "Medical practitioner (occupation)"
+* performer.function = $sct#223366009 "Healthcare professional"
