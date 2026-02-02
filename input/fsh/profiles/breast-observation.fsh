@@ -1,5 +1,5 @@
 Profile: BreastObservationFinding
-Parent: LTBaseObservation
+Parent: Observation
 Id: breast-observation-finding
 Title: "Breast Observation Finding"
 Description: "Breast observation findings."

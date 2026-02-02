@@ -33,6 +33,7 @@ Description: "An example instance of a breast scar observation."
 * status = #final
 * encounter = Reference(Encounter/example-palpation-encounter)
 * subject = Reference(Patient/example-patient)
+* performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
 // #inline example of the BodyStructureLtBreast
 * contained[0] = breast-body-structure-right-upper-outer-example
