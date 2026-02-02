@@ -25,22 +25,12 @@ Instance: birads-referral-cat4
 InstanceOf: BreastServiceRequest
 Title: "Example BI-RADS Category 4 Referral"
 Description: "A ServiceRequest instance recommending a referral to a breast surgeon due to a Category 4 (suspicious) BI-RADS finding."
-
-// * category[imaging] = $sct#363679005 "Imaging (procedure)"
-// Core elements
 * status = #active
 * intent = #order
 * priority = #routine
-// Service code
 * code = $sct#306300002 "Referral to breast surgeon (procedure)"
-// The Reason (ServiceRequest.reasonCode)
-* reason.concept = $sct#397144001 "Mammography assessment (Category 4) - Suspicious abnormality, biopsy should be considered (finding)"
-// Timing/Occurrence. The recommendation should happen immediately.
 * occurrenceDateTime = "2025-12-15T09:00:00Z"
-
-// Subject (The Patient) and Requester (The Radiologist)
 * subject = Reference(Patient/example-patient)
 * requester = Reference(Practitioner/example-practitioner)
-
-// Based On (Optional): Link back to the Diagnostic Report
-* basedOn = Reference(DiagnosticReport/example-birads-cat4)
+* reason.concept = $sct#397144001 "Mammography assessment (Category 4) - Suspicious abnormality, biopsy should be considered (finding)"
+* supportingInfo = Reference(Observation/example-birads-cat4)

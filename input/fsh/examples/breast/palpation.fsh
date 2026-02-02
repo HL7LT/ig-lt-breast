@@ -12,8 +12,8 @@ Usage: #example
 * bodySite = $sct#76752008 "Breast structure (body structure)"
 
 // Linking to the reason (e.g., a palpable mass found by patient)
-* statusReason = $sct#274390008 "Abdominal palpation - tender (finding)" 
+* statusReason = $sct#443607001 "Palpable mass (finding)" 
 
 // If a practitioner performed it, add a performer
 * performer.actor = Reference(Practitioner/example-doctor)
-* performer.function = $sct#394577000 "Medical practitioner (occupation)"
+* performer.function = $sct#158965000 "Medical practitioner (occupation)"
