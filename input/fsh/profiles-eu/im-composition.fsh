@@ -17,7 +17,7 @@ Description: "Clinical document used to represent a Imaging Study Report for the
 * extension contains $CompositionDiagnosticReportReferenceUrl named diagnosticreport-reference 1..1
 * identifier 1..
 * type from $ImImagingReportTypesEuVS (extensible)
-* type.coding ^slicing.discriminator.type = #value
+* type.coding ^slicing.discriminator.type = #pattern
 * type.coding ^slicing.discriminator.path = "$this"
 * type.coding ^slicing.ordered = false
 * type.coding ^slicing.rules = #open
@@ -26,9 +26,8 @@ Description: "Clinical document used to represent a Imaging Study Report for the
 * category contains imaging 1..1
 * category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
 * category[imaging].coding 1..1
-* author ^slicing.discriminator.type = #profile
-* author ^slicing.discriminator.path = "$this"
-* author ^slicing.ordered = false
+* author ^slicing.discriminator.type = #type
+* author ^slicing.discriminator.path = "resolve()"
 * author ^slicing.rules = #open
 * author contains
     author 0..* and
@@ -51,17 +50,26 @@ Description: "Clinical document used to represent a Imaging Study Report for the
 * custodian only Reference($EuOrganizationUrl)
 * custodian ^short = "Organization that manages the Imaging Report"
 * event ^slicing.discriminator.type = #value
-* event ^slicing.discriminator.path = "detail.concept"
+// CHANGE 1: Discriminate based on the System URL, not the whole concept
+* event ^slicing.discriminator.path = "detail.concept.coding.system"
 * event ^slicing.ordered = false
 * event ^slicing.rules = #open
 * event contains
     imagingstudy 1..* and
     procedure 1..*
+
+// CHANGE 2: Assign the specific systems to the slices so the validator can match them
+// Slice 1: Imaging Study (Modality) uses DICOM
+* event[imagingstudy].detail.concept.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
+
 * event[imagingstudy] ^short = "Modality"
 * event[imagingstudy] ^definition = "The type of imaging modality used to perform the study."
 * event[imagingstudy].detail 1..
 * event[imagingstudy].detail only CodeableReference($ImagingStudyEuImagingUrl)
 * event[imagingstudy].detail from $sect_CID_33.html (extensible)
+
+* event[procedure].detail.concept.coding.system = "http://snomed.info/sct"
+
 * event[procedure] ^short = "Study Type"
 * event[procedure] ^definition = "The type of imaging study performed."
 * event[procedure].detail 1..
@@ -88,8 +96,8 @@ Description: "Clinical document used to represent a Imaging Study Report for the
 * section[imagingstudy] ^definition = "This section holds information related to the imaging studies covered by this report."
 * section[imagingstudy].extension contains http://hl7.org/fhir/StructureDefinition/note named note 0..*
 * section[imagingstudy].code = $loinc#18726-0
-* section[imagingstudy].entry ^slicing.discriminator.type = #profile
-* section[imagingstudy].entry ^slicing.discriminator.path = "$this"
+* section[imagingstudy].entry ^slicing.discriminator.type = #type
+* section[imagingstudy].entry ^slicing.discriminator.path = "resolve()"
 * section[imagingstudy].entry ^slicing.ordered = false
 * section[imagingstudy].entry ^slicing.rules = #open
 * section[imagingstudy].entry contains imagingstudy 1..*
@@ -100,8 +108,8 @@ Description: "Clinical document used to represent a Imaging Study Report for the
 * section[order] ^definition = "This section holds information related to the order for the imaging study."
 * section[order].extension contains http://hl7.org/fhir/StructureDefinition/note named note 0..*
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[order].entry ^slicing.discriminator.type = #profile
-* section[order].entry ^slicing.discriminator.path = "$this"
+* section[order].entry ^slicing.discriminator.type = #type
+* section[order].entry ^slicing.discriminator.path = "resolve()"
 * section[order].entry ^slicing.ordered = false
 * section[order].entry ^slicing.rules = #open
 * section[order].entry contains order 0..*
@@ -114,8 +122,8 @@ Description: "Clinical document used to represent a Imaging Study Report for the
 * section[procedure] ^short = "Procedure"
 * section[procedure].extension contains http://hl7.org/fhir/StructureDefinition/note named note 0..*
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].entry ^slicing.discriminator.type = #profile
-* section[procedure].entry ^slicing.discriminator.path = "$this"
+* section[procedure].entry ^slicing.discriminator.type = #type
+* section[procedure].entry ^slicing.discriminator.path = "resolve()"
 * section[procedure].entry ^slicing.ordered = false
 * section[procedure].entry ^slicing.rules = #open
 * section[procedure].entry contains procedure 0..*
@@ -123,52 +131,59 @@ Description: "Clinical document used to represent a Imaging Study Report for the
 * section[comparison] ^short = "History"
 * section[comparison].extension contains http://hl7.org/fhir/StructureDefinition/note named note 0..*
 * section[comparison].code = $loinc#18834-2 "Radiology Comparison study (narrative)"
-* section[comparison].entry ^slicing.discriminator.type = #profile
-* section[comparison].entry ^slicing.discriminator.path = "$this"
+* section[comparison].entry ^slicing.discriminator.type = #type
+* section[comparison].entry ^slicing.discriminator.path = "resolve()"
 * section[comparison].entry ^slicing.ordered = false
 * section[comparison].entry ^slicing.rules = #open
-* section[comparison].entry contains comparedstudy 0..*
-* section[comparison].entry[comparedstudy] only Reference($ImagingStudyEuImagingUrl or $ImagingSelectionEuImagingUrl)
+* section[comparison].entry contains 
+    compared-study 0..* and
+    compared-selection 0..*
+* section[comparison].entry[compared-study] only Reference($ImagingStudyEuImagingUrl)
+* section[comparison].entry[compared-selection] only Reference($ImagingSelectionEuImagingUrl)
 * section[findings] ^short = "Findings"
 * section[findings].extension contains http://hl7.org/fhir/StructureDefinition/note named note 0..*
 * section[findings].code = $loinc#59776-5 "Findings"
-* section[findings].entry ^slicing.discriminator.type = #profile
-* section[findings].entry ^slicing.discriminator.path = "$this"
+* section[findings].entry ^slicing.discriminator.type = #type
+* section[findings].entry ^slicing.discriminator.path = "resolve()"
 * section[findings].entry ^slicing.ordered = false
 * section[findings].entry ^slicing.rules = #open
 * section[findings].entry contains
     finding 0..* and
-    keyimage 0..*
+    keyimage-ref 0..* and
+    keyimage-sel 0..*
 * section[findings].entry[finding] only Reference($FindingEuImagingUrl)
-* section[findings].entry[keyimage] only Reference($DocumentReferenceKeyImageEuImagingUrl or $KeyImageImagingSelectionEuImagingUrl)
+* section[findings].entry[keyimage-ref] only Reference($DocumentReferenceKeyImageEuImagingUrl)
+* section[findings].entry[keyimage-sel] only Reference($KeyImageImagingSelectionEuImagingUrl)
 * section[impression] ^short = "Impressions"
 * section[impression].extension contains http://hl7.org/fhir/StructureDefinition/note named note 0..*
 * section[impression].code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
-* section[impression].entry ^slicing.discriminator.type = #profile
-* section[impression].entry ^slicing.discriminator.path = "$this"
+* section[impression].entry ^slicing.discriminator.type = #type
+* section[impression].entry ^slicing.discriminator.path = "resolve()"
 * section[impression].entry ^slicing.ordered = false
 * section[impression].entry ^slicing.rules = #open
 * section[impression].entry contains
     finding 0..* and
     impression 0..* and
-    keyimage 0..*
+    keyimage-ref 0..* and
+    keyimage-sel 0..*
 * section[impression].entry[finding] only Reference($FindingEuImagingUrl)
 * section[impression].entry[impression] only Reference($EuConditionUrl)
-* section[impression].entry[keyimage] only Reference($DocumentReferenceKeyImageEuImagingUrl or $KeyImageImagingSelectionEuImagingUrl)
+* section[impression].entry[keyimage-ref] only Reference($DocumentReferenceKeyImageEuImagingUrl)
+* section[impression].entry[keyimage-sel] only Reference($KeyImageImagingSelectionEuImagingUrl)
 * section[recommendation] ^short = "Recommendations"
 * section[recommendation].extension contains http://hl7.org/fhir/StructureDefinition/note named note 0..*
 * section[recommendation].code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
-* section[recommendation].entry ^slicing.discriminator.type = #profile
-* section[recommendation].entry ^slicing.discriminator.path = "$this"
+* section[recommendation].entry ^slicing.discriminator.type = #type
+* section[recommendation].entry ^slicing.discriminator.path = "resolve()"
 * section[recommendation].entry ^slicing.ordered = false
 * section[recommendation].entry ^slicing.rules = #open
 * section[recommendation].entry contains careplan 0..*
 * section[recommendation].entry[careplan] only Reference($EuCarePlanUrl)
 * section[communication] ^short = "Communications"
 * section[communication].extension contains http://hl7.org/fhir/StructureDefinition/note named note 0..*
-* section[communication].code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
+* section[communication].code = $loinc#68604-8 "Radiology Diagnostic study note"
 
 Invariant: eu-imaging-composition-1
 Description: "When a section is empty, the emptyReason extension SHALL be present."
 * severity = #error
-* expression = "entry.empty() and emptyReason.exists()"
+* expression = "entry.exists() or emptyReason.exists()"
