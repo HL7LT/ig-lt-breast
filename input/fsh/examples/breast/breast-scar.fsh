@@ -36,6 +36,18 @@ Description: "An example instance of a breast scar observation."
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
 // #inline example of the BodyStructureLtBreast
-* contained[0] = breast-body-structure-right-upper-outer-example
-* bodyStructure.reference = "#breast-body-structure-right-upper-outer-example"
+* contained[0] = breast-body-structure-right-upper-outer
+* bodyStructure.reference = "#breast-body-structure-right-upper-outer"
 * valueCodeableConcept = $sct#442523003 "Surgical scar finding"
+
+
+Instance: breast-body-structure-right-upper-outer-example
+InstanceOf: BodyStructureLtBreast
+Usage: #inline
+Title: "Example Body Structure for Breast Scar"
+Description: "Right breast — upper outer quadrant."
+// This is the ID the reference must match:
+* id = "breast-body-structure-right-upper-outer"
+* patient = Reference(Patient/example-patient)
+* includedStructure[0].laterality = $sct#24028007 "Right"
+* includedStructure[0].structure = $sct#76365002 "Upper outer quadrant of breast"
