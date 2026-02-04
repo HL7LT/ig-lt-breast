@@ -12,11 +12,11 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * title = "Breast Cancer Prevention Program – Diagnostic Process Summary"
 
 * subject = Reference(example-patient)
-* author[author] = Reference(PractitionerRole/example-radiologist)
-* custodian = Reference(Organization/example-hospital)
+* author = Reference(PractitionerRole/example-practitioner-role)
+* custodian = Reference(Organization/example-organization)
 
 // Required extension
-* extension[diagnosticreport-reference].valueReference = Reference(DiagnosticReport/mammogram-diagnosticreport-example)
+* extension[diagnosticreport-reference].valueReference = Reference(DiagnosticReport/breast-diagnostic-report)
 
 // Required events
 * event[imagingstudy].detail.concept = $dcm#MG "Mammography"

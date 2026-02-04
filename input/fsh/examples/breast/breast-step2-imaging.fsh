@@ -40,7 +40,7 @@ Title: "Example – Mammography Imaging Study"
 Instance: breast-imagingstudy-previos-example
 InstanceOf: ImagingStudy
 Usage: #example
-Title: "Example – Mammography Imaging Study"
+Title: "Example – Previous Mammography Imaging Study"
 * status = #available
 * subject = Reference(example-patient)
 * encounter = Reference(ExampleBreastStep2ImagingEncounter)
@@ -57,7 +57,7 @@ Usage: #example
 Title: "Example – Mammography Radiation Dose"
 * status = #final
 * category = $observation-category#imaging "Imaging"
-* code = $sct#363787002 "Radiation dose (observable entity)"
+* code = $sct#363787002 "Observable entity"
 * subject = Reference(example-patient)
 * encounter = Reference(ExampleBreastStep2ImagingEncounter)
 * effectiveDateTime = "2024-06-15T10:15:00+03:00"
