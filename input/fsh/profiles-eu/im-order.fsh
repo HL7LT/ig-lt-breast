@@ -29,6 +29,11 @@ Description: "This profile on ServiceRequest represents the order for the Imagin
 * category ^slicing.rules = #open
 * category contains imaging 1..1
 * category[imaging] = $sct#363679005 "Imaging"
+
+* code ^short = "The procedure or service requested"
+* code ^definition = "A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested."
+* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual or organization."
+
 * supportingInfo ^slicing.discriminator.type = #value
 * supportingInfo ^slicing.discriminator.path = "$this"
 * supportingInfo ^slicing.ordered = false
