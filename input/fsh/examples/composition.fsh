@@ -22,10 +22,8 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * event[imagingstudy].detail.concept = $dcm#MG "Mammography"
 * event[procedure].detail.concept = $sct#71651007 "Mammography (procedure)"
 
-
-// ---------------------
+// -----------------
 // Sections
-// ---------------------
 
 // Imaging Study
 * section[imagingstudy].title = "Imaging Study"
