@@ -45,7 +45,7 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * section[history].title = "History"
 * section[history].text.status = #generated
 * section[history].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Asymptomatic screening participant.</div>"
-
+* section[history].entry[+] = Reference(Observation/breast-history-disease-example)
 
 // Procedure
 * section[procedure].title = "Procedure"
