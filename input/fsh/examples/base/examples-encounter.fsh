@@ -48,3 +48,14 @@ Description: "The specific encounter where the breast history and palpation were
   * start = "2024-01-15T10:00:00+02:00"
   * end = "2024-01-15T10:30:00+02:00"
 * serviceProvider = Reference(Organization/example-organization)
+
+Instance: breast-diagnostic-report
+InstanceOf: DiagnosticReport
+Usage: #example
+Title: "Example Breast Diagnostic Report"
+* status = #final
+* code = $sct#71651007 "Mammography"
+* subject = Reference(Patient/example-patient)
+* performer = Reference(Practitioner/example-doctor)
+* issued = "2026-01-10T10:00:00+02:00"
+* result[0] = Reference(Observation/example-birads-cat4)

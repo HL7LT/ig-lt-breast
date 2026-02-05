@@ -34,18 +34,6 @@ Title: "Right Breast – Upper Inner Quadrant"
 * includedStructure[0].structure = $sct#77831004 "Upper inner quadrant of breast"
 * includedStructure[0].laterality = $sct#24028007 "Right"
 
-
-// Inline example of BodyStructure
-Instance: breast-body-structure-right-upper-outer-example
-InstanceOf: BodyStructureLtBreast
-Usage: #inline
-Title: "Example Body Structure for Breast Scar"
-Description: "Right breast — upper outer quadrant."
-* id = "breast-body-structure-right-upper-outer"
-* patient = Reference(Patient/example-patient)
-* includedStructure[0].laterality = $sct#24028007 "Right (qualifier value)"
-* includedStructure[0].structure = $sct#76365002 "Upper outer quadrant of breast"
-
 // Inline example of BodyStructure
 Instance: breast-body-structure-multisite
 InstanceOf: BodyStructureLtBreast

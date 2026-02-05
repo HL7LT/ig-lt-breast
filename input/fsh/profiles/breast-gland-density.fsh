@@ -1,6 +1,6 @@
 // Profile: LT Gland Density
 Profile: BreastGlandDensity
-Parent: Observation
+Parent: LTBaseObservation
 Id: breast-gland-density
 Title: "Breast Gland Density"
 Description: "Breast gland density observation according to ACR BI-RADS classification."
@@ -38,6 +38,6 @@ Title: "Example – Breast Density: Fatty"
 * subject = Reference(example-patient)
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
-* valueCodeableConcept = $sct#129716005 "Almost entirely fat breast composition (finding)"
+* valueCodeableConcept = $sct#129716005
 * bodySite = $sct#76752008 "Breast"
 * note.text = "Mammography shows predominantly fatty breast density."

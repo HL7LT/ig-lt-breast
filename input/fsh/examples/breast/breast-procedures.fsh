@@ -9,6 +9,6 @@ Title: "Example – Breast Palpation Procedure"
 * encounter = Reference(Encounter/example-encounter1)
 * occurrenceDateTime = "2024-06-15T09:40:00+03:00"
 * performer[performer]
-  * actor = Reference(Practitioner/example-practitioner)
+  * actor = Reference(PractitionerRole/example-practitioner-role) 
   * function = $sct#223366009 "Healthcare professional"
 

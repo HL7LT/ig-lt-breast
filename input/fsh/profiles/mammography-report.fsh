@@ -17,8 +17,8 @@ Description: "A Diagnostic Report for Mammography imaging studies (EU)."
 * encounter only Reference(LTBaseEncounter)
 
 * result MS
-* result ^slicing.discriminator[0].type = #value
-* result ^slicing.discriminator[0].path = "url" 
+* result ^slicing.discriminator[0].type = #profile
+* result ^slicing.discriminator[0].path = "resolve()" 
 * result ^slicing.rules = #open
 
 * result contains birads 0..*

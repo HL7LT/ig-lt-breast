@@ -12,11 +12,11 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * title = "Breast Cancer Prevention Program – Diagnostic Process Summary"
 
 * subject = Reference(example-patient)
-* author[author] = Reference(PractitionerRole/example-radiologist)
-* custodian = Reference(Organization/example-hospital)
+* author = Reference(PractitionerRole/example-practitioner-role)
+* custodian = Reference(Organization/example-organization)
 
 // Required extension
-* extension[diagnosticreport-reference].valueReference = Reference(DiagnosticReport/mammogram-diagnosticreport-example)
+* extension[diagnosticreport-reference].valueReference = Reference(DiagnosticReport/breast-diagnostic-report)
 
 // Required events
 * event[imagingstudy].detail.concept = $dcm#MG "Mammography"
@@ -43,7 +43,7 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * section[history].title = "History"
 * section[history].text.status = #generated
 * section[history].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Asymptomatic screening participant.</div>"
-
+* section[history].entry[+] = Reference(Observation/breast-history-disease-example)
 
 // Procedure
 * section[procedure].title = "Procedure"
@@ -56,7 +56,7 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * section[comparison].title = "Comparison"
 * section[comparison].text.status = #generated
 * section[comparison].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Compared with prior mammogram from 2024.</div>"
-* section[comparison].entry[comparedstudy][+] = Reference(breast-imagingstudy-previos-example)
+* section[comparison].entry[compared-study][+] = Reference(breast-imagingstudy-previos-example)
 
 
 // Findings
