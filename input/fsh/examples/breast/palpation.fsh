@@ -15,5 +15,5 @@ Usage: #example
 * statusReason = $sct#443607001 "Palpable mass (finding)" 
 
 // If a practitioner performed it, add a performer
-* performer.actor = Reference(Practitioner/example-doctor)
+* performer.actor = Reference(PractitionerRole/example-practitioner-role)
 * performer.function = $sct#223366009 "Healthcare professional"
