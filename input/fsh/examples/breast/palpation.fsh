@@ -4,7 +4,7 @@ Title: "Example of Palpation Procedure"
 Usage: #example
 * status = #completed
 * code = $sct#113011001 "Palpation (procedure)"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * encounter = Reference(Encounter/example-encounter1)
 * occurrenceDateTime = "2023-08-01T10:20:00Z"
 
