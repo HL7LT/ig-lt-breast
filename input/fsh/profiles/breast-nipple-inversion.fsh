@@ -30,7 +30,7 @@ Title: "Example Breast Nipple Inversion Observation"
 Description: "An example instance of a breast nipple inversion observation."
 * status = #final
 * encounter = Reference(Encounter/example-palpation-encounter)
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
 * bodySite = $sct#76752008 "Breast"

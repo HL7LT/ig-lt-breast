@@ -32,7 +32,7 @@ Title: "Example - Breast Scar Observation"
 Description: "An example instance of a breast scar observation."
 * status = #final
 * encounter = Reference(Encounter/example-palpation-encounter)
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
 // #inline example of the BodyStructureLtBreast
@@ -48,6 +48,6 @@ Title: "Example Body Structure for Breast Scar"
 Description: "Right breast — upper outer quadrant."
 // This is the ID the reference must match:
 * id = "breast-body-structure-right-upper-outer"
-* patient = Reference(Patient/example-patient)
+* patient = Reference(example-patient-female)
 * includedStructure[0].laterality = $sct#24028007 "Right"
 * includedStructure[0].structure = $sct#76365002 "Upper outer quadrant of breast"

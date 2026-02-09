@@ -104,7 +104,7 @@ Usage: #example
 Title: "Breast Lesion - Right Cyst"
 Description: "Ultrasound finding of a cyst in the right breast at 10 o'clock."
 * status = #final
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * bodySite = $sct#73056007 "Right breast"
 * component[lesion].valueCodeableConcept = $sct#399294002 "Cyst of breast (disorder)"
@@ -121,7 +121,7 @@ Usage: #example
 Title: "Example Lesion - Left Fibroadenoma"
 Description: "Ultrasound finding of a fibroadenoma in the left breast at 3 o'clock."
 * status = #final
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * bodySite = $sct#80248007 "Left breast"
 * component[lesion].valueCodeableConcept = $sct#254845004 "Fibroadenoma of breast (disorder)"
@@ -138,7 +138,7 @@ Usage: #example
 Title: "Example Lesion - Right Malignant Tumor"
 Description: "Ultrasound finding of a malignant tumor in the right breast at 6 o'clock."
 * status = #final
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * bodySite = $sct#73056007 "Right breast"
 * component[lesion].valueCodeableConcept = $sct#254837009 "Malignant neoplasm of breast (disorder)"

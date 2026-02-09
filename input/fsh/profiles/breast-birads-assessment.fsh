@@ -24,7 +24,7 @@ InstanceOf: BiradsAssessment
 Title: "Example BI-RADS 1 – Negative"
 Usage: #example
 * status = #final
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * code = $sct#146611000146107 "Breast Imaging Reporting and Data System assessment category (observable entity)"
 * effectiveDateTime = "2023-08-01T10:00:00Z"
@@ -35,7 +35,7 @@ InstanceOf: BiradsAssessment
 Title: "Example BI-RADS 4 – Suspicious Abnormality"
 Usage: #example
 * status = #final
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * code = $sct#146611000146107 "Breast Imaging Reporting and Data System assessment category (observable entity)"
 * effectiveDateTime = "2023-08-01T10:00:00Z"

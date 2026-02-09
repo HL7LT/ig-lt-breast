@@ -60,7 +60,7 @@ InstanceOf: MammographicExaminationFinding
 Usage: #example
 Title: "Mammographic Mass – Left UOQ (12 mm)"
 * status = #final
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#7147002 "New"
@@ -78,7 +78,7 @@ InstanceOf: MammographicExaminationFinding
 Usage: #example
 Title: "Mammographic Calcification – Right LIQ"
 * status = #final
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#260388006 "No status change"
@@ -92,7 +92,7 @@ InstanceOf: MammographicExaminationFinding
 Usage: #example
 Title: "No Mammographic Architectural Distortion"
 * status = #final
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#373572006 "Clinical finding absent"
@@ -104,7 +104,7 @@ InstanceOf: MammographicExaminationFinding
 Usage: #example
 Title: "Asymmetric Tissue – Bilateral UIQ"
 * status = #final
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * component[evolution].valueCodeableConcept = $sct#35105006 "Increased"

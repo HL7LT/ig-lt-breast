@@ -7,7 +7,7 @@ Description: "An example of a ServiceRequest for breast cancer screening."
 * intent = #order
 // * category[imaging] = $sct#363679005 "Imaging (procedure)"
 * code = $sct#15886004 "Screening for cancer"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * encounter = Reference(Encounter/example-encounter1)
 * requester = Reference(Practitioner/example-practitioner)
 * authoredOn = "2024-06-15T09:20:00+03:00"

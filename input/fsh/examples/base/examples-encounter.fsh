@@ -4,7 +4,7 @@ Title: "Example of the first visit for the breast examination"
 Usage: #example
 * status = #completed
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * participant
   * type = $v3-ParticipationType#ATND "attender"
   * actor = Reference(Practitioner/example-practitioner)
@@ -21,7 +21,7 @@ Usage: #example
 // Title: "Example – Breast Imaging Visit (Step 1)"
 // * status = #completed
 // * class = $v3-ActCode#AMB "Ambulatory"
-// * subject = Reference(example-patient)
+// * subject = Reference(example-patient-female)
 // * participant
 //   * type = $v3-ParticipationType#ATND "attender"
 //   * period
@@ -40,7 +40,7 @@ Title: "Example – Palpation Encounter"
 Description: "The specific encounter where the breast history and palpation were performed."
 * status = #completed
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
-* subject = Reference(Patient/example-patient) // Ensure this matches the patient used in your other examples
+* subject = Reference(example-patient-female) // Ensure this matches the patient used in your other examples
 * participant
   * type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#ATND "attender"
   * actor = Reference(Practitioner/example-practitioner)
@@ -55,7 +55,7 @@ Usage: #example
 Title: "Example Breast Diagnostic Report"
 * status = #final
 * code = $sct#71651007 "Mammography"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-doctor)
 * issued = "2026-01-10T10:00:00+02:00"
 * result[0] = Reference(Observation/example-birads-cat4)

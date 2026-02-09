@@ -11,7 +11,7 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * date = "2026-01-10T10:00:00+02:00"
 * title = "Breast Cancer Prevention Program – Diagnostic Process Summary"
 
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * author = Reference(PractitionerRole/example-practitioner-role)
 * custodian = Reference(Organization/example-organization)
 

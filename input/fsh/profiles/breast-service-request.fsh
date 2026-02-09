@@ -30,7 +30,7 @@ Description: "A ServiceRequest instance recommending a referral to a breast surg
 * priority = #routine
 * code = $sct#306300002 "Referral to breast surgeon (procedure)"
 * occurrenceDateTime = "2025-12-15T09:00:00Z"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * requester = Reference(Practitioner/example-practitioner)
 * reason.concept = $sct#397144001 "Mammography assessment (Category 4) - Suspicious abnormality, biopsy should be considered (finding)"
 * supportingInfo = Reference(Observation/example-birads-cat4)

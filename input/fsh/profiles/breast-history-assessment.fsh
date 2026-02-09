@@ -26,7 +26,7 @@ InstanceOf: BreastHistoryAssessment
 Usage: #example
 Title: "Example – Breast Surgery History"
 * status = #final
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * encounter = Reference(Encounter/example-palpation-encounter)
 * performer = Reference(Practitioner/example-practitioner)
 * valueCodeableConcept = $sct#71661000210109 "History of operation on breast (situation)"
@@ -40,7 +40,7 @@ InstanceOf: BreastHistoryAssessment
 Usage: #example
 Title: "Example – Breast Injury History"
 * status = #final
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * encounter = Reference(Encounter/example-palpation-encounter)
 * performer = Reference(Practitioner/example-practitioner)
 * valueCodeableConcept = $sct#161586000 "History of injury (situation)"
@@ -53,7 +53,7 @@ InstanceOf: BreastHistoryAssessment
 Usage: #example
 Title: "Example – No Breast Disease History"
 * status = #final
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-female)
 * encounter = Reference(Encounter/example-palpation-encounter)
 * performer = Reference(Practitioner/example-practitioner)
 * valueCodeableConcept = $sct#700146008 "No history of malignant tumor of breast"

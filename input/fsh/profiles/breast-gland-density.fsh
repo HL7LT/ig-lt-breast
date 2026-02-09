@@ -35,7 +35,7 @@ InstanceOf: BreastGlandDensity
 Usage: #example
 Title: "Example – Breast Density: Fatty"
 * status = #final
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#129716005

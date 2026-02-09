@@ -4,7 +4,7 @@ Usage: #example
 Title: "Example – Breast Imaging Acquisition Encounter (Step 2)"
 * status = #completed
 * class = $v3-ActCode#AMB "Ambulatory"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * participant
   * type = $v3-ParticipationType#ATND "attender"
   * actor = Reference(example-practitioner)
@@ -19,7 +19,7 @@ Usage: #example
 Title: "Example – Mammography Procedure"
 * status = #completed
 * code = $sct#71651007 "Mammography (procedure)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * encounter = Reference(ExampleBreastStep2ImagingEncounter)
 * occurrenceDateTime = "2024-06-15T10:10:00+03:00"
 * performer.actor = Reference(example-practitioner)
@@ -29,7 +29,7 @@ InstanceOf: ImagingStudy
 Usage: #example
 Title: "Example – Mammography Imaging Study"
 * status = #available
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * encounter = Reference(ExampleBreastStep2ImagingEncounter)
 * started = "2024-06-15T10:10:00+03:00"
 * modality = $dicom-dcm#MG "Mammography"
@@ -42,7 +42,7 @@ InstanceOf: ImagingStudy
 Usage: #example
 Title: "Example – Previous Mammography Imaging Study"
 * status = #available
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * encounter = Reference(ExampleBreastStep2ImagingEncounter)
 * started = "2023-05-11T10:10:00+03:00"
 * modality = $dicom-dcm#MG "Mammography"
@@ -58,7 +58,7 @@ Title: "Example – Mammography Radiation Dose"
 * status = #final
 * category = $observation-category#imaging "Imaging"
 * code = $sct#363787002 "Observable entity"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * encounter = Reference(ExampleBreastStep2ImagingEncounter)
 * effectiveDateTime = "2024-06-15T10:15:00+03:00"
 * valueQuantity = 2.5 'mGy' "milligray"
@@ -69,5 +69,5 @@ Usage: #example
 Title: "Example – Breast Follow-up Care Plan"
 * status = #active
 * intent = #plan
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-female)
 * encounter = Reference(ExampleBreastStep2ImagingEncounter)
