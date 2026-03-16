@@ -1,5 +1,5 @@
 Instance: breast-skin-formation-example
-InstanceOf: BreastObservationFinding
+InstanceOf: BreastObservationFindingLtBreast
 Usage: #example
 Title: "Example – Breast Skin Formations Present"
 * status = #final

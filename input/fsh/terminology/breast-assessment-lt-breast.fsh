@@ -1,7 +1,8 @@
-ValueSet: BreastAssessment
-Id: breast-assessment
+ValueSet: BreastAssessmentLtBreast
+Id: breast-assessment-lt-breast
 Title: "Breast Assessment Services and Procedures"
 Description: "This ValueSet includes all clinical services and procedures related to the assessment and diagnostic evaluation of the breast, such as imaging, biopsy, and specialist referrals."
+* ^url = $breast-assessment-lt-breast-url
 * ^language = #en
 * ^status = #active
 * ^experimental = true

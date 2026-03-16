@@ -1,7 +1,8 @@
-ValueSet: BreastNippleAppearanceFinding
-Id: breast-nipple-appearance-finding
+ValueSet: BreastNippleAppearanceFindingLtBreast
+Id: breast-nipple-appearance-finding-lt-breast
 Title: "Breast Nipple Appearance Finding"
 Description: "SNOMED CT finding representing findings of the breast nipple appearance."
+* ^url = $breast-nipple-appearance-finding-lt-breast-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

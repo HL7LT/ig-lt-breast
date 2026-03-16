@@ -1,7 +1,8 @@
-ValueSet: BreastClockPosition
-Id: breast-clock-position
+ValueSet: BreastClockPositionLtBreast
+Id: breast-clock-position-lt-breast
 Title: "Breast Clock Position"
 Description: "Clock positions (1-12 o'clock) for localizing breast findings."
+* ^url = $breast-clock-position-lt-breast-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

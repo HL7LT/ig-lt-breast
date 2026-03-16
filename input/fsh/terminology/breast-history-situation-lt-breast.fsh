@@ -1,7 +1,8 @@
-ValueSet: BreastHistorySituation
-Id: lt-breast-history-situation
+ValueSet: BreastHistorySituationLtBreast
+Id: breast-history-situation-lt-breast
 Title: "Breast History Situations"
 Description: "A value set of SNOMED CT situations representing various types of breast history."
+* ^url = $breast-history-situation-lt-breast-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

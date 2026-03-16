@@ -71,7 +71,7 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * section[impression].title = "Impression"
 * section[impression].text.status = #generated
 * section[impression].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>BI-RADS 4: Suspicious abnormality.</div>"
-* section[impression].entry[finding][+] = Reference(example-birads-cat4)
+* section[impression].entry[finding][+] = Reference(observation-birads-cat4-example)
 
 
 // Recommendation

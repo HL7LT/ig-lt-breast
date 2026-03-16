@@ -1,7 +1,7 @@
 Instance: example-encounter1
-InstanceOf: LTBaseEncounter
-Title: "Example of the first visit for the breast examination"
+InstanceOf: EncounterLt
 Usage: #example
+Title: "Encounter: First visit for breast examination (example)"
 * status = #completed
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB
 * subject = Reference(example-patient-female)
@@ -34,9 +34,9 @@ Usage: #example
 // * serviceProvider = Reference(example-organization)
 
 Instance: example-palpation-encounter
-InstanceOf: LTBaseEncounter
+InstanceOf: EncounterLt
 Usage: #example
-Title: "Example – Palpation Encounter"
+Title: "Encounter: Palpation (example)"
 Description: "The specific encounter where the breast history and palpation were performed."
 * status = #completed
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
@@ -58,4 +58,4 @@ Title: "Example Breast Diagnostic Report"
 * subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-doctor)
 * issued = "2026-01-10T10:00:00+02:00"
-* result[0] = Reference(Observation/example-birads-cat4)
+* result[0] = Reference(Observation/observation-birads-cat4-example)

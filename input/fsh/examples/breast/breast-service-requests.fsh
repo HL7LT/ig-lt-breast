@@ -1,5 +1,5 @@
 Instance: breast-screening-request
-InstanceOf: BreastServiceRequest
+InstanceOf: BreastServiceRequestLtBreast
 Usage: #example
 Title: "Example – Breast Screening Request (Step 1)"
 Description: "An example of a ServiceRequest for breast cancer screening."

@@ -26,7 +26,7 @@
 
 
 Instance: breast-scar-example
-InstanceOf: BreastObservationFinding
+InstanceOf: BreastObservationFindingLtBreast
 Usage: #example
 Title: "Example - Breast Scar Observation"
 Description: "An example instance of a breast scar observation."

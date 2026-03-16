@@ -1,7 +1,7 @@
-Instance: ExampleBreastStep2ImagingEncounter
-InstanceOf: LTBaseEncounter
+Instance: encounter-breast-step2-imaging-example
+InstanceOf: EncounterLt
 Usage: #example
-Title: "Example – Breast Imaging Acquisition Encounter (Step 2)"
+Title: "Encounter: Breast Imaging Acquisition Step 2 (example)"
 * status = #completed
 * class = $v3-ActCode#AMB "Ambulatory"
 * subject = Reference(example-patient-female)
@@ -20,7 +20,7 @@ Title: "Example – Mammography Procedure"
 * status = #completed
 * code = $sct#71651007 "Mammography (procedure)"
 * subject = Reference(example-patient-female)
-* encounter = Reference(ExampleBreastStep2ImagingEncounter)
+* encounter = Reference(encounter-breast-step2-imaging-example)
 * occurrenceDateTime = "2024-06-15T10:10:00+03:00"
 * performer.actor = Reference(example-practitioner)
 
@@ -30,7 +30,7 @@ Usage: #example
 Title: "Example – Mammography Imaging Study"
 * status = #available
 * subject = Reference(example-patient-female)
-* encounter = Reference(ExampleBreastStep2ImagingEncounter)
+* encounter = Reference(encounter-breast-step2-imaging-example)
 * started = "2024-06-15T10:10:00+03:00"
 * modality = $dicom-dcm#MG "Mammography"
 * series[0].uid = "1.2.840.113619.2.55.3.604688654.1234"
@@ -43,7 +43,7 @@ Usage: #example
 Title: "Example – Previous Mammography Imaging Study"
 * status = #available
 * subject = Reference(example-patient-female)
-* encounter = Reference(ExampleBreastStep2ImagingEncounter)
+* encounter = Reference(encounter-breast-step2-imaging-example)
 * started = "2023-05-11T10:10:00+03:00"
 * modality = $dicom-dcm#MG "Mammography"
 * series[0].uid = "1.2.840.113619.2.55.3.604688654.1234"
@@ -59,7 +59,7 @@ Title: "Example – Mammography Radiation Dose"
 * category = $observation-category#imaging "Imaging"
 * code = $sct#363787002 "Observable entity"
 * subject = Reference(example-patient-female)
-* encounter = Reference(ExampleBreastStep2ImagingEncounter)
+* encounter = Reference(encounter-breast-step2-imaging-example)
 * effectiveDateTime = "2024-06-15T10:15:00+03:00"
 * valueQuantity = 2.5 'mGy' "milligray"
 
@@ -70,4 +70,4 @@ Title: "Example – Breast Follow-up Care Plan"
 * status = #active
 * intent = #plan
 * subject = Reference(example-patient-female)
-* encounter = Reference(ExampleBreastStep2ImagingEncounter)
+* encounter = Reference(encounter-breast-step2-imaging-example)

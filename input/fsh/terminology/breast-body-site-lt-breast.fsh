@@ -1,7 +1,8 @@
-ValueSet: BreastBodySite
-Id: breast-body-site
+ValueSet: BreastBodySiteLtBreast
+Id: breast-body-site-lt-breast
 Title: "Breast Body Site"
 Description: "Entire breast and left/right breasts."
+* ^url = $breast-body-site-lt-breast-url
 * ^status = #active
 * ^experimental = false
 * ^language = #en

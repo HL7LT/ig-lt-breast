@@ -1,7 +1,7 @@
 Instance: example-patient-female
-InstanceOf: LTBasePatient // Links this instance to the specific profile
+InstanceOf: PatientLt
 Usage: #example
-Title: "Example of Patient - Janette Petrauskaite"
+Title: "Patient: Janette Petrauskaite (example)"
 Description: "An example Patient conforming to the Lithuanian Base Profile."
 // Identifiers (Required: 1..* MS)
 * identifier[0].use = #official

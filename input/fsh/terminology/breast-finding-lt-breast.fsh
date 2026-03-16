@@ -1,7 +1,8 @@
-ValueSet: BreastFinding
-Id: breast-finding
+ValueSet: BreastFindingLtBreast
+Id: breast-finding-lt-breast
 Title: "Breast Finding"
 Description: "SNOMED CT finding representing findings on the breast."
+* ^url = $breast-finding-lt-breast-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

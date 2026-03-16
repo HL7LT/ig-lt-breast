@@ -1,7 +1,8 @@
-ValueSet: UltrasoundLesionFinding
-Id: ultrasound-lesion-finding
+ValueSet: UltrasoundLesionFindingLtBreast
+Id: ultrasound-lesion-finding-lt-breast
 Title: "Ultrasound Lesion Finding"
 Description: "Lesions findings identified during breast ultrasound."
+* ^url = $ultrasound-lesion-finding-lt-breast-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

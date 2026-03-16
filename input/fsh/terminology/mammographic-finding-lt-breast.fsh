@@ -1,8 +1,9 @@
 // Mammographic breast changes
-ValueSet: MammographicFinding
-Id: mammographic-finding
+ValueSet: MammographicFindingLtBreast
+Id: mammographic-finding-lt-breast
 Title: "Mammographic Finding"
 Description: "Findings during the mammographic procedure."
+* ^url = $mammographic-finding-lt-breast-url
 * ^status = #active
 * ^experimental = false
 * ^language = #en

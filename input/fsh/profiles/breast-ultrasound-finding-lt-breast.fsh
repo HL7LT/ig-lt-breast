@@ -1,22 +1,23 @@
-Profile: BreastUltrasoundFinding
+Profile: BreastUltrasoundFindingLtBreast
 Parent: Observation
-Id: breast-ultrasound-finding
+Id: breast-ultrasound-finding-lt-breast
 Title: "Breast Ultrasound Findings"
 Description: "A radiology observation representing one specific ultrasound lesion with localization, dimensions, and characteristics."
+* ^url = $breast-ultrasound-finding-lt-breast-url
 * ^status = #active
 * ^publisher = "HL7 Lithuania"
 * ^language = #en
 * category = $observation-category#imaging "Imaging"
 * code = $sct#47079000 "Ultrasonography of breast (procedure)"
 * subject 1..1
-* subject only Reference(LTBasePatient)
+* subject only Reference(PatientLt)
 * effective[x] 1..1
 * effective[x] only dateTime
 //* value[x] 0..0
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
 * bodySite MS
-* bodySite from BreastBodySite (required)
+* bodySite from BreastBodySiteLtBreast (required)
 * note 0..*
 * note ^short = "Lesion characteristics"
 * note ^definition = "Free text description of shape, contour, echogenicity, homogeneity, vascularity, and elasticity."
@@ -35,7 +36,7 @@ Description: "A radiology observation representing one specific ultrasound lesio
 
 * component[lesion].value[x] 1..1
 * component[lesion].value[x] only CodeableConcept
-* component[lesion].valueCodeableConcept from UltrasoundLesionFinding (required)
+* component[lesion].valueCodeableConcept from UltrasoundLesionFindingLtBreast (required)
 
 //clocks
 * component contains clock-position 1..1
@@ -45,7 +46,7 @@ Description: "A radiology observation representing one specific ultrasound lesio
 
 * component[clock-position].value[x] 1..1
 * component[clock-position].value[x] only CodeableConcept
-* component[clock-position].valueCodeableConcept from BreastClockPosition (required)
+* component[clock-position].valueCodeableConcept from BreastClockPositionLtBreast (required)
 
 //Length (mm)
 * component contains length-mm 0..1
@@ -95,55 +96,3 @@ Description:  "Records the one to three dimensions of a tumor"
 * component[tumorOtherDimension].code = $LNC#33729-5 // "Size additional dimension in Tumor"
 * component[tumorOtherDimension].value[x] only Quantity
 * component[tumorOtherDimension].value[x] from TumorSizeUnitsVS (required) */
-
-
-// Example 1: Right breast, 10 o'clock, Cyst
-Instance: example-lesion-right-10-oclock-cyst
-InstanceOf: BreastUltrasoundFinding
-Usage: #example
-Title: "Breast Lesion - Right Cyst"
-Description: "Ultrasound finding of a cyst in the right breast at 10 o'clock."
-* status = #final
-* subject = Reference(example-patient-female)
-* effectiveDateTime = "2025-10-01T09:00:00Z"
-* bodySite = $sct#73056007 "Right breast"
-* component[lesion].valueCodeableConcept = $sct#399294002 "Cyst of breast (disorder)"
-* component[clock-position].valueCodeableConcept = $sct#260322009 "10 o'clock position (qualifier value)"
-* component[length-mm].valueQuantity = 12 'mm'
-* component[width-mm].valueQuantity = 7 'mm'
-* note.text = "Smooth, round shape"
-* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable
-
-// Example 2: Left breast, 3 o'clock, Fibroadenoma
-Instance: example-lesion-left-3-oclock-fibroadenoma
-InstanceOf: BreastUltrasoundFinding
-Usage: #example
-Title: "Example Lesion - Left Fibroadenoma"
-Description: "Ultrasound finding of a fibroadenoma in the left breast at 3 o'clock."
-* status = #final
-* subject = Reference(example-patient-female)
-* effectiveDateTime = "2025-10-01T09:00:00Z"
-* bodySite = $sct#80248007 "Left breast"
-* component[lesion].valueCodeableConcept = $sct#254845004 "Fibroadenoma of breast (disorder)"
-* component[clock-position].valueCodeableConcept = $sct#260330005 "3 o'clock position (qualifier value)"
-* component[length-mm].valueQuantity = 8 'mm'
-* component[width-mm].valueQuantity = 5 'mm'
-* note.text = "Oval shape"
-* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable
-
-// Example 3: Right breast, 6 o'clock, Malignant tumor
-Instance: example-lesion-right-6-oclock-malignant-tumor
-InstanceOf: BreastUltrasoundFinding
-Usage: #example
-Title: "Example Lesion - Right Malignant Tumor"
-Description: "Ultrasound finding of a malignant tumor in the right breast at 6 o'clock."
-* status = #final
-* subject = Reference(example-patient-female)
-* effectiveDateTime = "2025-10-01T09:00:00Z"
-* bodySite = $sct#73056007 "Right breast"
-* component[lesion].valueCodeableConcept = $sct#254837009 "Malignant neoplasm of breast (disorder)"
-* component[clock-position].valueCodeableConcept = $sct#260337008 "6 o'clock position (qualifier value)"
-* component[length-mm].valueQuantity = 15 'mm'
-* component[width-mm].valueQuantity = 10 'mm'
-* note.text = "Irregular shape"
-* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable

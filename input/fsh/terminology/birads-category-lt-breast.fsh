@@ -1,7 +1,8 @@
-ValueSet: BiradsCategory
-Id: birads-category
+ValueSet: BiradsCategoryLtBreast
+Id: birads-category-lt-breast
 Title: "BI-RADS Category"
 Description: "Categories of Breast Imaging Reporting and Data System."
+* ^url = $birads-category-lt-breast-url
 * ^language = #en
 * ^status = #active
 * ^experimental = true
