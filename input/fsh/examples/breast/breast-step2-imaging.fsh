@@ -14,7 +14,7 @@ Title: "Encounter: Breast Imaging Acquisition Step 2 (example)"
 * serviceProvider = Reference(example-organization)
 
 Instance: breast-imaging-procedure-example
-InstanceOf: Procedure
+InstanceOf: ProcedureLt
 Usage: #example
 Title: "Example – Mammography Procedure"
 * status = #completed
@@ -25,9 +25,11 @@ Title: "Example – Mammography Procedure"
 * performer.actor = Reference(example-practitioner)
 
 Instance: breast-imagingstudy-example
-InstanceOf: ImagingStudy
+InstanceOf: ImagingStudyLt
 Usage: #example
 Title: "Example – Mammography Imaging Study"
+* identifier.system = "urn:dicom:uid"
+* identifier.value = "urn:oid:1.2.840.113619.2.55.3.604688654.9999"
 * status = #available
 * subject = Reference(example-patient-female)
 * encounter = Reference(encounter-breast-step2-imaging-example)
@@ -38,9 +40,11 @@ Title: "Example – Mammography Imaging Study"
 * series[0].bodySite = $sct#76752008 "Breast structure"
 
 Instance: breast-imagingstudy-previos-example
-InstanceOf: ImagingStudy
+InstanceOf: ImagingStudyLt
 Usage: #example
 Title: "Example – Previous Mammography Imaging Study"
+* identifier.system = "urn:dicom:uid"
+* identifier.value = "urn:oid:1.2.840.113619.2.55.3.604688654.8888"
 * status = #available
 * subject = Reference(example-patient-female)
 * encounter = Reference(encounter-breast-step2-imaging-example)
@@ -52,7 +56,7 @@ Title: "Example – Previous Mammography Imaging Study"
 
 
 Instance: breast-mammography-radiation-dose
-InstanceOf: ObservationEu
+InstanceOf: ObservationLt
 Usage: #example
 Title: "Example – Mammography Radiation Dose"
 * status = #final
@@ -64,7 +68,7 @@ Title: "Example – Mammography Radiation Dose"
 * valueQuantity = 2.5 'mGy' "milligray"
 
 Instance: breast-followup-careplan-example
-InstanceOf: CarePlanEu
+InstanceOf: CarePlanLt
 Usage: #example
 Title: "Example – Breast Follow-up Care Plan"
 * status = #active

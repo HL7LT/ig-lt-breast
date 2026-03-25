@@ -21,9 +21,9 @@ Description: "Breast gland density observation according to ACR BI-RADS classifi
 // Value
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from BreastGlandDensityACRLtBreast (required)
+* valueCodeableConcept from BreastGlandDensityAcrVS (required)
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
 * bodySite MS
-* bodySite from BreastBodySiteLtBreast (required)
+* bodySite from BreastBodySiteVS (required)
 * component 0..0

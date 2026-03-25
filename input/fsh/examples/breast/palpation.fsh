@@ -1,5 +1,5 @@
 Instance: example-palpation-procedure
-InstanceOf: ImProcedure
+InstanceOf: ProcedureLt
 Title: "Example of Palpation Procedure"
 Usage: #example
 * status = #completed

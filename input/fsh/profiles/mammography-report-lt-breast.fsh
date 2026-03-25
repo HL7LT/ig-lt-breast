@@ -1,43 +1,17 @@
 Profile: MammographyReportLtBreast
-//change to the ImDiagnosticReport when EU Imaging R5 is available
-//Parent: ImDiagnosticReport  # from https://build.fhir.org/ig/hl7-eu/imaging-r5
-//DiagnosticReportEuImaging come from https://build.fhir.org/ig/oijauregui/ehdsimaging-r5/en
-Parent: ImDiagnosticReport
+Parent: ImagingReportLt
 Id: mammography-report-lt-breast
-Title: "Mammography Diagnostic Report"
-Description: "A Diagnostic Report for Mammography imaging studies (EU)."
+Title: "Mammography Diagnostic Report (LT Breast)"
+Description: "A Diagnostic Report for Mammography imaging studies. Aggregates BI-RADS assessments, mammographic findings, ultrasound findings, and general breast observations."
 * ^url = $mammography-report-lt-breast-url
-* status = #final
-//* category = http://terminology.hl7.org/CodeSystem/v2-0074#IMG "Diagnostic Imaging"
-// * category contains documentType 0..1
-// * category[documentType] = http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes#imaging-report-v0-0-1 "Imaging Report V0.0.1"
-// * category[diagnostic-service] =  http://terminology.hl7.org/CodeSystem/v2-0074#IMG "Diagnostic Imaging"
+* ^status = #active
 * code.coding contains doc-type 1..1
 * code.coding[doc-type] = $sct#4231000179109 "Mammography report (record artifact)"
-//* subject only Reference($lt-patient)
 * encounter only Reference(EncounterLt)
 
+// Result references — carries structured findings from the mammography evaluation.
+// Breast observation profiles (BiradsAssessment, MammographicFinding, UltrasoundFinding, etc.)
+// are referenced via result. The parent constrains result to Reference(ObservationLt).
 * result MS
-* result ^slicing.discriminator[0].type = #profile
-* result ^slicing.discriminator[0].path = "resolve()"
-* result ^slicing.rules = #open
-
-* result contains birads 0..*
-* result[birads] only Reference(BiradsAssessmentLtBreast)
-* result[birads] ^short = "Reference to the standardized BI-RADS Assessment Observation."
-
-* result contains observation 0..*
-* result[observation] only Reference(BreastObservationFindingLtBreast)
-* result[observation] ^short = "Reference to the observation of the breast observation."
-
-* result contains mammographic 0..*
-* result[mammographic] only Reference(MammographicExaminationFindingLtBreast)
-* result[mammographic] ^short = "Reference to the observation of the Mammographic Examination."
-
-* result contains ultrasound 0..*
-* result[ultrasound] only Reference(BreastUltrasoundFindingLtBreast)
-* result[ultrasound] ^short = "Reference to the observation of the Breast Ultrasound Finding."
-
-// * result contains radiation 0..1
-// * result[radiation] only Reference($radiation-dose)
-// * result[radiation] ^short = "Reference to the radiation dose observation."
+* result ^short = "Mammography results: BI-RADS, mammographic findings, ultrasound findings, breast observations"
+* result ^definition = "References to Observation resources carrying the structured findings of the mammography evaluation."

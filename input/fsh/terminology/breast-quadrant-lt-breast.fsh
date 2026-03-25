@@ -1,8 +1,8 @@
-ValueSet: BreastQuadrantLtBreast
-Id: breast-quadrant-lt-breast
+ValueSet: BreastQuadrantVS
+Id: breast-quadrant
 Title: "Breast Quadrants"
 Description: "Quadrants of the breast."
-* ^url = $breast-quadrant-lt-breast-url
+* ^url = $breast-quadrant-vs-url
 * ^status = #active
 * ^experimental = false
 * ^language = #en

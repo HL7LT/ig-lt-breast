@@ -1,6 +1,6 @@
 
 Instance: ExampleBreastPalpation
-InstanceOf: ImProcedure
+InstanceOf: ProcedureLt
 Usage: #example
 Title: "Example – Breast Palpation Procedure"
 * status = #completed
@@ -8,7 +8,6 @@ Title: "Example – Breast Palpation Procedure"
 * subject = Reference(example-patient-female)
 * encounter = Reference(Encounter/example-encounter1)
 * occurrenceDateTime = "2024-06-15T09:40:00+03:00"
-* performer[performer]
-  * actor = Reference(PractitionerRole/example-practitioner-role) 
-  * function = $sct#223366009 "Healthcare professional"
+* performer.actor = Reference(PractitionerRole/example-practitioner-role)
+* performer.function = $sct#223366009 "Healthcare professional"
 

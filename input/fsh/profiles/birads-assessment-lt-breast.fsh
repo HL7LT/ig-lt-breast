@@ -13,8 +13,8 @@ Description: "Final radiological diagnostic conclusion according to BI-RADS clas
 * effective[x] only dateTime
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
-* valueCodeableConcept from BiradsCategoryLtBreast (required)
+* valueCodeableConcept from BiradsCategoryVS (required)
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
 * bodySite MS
-* bodySite from BreastBodySiteLtBreast (required)
+* bodySite from BreastBodySiteVS (required)

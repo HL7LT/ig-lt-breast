@@ -1,5 +1,5 @@
 Profile: BreastServiceRequestLtBreast
-Parent: ImOrder
+Parent: ServiceRequestLt
 Id: breast-service-request-lt-breast
 Title: "Breast Examination Order"
 Description: "A profile of ServiceRequest used to capture a clinical recommendation (e.g., follow-up ultrasound, surgical referral)."
@@ -8,10 +8,10 @@ Description: "A profile of ServiceRequest used to capture a clinical recommendat
 * subject 1..1 MS
 * subject only Reference(PatientLt)
 * code 1..1 MS
-* code from BreastAssessmentLtBreast (required)
+* code from BreastAssessmentVS (required)
 // Reason Code: The BI-RADS result that necessitated the recommendation is mandatory.
 * reason MS
-* reason from BiradsCategoryLtBreast (required)
+* reason from BiradsCategoryVS (required)
 // Requester (The Clinician/Report Author) is mandatory.
 * requester 1..1
 * requester only Reference(PractitionerLt or PractitionerRoleLt or OrganizationLt)
@@ -20,4 +20,4 @@ Description: "A profile of ServiceRequest used to capture a clinical recommendat
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
 * bodySite MS
-* bodySite from BreastBodySiteLtBreast (required)
+* bodySite from BreastBodySiteVS (required)

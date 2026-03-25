@@ -17,7 +17,7 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
 * bodySite MS
-* bodySite from BreastBodySiteLtBreast (required)
+* bodySite from BreastBodySiteVS (required)
 * note 0..*
 * note ^short = "Lesion characteristics"
 * note ^definition = "Free text description of shape, contour, echogenicity, homogeneity, vascularity, and elasticity."
@@ -36,7 +36,7 @@ Description: "A radiology observation representing one specific ultrasound lesio
 
 * component[lesion].value[x] 1..1
 * component[lesion].value[x] only CodeableConcept
-* component[lesion].valueCodeableConcept from UltrasoundLesionFindingLtBreast (required)
+* component[lesion].valueCodeableConcept from UltrasoundLesionFindingVS (required)
 
 //clocks
 * component contains clock-position 1..1
@@ -46,7 +46,7 @@ Description: "A radiology observation representing one specific ultrasound lesio
 
 * component[clock-position].value[x] 1..1
 * component[clock-position].value[x] only CodeableConcept
-* component[clock-position].valueCodeableConcept from BreastClockPositionLtBreast (required)
+* component[clock-position].valueCodeableConcept from BreastClockPositionVS (required)
 
 //Length (mm)
 * component contains length-mm 0..1

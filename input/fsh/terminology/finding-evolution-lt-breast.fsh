@@ -1,8 +1,8 @@
-ValueSet: FindingEvolutionLtBreast
-Id: finding-evolution-lt-breast
+ValueSet: FindingEvolutionVS
+Id: finding-evolution
 Title: "Finding Evolution"
 Description: "Evolution of findings during the mammographic procedure."
-* ^url = $finding-evolution-lt-breast-url
+* ^url = $finding-evolution-vs-url
 * ^status = #active
 * ^experimental = false
 * ^language = #en

@@ -1,9 +1,9 @@
 // Gland Density ACR ValueSet
-ValueSet: BreastGlandDensityACRLtBreast
-Id: breast-gland-density-acr-lt-breast
+ValueSet: BreastGlandDensityAcrVS
+Id: breast-gland-density-acr
 Title: "Breast Gland Density ACR"
 Description: "ACR (BI-RADS) glandular density assessment."
-* ^url = $breast-gland-density-acr-lt-breast-url
+* ^url = $breast-gland-density-acr-vs-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

@@ -15,4 +15,4 @@ Description: "BodyStructure profile representing breast structures including lat
 * includedStructure.structure 1..1 MS
 * includedStructure.laterality 1..1 MS
 * includedStructure.qualifier 0..0
-* includedStructure.structure from BreastQuadrantLtBreast (required)
+* includedStructure.structure from BreastQuadrantVS (required)

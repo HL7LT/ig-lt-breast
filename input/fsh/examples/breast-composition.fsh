@@ -1,5 +1,5 @@
 Instance: breast-adp-process-composition-example
-InstanceOf: ImComposition
+InstanceOf: BreastCompositionLtBreast
 Usage: #example
 Title: "Example – Breast Cancer ADP Diagnostic Process Summary"
 Description: "ImComposition example summarizing the breast cancer diagnostic process."
@@ -56,7 +56,7 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * section[comparison].title = "Comparison"
 * section[comparison].text.status = #generated
 * section[comparison].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Compared with prior mammogram from 2024.</div>"
-* section[comparison].entry[compared-study][+] = Reference(breast-imagingstudy-previos-example)
+* section[comparison].entry[comparedstudy][+] = Reference(breast-imagingstudy-previos-example)
 
 
 // Findings

@@ -11,17 +11,22 @@ Alias: $breast-service-request-lt-breast-url = https://hl7.lt/fhir/breast/Struct
 Alias: $breast-ultrasound-finding-lt-breast-url = https://hl7.lt/fhir/breast/StructureDefinition/breast-ultrasound-finding-lt-breast
 Alias: $mammographic-examination-finding-lt-breast-url = https://hl7.lt/fhir/breast/StructureDefinition/mammographic-examination-finding-lt-breast
 Alias: $mammography-report-lt-breast-url = https://hl7.lt/fhir/breast/StructureDefinition/mammography-report-lt-breast
+Alias: $breast-report-lt-breast-url = https://hl7.lt/fhir/breast/StructureDefinition/breast-report-lt-breast
+Alias: $breast-composition-lt-breast-url = https://hl7.lt/fhir/breast/StructureDefinition/breast-composition-lt-breast
+
+// Terminology – CodeSystem (tx.hl7.lt, no -lt-breast in path)
+Alias: $breast-questionnaire-options-cs-url = https://tx.hl7.lt/fhir/CodeSystem/breast-questionnaire-options
 
 // Terminology – ValueSet (tx.hl7.lt, no -lt-breast in path)
-Alias: $breast-assessment-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/breast-assessment
-Alias: $breast-body-site-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/breast-body-site
-Alias: $breast-clock-position-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/breast-clock-position
-Alias: $breast-finding-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/breast-finding
-Alias: $breast-gland-density-acr-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/breast-gland-density-acr
-Alias: $breast-history-situation-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/breast-history-situation
-Alias: $breast-nipple-appearance-finding-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/breast-nipple-appearance-finding
-Alias: $breast-quadrant-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/breast-quadrant
-Alias: $birads-category-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/birads-category
-Alias: $finding-evolution-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/finding-evolution
-Alias: $mammographic-finding-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/mammographic-finding
-Alias: $ultrasound-lesion-finding-lt-breast-url = https://tx.hl7.lt/fhir/ValueSet/ultrasound-lesion-finding
+Alias: $breast-assessment-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-assessment
+Alias: $breast-body-site-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-body-site
+Alias: $breast-clock-position-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-clock-position
+Alias: $breast-finding-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-finding
+Alias: $breast-gland-density-acr-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-gland-density-acr
+Alias: $breast-history-situation-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-history-situation
+Alias: $breast-nipple-appearance-finding-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-nipple-appearance-finding
+Alias: $breast-quadrant-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-quadrant
+Alias: $birads-category-vs-url = https://tx.hl7.lt/fhir/ValueSet/birads-category
+Alias: $finding-evolution-vs-url = https://tx.hl7.lt/fhir/ValueSet/finding-evolution
+Alias: $mammographic-finding-vs-url = https://tx.hl7.lt/fhir/ValueSet/mammographic-finding
+Alias: $ultrasound-lesion-finding-vs-url = https://tx.hl7.lt/fhir/ValueSet/ultrasound-lesion-finding

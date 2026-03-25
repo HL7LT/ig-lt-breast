@@ -14,11 +14,11 @@ Description: "Breast observation findings."
 * code = $sct#364370007 "Breast observable"
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from BreastFindingLtBreast (preferred)
+* valueCodeableConcept from BreastFindingVS (preferred)
 // location of the finding
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
 * bodySite MS
-* bodySite from BreastBodySiteLtBreast (required)
+* bodySite from BreastBodySiteVS (required)
 * bodyStructure ^short = "Breast side and quadrant represented using BodyStructure"
 

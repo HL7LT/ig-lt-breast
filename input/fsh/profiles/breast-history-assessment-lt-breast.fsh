@@ -13,7 +13,7 @@ Description: "Breast history assessment according to the patient saying."
 * code = $sct#161797003 "History of breast problem (situation)"
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from BreastHistorySituationLtBreast (preferred)
+* valueCodeableConcept from BreastHistorySituationVS (preferred)
 // location of the finding
 * bodyStructure 0..1
 * bodyStructure only Reference(BodyStructureLtBreast)

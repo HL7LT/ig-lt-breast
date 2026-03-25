@@ -24,7 +24,7 @@ Description: "Observation representing mammographic breast changes using BodyStr
 * bodyStructure MS
 * bodyStructure only Reference(BodyStructureLtBreast)
 * bodySite MS
-* bodySite from BreastBodySiteLtBreast (required)
+* bodySite from BreastBodySiteVS (required)
 * bodyStructure ^short = "Breast side and breast quadrants involved in finding"
 // Structured components
 * component 0..*
@@ -38,7 +38,7 @@ Description: "Observation representing mammographic breast changes using BodyStr
 // Slice: Type of change
 * component[Type].code = $sct#129714008 "Mammography finding (finding)"
 * component[Type].value[x] only CodeableConcept
-* component[Type].valueCodeableConcept from MammographicFindingLtBreast (required)
+* component[Type].valueCodeableConcept from MammographicFindingVS (required)
 * component[Type] ^short = "Mammographic finding"
 // Slice: Diameter of Lump (Size)
 * component[Diameter].code = $sct#248530000 "Diameter of lump (observable entity)"
@@ -49,5 +49,5 @@ Description: "Observation representing mammographic breast changes using BodyStr
 // Slice: Evolution of finding
 * component[evolution].code = $sct#288531002 "Finding status values"
 * component[evolution].value[x] only CodeableConcept
-* component[evolution].valueCodeableConcept from FindingEvolutionLtBreast (required)
+* component[evolution].valueCodeableConcept from FindingEvolutionVS (required)
 * component[evolution] ^short = "Evolution of mammographic finding"
