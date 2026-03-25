@@ -68,31 +68,4 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[width-mm].value[x] only $EuQuantityUrl
 * component[width-mm].valueQuantity = $ucum#mm
 
-
-// found example https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html
-/*
-Profile: TumorSize
-Parent:  Observation
-Id: example-tumor-size
-Title: "Tumor Size"
-Description:  "Records the one to three dimensions of a tumor"
-* code = $LNC#21889-1 //"Size Tumor"
-// other rules omitted
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
-// Contains rule
-* component contains tumorLongestDimension 1..1 and tumorOtherDimension 0..2
-// Set properties of each slice
-* component[tumorLongestDimension] ^short = "Longest tumor dimension"
-* component[tumorLongestDimension] ^definition = "The longest tumor dimension in cm or mm."
-* component[tumorLongestDimension].code = $LNC#33728-7 // "Size.maximum dimension in Tumor"
-* component[tumorLongestDimension].value[x] only Quantity
-* component[tumorLongestDimension].value[x] from TumorSizeUnitsVS (required)   // value set defined elsewhere
-* component[tumorOtherDimension] ^short = "Other tumor dimension(s)"
-* component[tumorOtherDimension] ^definition = "The second or third tumor dimension in cm or mm."
-* component[tumorOtherDimension] ^comment = "Additional tumor dimensions should be ordered from largest to smallest."
-* component[tumorOtherDimension].code = $LNC#33729-5 // "Size additional dimension in Tumor"
-* component[tumorOtherDimension].value[x] only Quantity
-* component[tumorOtherDimension].value[x] from TumorSizeUnitsVS (required) */
+// Tumor size measurement is handled by TumorMeasurementLtLab from ig-lt-lab

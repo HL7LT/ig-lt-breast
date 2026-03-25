@@ -26,6 +26,7 @@ dependencies:
   lt.hl7.fhir.vitalsigns: current
   lt.hl7.fhir.eu: 0.0.2
   hl7.fhir.eu.base-r5: 0.1.0
+  lt.hl7.fhir.lab: current
 
 
 # The pages property corresponds to IG.definition.page. SUSHI can
