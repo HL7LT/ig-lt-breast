@@ -21,7 +21,9 @@ publisher:
   email: info@medicinosnk.lt
 
 dependencies:
-  lt.hl7.fhir.base: 0.3.0
+  lt.hl7.fhir.base: current
+  lt.hl7.fhir.lifestyle: current
+  lt.hl7.fhir.vitalsigns: current
   lt.hl7.fhir.eu: 0.0.2
   hl7.fhir.eu.base-r5: 0.1.0
 
@@ -61,6 +63,14 @@ pages:
     title: Home
   workflow.md:
     title: Workflow
+  profiles.md:
+    title: Profiles
+  terminology.md:
+    title: Terminology
+  examples.md:
+    title: Examples
+  questionnaires.md:
+    title: Questionnaires
 
 
 parameters:
@@ -68,6 +78,7 @@ parameters:
   special-url:
     - https://terminology.hl7.lt/fhir
     - https://tx.hl7.lt/fhir
+    - https://tx.hl7.lt/fhir/CodeSystem/breast-questionnaire-options
 
   excludettl: true
   shownav: true
@@ -98,6 +109,10 @@ parameters:
 menu:
   Home: index.html
   Workflow: workflow.html
+  Profiles: profiles.html
+  Terminology: terminology.html
+  Examples: examples.html
+  Questionnaires: questionnaires.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
