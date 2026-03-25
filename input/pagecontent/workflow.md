@@ -6,7 +6,7 @@ The workflow begins with an imaging acquisition visit, during which the patient 
 
 ## Imaging acquisition
 
-The process starts when a clinician or screening programme initiates a breast imaging examination by placing an [imaging order](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/StructureDefinition-ImOrder.html), for example a [breast screening request](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/ServiceRequest-breast-screening-request.html). The order specifies the type of examination (screening or diagnostic), the anatomical focus, and any relevant clinical indications.
+The process starts when a clinician or screening programme initiates a breast imaging examination by placing an [imaging order](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/StructureDefinition-ImOrder.html), for example a [breast screening request](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/ServiceRequest-servicerequest-breast-screening-example.html). The order specifies the type of examination (screening or diagnostic), the anatomical focus, and any relevant clinical indications.
 
 During the imaging acquisition visit, a radiology technologist performs the imaging procedures, such as mammography (example: [Mammography Procedure](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/Procedure-ExampleMammographyProcedure.html)), tomosynthesis, or breast ultrasound. The patient is present during this encounter (example: [Breast Imaging Acquisition Encounter](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/Encounter-ExampleBreastStep2ImagingEncounter.html)).
 

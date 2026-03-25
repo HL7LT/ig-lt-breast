@@ -1,11 +1,12 @@
-Instance: example-palpation-procedure
+Instance: procedure-palpation-mass-example
 InstanceOf: ProcedureLt
-Title: "Example of Palpation Procedure"
+Title: "Procedure: Palpation – Mass Finding (example)"
+Description: "Breast palpation procedure revealing a palpable mass."
 Usage: #example
 * status = #completed
 * code = $sct#113011001 "Palpation (procedure)"
 * subject = Reference(example-patient-female)
-* encounter = Reference(Encounter/example-encounter1)
+* encounter = Reference(Encounter/encounter-first-visit-example)
 * occurrenceDateTime = "2023-08-01T10:20:00Z"
 
 // Specifying the body site (e.g., Breast)

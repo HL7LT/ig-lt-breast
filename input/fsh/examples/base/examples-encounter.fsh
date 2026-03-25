@@ -1,7 +1,8 @@
-Instance: example-encounter1
+Instance: encounter-first-visit-example
 InstanceOf: EncounterLt
 Usage: #example
-Title: "Encounter: First visit for breast examination (example)"
+Title: "Encounter: First Visit (example)"
+Description: "First outpatient encounter for breast imaging screening."
 * status = #completed
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB
 * subject = Reference(example-patient-female)
@@ -33,7 +34,7 @@ Title: "Encounter: First visit for breast examination (example)"
 //   * end = "2024-06-15T10:00:00+03:00"
 // * serviceProvider = Reference(example-organization)
 
-Instance: example-palpation-encounter
+Instance: encounter-palpation-example
 InstanceOf: EncounterLt
 Usage: #example
 Title: "Encounter: Palpation (example)"
@@ -49,10 +50,11 @@ Description: "The specific encounter where the breast history and palpation were
   * end = "2024-01-15T10:30:00+02:00"
 * serviceProvider = Reference(Organization/example-organization)
 
-Instance: breast-diagnostic-report
+Instance: diagnosticreport-breast-imaging-example
 InstanceOf: DiagnosticReport
 Usage: #example
-Title: "Example Breast Diagnostic Report"
+Title: "DiagnosticReport: Breast Imaging (example)"
+Description: "Placeholder DiagnosticReport referenced by the breast imaging composition."
 * status = #final
 * code = $sct#71651007 "Mammography"
 * subject = Reference(example-patient-female)

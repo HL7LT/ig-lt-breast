@@ -4,7 +4,7 @@ Usage: #example
 Title: "Observation: Breast Nipple Inversion (example)"
 Description: "An example instance of a breast nipple inversion observation."
 * status = #final
-* encounter = Reference(Encounter/example-palpation-encounter)
+* encounter = Reference(Encounter/encounter-palpation-example)
 * subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"

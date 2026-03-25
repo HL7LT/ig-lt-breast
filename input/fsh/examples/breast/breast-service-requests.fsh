@@ -1,14 +1,14 @@
-Instance: breast-screening-request
+Instance: servicerequest-breast-screening-example
 InstanceOf: BreastServiceRequestLtBreast
 Usage: #example
-Title: "Example – Breast Screening Request (Step 1)"
+Title: "ServiceRequest: Breast Screening (example)"
 Description: "An example of a ServiceRequest for breast cancer screening."
 * status = #active
 * intent = #order
 // * category[imaging] = $sct#363679005 "Imaging (procedure)"
 * code = $sct#15886004 "Screening for cancer"
 * subject = Reference(example-patient-female)
-* encounter = Reference(Encounter/example-encounter1)
+* encounter = Reference(Encounter/encounter-first-visit-example)
 * requester = Reference(Practitioner/example-practitioner)
 * authoredOn = "2024-06-15T09:20:00+03:00"
 * occurrencePeriod

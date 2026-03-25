@@ -13,10 +13,11 @@ Title: "Encounter: Breast Imaging Acquisition Step 2 (example)"
   * end = "2024-06-15T10:30:00+03:00"
 * serviceProvider = Reference(example-organization)
 
-Instance: breast-imaging-procedure-example
+Instance: procedure-mammography-example
 InstanceOf: ProcedureLt
 Usage: #example
-Title: "Example – Mammography Procedure"
+Title: "Procedure: Mammography (example)"
+Description: "Bilateral digital mammography procedure during imaging acquisition."
 * status = #completed
 * code = $sct#71651007 "Mammography (procedure)"
 * subject = Reference(example-patient-female)
@@ -24,10 +25,11 @@ Title: "Example – Mammography Procedure"
 * occurrenceDateTime = "2024-06-15T10:10:00+03:00"
 * performer.actor = Reference(example-practitioner)
 
-Instance: breast-imagingstudy-example
+Instance: imagingstudy-mammography-example
 InstanceOf: ImagingStudyLt
 Usage: #example
-Title: "Example – Mammography Imaging Study"
+Title: "ImagingStudy: Mammography (example)"
+Description: "Mammography imaging study with bilateral breast series."
 * identifier.system = "urn:dicom:uid"
 * identifier.value = "urn:oid:1.2.840.113619.2.55.3.604688654.9999"
 * status = #available
@@ -39,10 +41,11 @@ Title: "Example – Mammography Imaging Study"
 * series[0].modality = $dicom-dcm#MG "Mammography"
 * series[0].bodySite = $sct#76752008 "Breast structure"
 
-Instance: breast-imagingstudy-previos-example
+Instance: imagingstudy-mammography-previous-example
 InstanceOf: ImagingStudyLt
 Usage: #example
-Title: "Example – Previous Mammography Imaging Study"
+Title: "ImagingStudy: Previous Mammography (example)"
+Description: "Prior mammography study used for comparison in the current evaluation."
 * identifier.system = "urn:dicom:uid"
 * identifier.value = "urn:oid:1.2.840.113619.2.55.3.604688654.8888"
 * status = #available
@@ -55,10 +58,11 @@ Title: "Example – Previous Mammography Imaging Study"
 * series[0].bodySite = $sct#76752008 "Breast structure"
 
 
-Instance: breast-mammography-radiation-dose
+Instance: observation-radiation-dose-example
 InstanceOf: ObservationLt
 Usage: #example
-Title: "Example – Mammography Radiation Dose"
+Title: "Observation: Radiation Dose (example)"
+Description: "Radiation dose of 2.5 mGy recorded during the mammography procedure."
 * status = #final
 * category = $observation-category#imaging "Imaging"
 * code = $sct#363787002 "Observable entity"
@@ -67,10 +71,11 @@ Title: "Example – Mammography Radiation Dose"
 * effectiveDateTime = "2024-06-15T10:15:00+03:00"
 * valueQuantity = 2.5 'mGy' "milligray"
 
-Instance: breast-followup-careplan-example
+Instance: careplan-breast-followup-example
 InstanceOf: CarePlanLt
 Usage: #example
-Title: "Example – Breast Follow-up Care Plan"
+Title: "CarePlan: Breast Follow-up (example)"
+Description: "Follow-up care plan for breast screening with BI-RADS-based recommendations."
 * status = #active
 * intent = #plan
 * subject = Reference(example-patient-female)

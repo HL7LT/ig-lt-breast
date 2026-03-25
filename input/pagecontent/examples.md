@@ -52,8 +52,8 @@ This page lists all example instances in the Lithuanian Breast Diagnostics Imple
 
 | Instance | Profile | Description |
 |---|---|---|
-| [breast-scar-example](Observation-breast-scar-example.html) | BreastObservationFindingLtBreast | Surgical scar observation with body structure reference. |
-| [breast-skin-formation-example](Observation-breast-skin-formation-example.html) | BreastObservationFindingLtBreast | Skin formation (mass of skin) observation. |
+| [observation-breast-scar-example](Observation-observation-breast-scar-example.html) | BreastObservationFindingLtBreast | Surgical scar observation with body structure reference. |
+| [observation-breast-skin-formation-example](Observation-observation-breast-skin-formation-example.html) | BreastObservationFindingLtBreast | Skin formation (mass of skin) observation. |
 
 #### Body Structure Examples
 
@@ -67,9 +67,9 @@ This page lists all example instances in the Lithuanian Breast Diagnostics Imple
 | Instance | Profile | Description |
 |---|---|---|
 | [breast-service-request-birads4-example](ServiceRequest-breast-service-request-birads4-example.html) | BreastServiceRequestLtBreast | BI-RADS 4 triggered referral for biopsy. |
-| [breast-imaging-procedure-example](Procedure-breast-imaging-procedure-example.html) | ProcedureLt | Mammography procedure. |
-| [breast-imagingstudy-example](ImagingStudy-breast-imagingstudy-example.html) | ImagingStudyLt | Mammography imaging study. |
-| [breast-mammography-radiation-dose](Observation-breast-mammography-radiation-dose.html) | ObservationLt | Radiation dose observation (2.5 mGy). |
+| [procedure-mammography-example](Procedure-procedure-mammography-example.html) | ProcedureLt | Mammography procedure. |
+| [imagingstudy-mammography-example](ImagingStudy-imagingstudy-mammography-example.html) | ImagingStudyLt | Mammography imaging study. |
+| [observation-radiation-dose-example](Observation-observation-radiation-dose-example.html) | ObservationLt | Radiation dose observation (2.5 mGy). |
 
 #### Questionnaire Examples
 

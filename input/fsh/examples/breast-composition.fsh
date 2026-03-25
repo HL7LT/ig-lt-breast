@@ -1,8 +1,8 @@
-Instance: breast-adp-process-composition-example
+Instance: composition-breast-diagnostic-example
 InstanceOf: BreastCompositionLtBreast
 Usage: #example
-Title: "Example – Breast Cancer ADP Diagnostic Process Summary"
-Description: "ImComposition example summarizing the breast cancer diagnostic process."
+Title: "Composition: Breast Diagnostic Process (example)"
+Description: "Imaging composition summarizing the breast cancer ADP diagnostic process with all required sections."
 
 * identifier.system = "http://example.org/documents"
 * identifier.value = "BREAST-ADP-2026-0001"
@@ -16,7 +16,7 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * custodian = Reference(Organization/example-organization)
 
 // Required extension
-* extension[diagnosticreport-reference].valueReference = Reference(DiagnosticReport/breast-diagnostic-report)
+* extension[diagnosticreport-reference].valueReference = Reference(DiagnosticReport/diagnosticreport-breast-imaging-example)
 
 // Required events
 * event[imagingstudy].detail.concept = $dcm#MG "Mammography"
@@ -29,14 +29,14 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * section[imagingstudy].title = "Imaging Study"
 * section[imagingstudy].text.status = #generated
 * section[imagingstudy].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Screening mammography performed.</div>"
-* section[imagingstudy].entry[imagingstudy][+] = Reference(breast-imagingstudy-example)
+* section[imagingstudy].entry[imagingstudy][+] = Reference(imagingstudy-mammography-example)
 
 
 // Order
 * section[order].title = "Order"
 * section[order].text.status = #generated
 * section[order].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Screening mammography ordered.</div>"
-* section[order].entry[order][+] = Reference(breast-screening-request)
+* section[order].entry[order][+] = Reference(servicerequest-breast-screening-example)
 
 
 // History
@@ -49,22 +49,22 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * section[procedure].title = "Procedure"
 * section[procedure].text.status = #generated
 * section[procedure].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Bilateral digital mammography performed.</div>"
-* section[procedure].entry[procedure][+] = Reference(breast-imaging-procedure-example)
+* section[procedure].entry[procedure][+] = Reference(procedure-mammography-example)
 
 
 // Comparison
 * section[comparison].title = "Comparison"
 * section[comparison].text.status = #generated
 * section[comparison].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Compared with prior mammogram from 2024.</div>"
-* section[comparison].entry[comparedstudy][+] = Reference(breast-imagingstudy-previos-example)
+* section[comparison].entry[comparedstudy][+] = Reference(imagingstudy-mammography-previous-example)
 
 
 // Findings
 * section[findings].title = "Findings"
 * section[findings].text.status = #generated
 * section[findings].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Suspicious lesion in left breast.</div>"
-* section[findings].entry[finding][+] = Reference(breast-scar-example)
-* section[findings].entry[finding][+] = Reference(breast-skin-formation-example)
+* section[findings].entry[finding][+] = Reference(observation-breast-scar-example)
+* section[findings].entry[finding][+] = Reference(observation-breast-skin-formation-example)
 
 
 // Impression (BI-RADS here)
@@ -78,6 +78,6 @@ Description: "ImComposition example summarizing the breast cancer diagnostic pro
 * section[recommendation].title = "Recommendation"
 * section[recommendation].text.status = #generated
 * section[recommendation].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Core needle biopsy recommended.</div>"
-* section[recommendation].entry[careplan][+] = Reference(breast-followup-careplan-example)
+* section[recommendation].entry[careplan][+] = Reference(careplan-breast-followup-example)
 
 

@@ -23,15 +23,15 @@ Description: "Example of a complete breast diagnostic report aggregating imaging
 * issued = "2026-01-10T12:00:00+02:00"
 * performer[author] = Reference(PractitionerRole/example-practitioner-role)
 * resultsInterpreter[author] = Reference(PractitionerRole/example-practitioner-role)
-* study = Reference(breast-imagingstudy-example)
-* composition = Reference(breast-adp-process-composition-example)
+* study = Reference(imagingstudy-mammography-example)
+* composition = Reference(composition-breast-diagnostic-example)
 
 // Result observations
 * result[+] = Reference(observation-birads-1-negative-example)
 * result[+] = Reference(observation-birads-cat4-example)
 * result[+] = Reference(observation-gland-density-fatty-example)
 * result[+] = Reference(observation-mammo-mass-left-uoq-example)
-* result[+] = Reference(breast-scar-example)
+* result[+] = Reference(observation-breast-scar-example)
 * result[+] = Reference(observation-lesion-right-10-oclock-cyst-example)
 
 // Conclusion

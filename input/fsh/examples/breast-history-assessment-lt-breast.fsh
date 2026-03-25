@@ -4,7 +4,7 @@ Usage: #example
 Title: "Observation: Breast Surgery History (example)"
 * status = #final
 * subject = Reference(example-patient-female)
-* encounter = Reference(Encounter/example-palpation-encounter)
+* encounter = Reference(Encounter/encounter-palpation-example)
 * performer = Reference(Practitioner/example-practitioner)
 * valueCodeableConcept = $sct#71661000210109 "History of operation on breast (situation)"
 * note.text = "Lumpectomy of the left breast UOQ in 2018."
@@ -17,7 +17,7 @@ Usage: #example
 Title: "Observation: Breast Injury History (example)"
 * status = #final
 * subject = Reference(example-patient-female)
-* encounter = Reference(Encounter/example-palpation-encounter)
+* encounter = Reference(Encounter/encounter-palpation-example)
 * performer = Reference(Practitioner/example-practitioner)
 * valueCodeableConcept = $sct#161586000 "History of injury (situation)"
 * bodyStructure = Reference(breast-body-structure-right-uiq-example)
@@ -29,7 +29,7 @@ Usage: #example
 Title: "Observation: No Breast Disease History (example)"
 * status = #final
 * subject = Reference(example-patient-female)
-* encounter = Reference(Encounter/example-palpation-encounter)
+* encounter = Reference(Encounter/encounter-palpation-example)
 * performer = Reference(Practitioner/example-practitioner)
 * valueCodeableConcept = $sct#700146008 "No history of malignant tumor of breast"
 * effectiveDateTime = "2024-01-15T00:00:00+02:00"

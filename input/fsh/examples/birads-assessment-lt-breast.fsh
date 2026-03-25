@@ -2,6 +2,7 @@ Instance: observation-birads-1-negative-example
 InstanceOf: BiradsAssessmentLtBreast
 Usage: #example
 Title: "Observation: BI-RADS 1 – Negative (example)"
+Description: "BI-RADS category 1 (Negative) assessment – no abnormality detected."
 * status = #final
 * subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
@@ -13,6 +14,7 @@ Instance: observation-birads-cat4-example
 InstanceOf: BiradsAssessmentLtBreast
 Usage: #example
 Title: "Observation: BI-RADS 4 – Suspicious Abnormality (example)"
+Description: "BI-RADS category 4 (Suspicious Abnormality) – biopsy should be considered."
 * status = #final
 * subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)

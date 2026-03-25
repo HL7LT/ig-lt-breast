@@ -25,13 +25,13 @@
 
 
 
-Instance: breast-scar-example
+Instance: observation-breast-scar-example
 InstanceOf: BreastObservationFindingLtBreast
 Usage: #example
-Title: "Example - Breast Scar Observation"
+Title: "Observation: Breast Scar (example)"
 Description: "An example instance of a breast scar observation."
 * status = #final
-* encounter = Reference(Encounter/example-palpation-encounter)
+* encounter = Reference(Encounter/encounter-palpation-example)
 * subject = Reference(example-patient-female)
 * performer = Reference(Practitioner/example-practitioner)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
@@ -44,7 +44,7 @@ Description: "An example instance of a breast scar observation."
 Instance: breast-body-structure-right-upper-outer-example
 InstanceOf: BodyStructureLtBreast
 Usage: #inline
-Title: "Example Body Structure for Breast Scar"
+Title: "BodyStructure: Right Breast Upper Outer Quadrant (example)"
 Description: "Right breast — upper outer quadrant."
 // This is the ID the reference must match:
 * id = "breast-body-structure-right-upper-outer"
