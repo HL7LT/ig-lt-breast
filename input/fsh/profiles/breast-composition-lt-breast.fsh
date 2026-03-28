@@ -23,16 +23,25 @@ Description: "Breast-specific imaging composition extending the base imaging com
 * section[findings].entry contains
     breastObservation 0..* and
     mammographicFinding 0..* and
+    tomosynthesisFinding 0..* and
     ultrasoundFinding 0..* and
-    glandDensity 0..*
+    glandDensity 0..* and
+    parenchyma 0..* and
+    ductCondition 0..*
 * section[findings].entry[breastObservation] only Reference(BreastObservationFindingLtBreast)
 * section[findings].entry[breastObservation] ^short = "Breast observation finding (scars, skin changes)"
 * section[findings].entry[mammographicFinding] only Reference(MammographicExaminationFindingLtBreast)
 * section[findings].entry[mammographicFinding] ^short = "Mammographic examination finding"
+* section[findings].entry[tomosynthesisFinding] only Reference(TomosynthesisFindingLtBreast)
+* section[findings].entry[tomosynthesisFinding] ^short = "Tomosynthesis examination finding"
 * section[findings].entry[ultrasoundFinding] only Reference(BreastUltrasoundFindingLtBreast)
 * section[findings].entry[ultrasoundFinding] ^short = "Ultrasound lesion finding"
 * section[findings].entry[glandDensity] only Reference(BreastGlandDensityLtBreast)
 * section[findings].entry[glandDensity] ^short = "ACR breast gland density assessment"
+* section[findings].entry[parenchyma] only Reference(BreastParenchymaLtBreast)
+* section[findings].entry[parenchyma] ^short = "Ultrasound breast parenchyma structure"
+* section[findings].entry[ductCondition] only Reference(BreastDuctConditionLtBreast)
+* section[findings].entry[ductCondition] ^short = "Breast duct condition (expanded/normal)"
 
 // Impression section — add BI-RADS assessment slice
 * section[impression].entry contains

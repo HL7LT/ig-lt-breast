@@ -68,4 +68,43 @@ Description: "A radiology observation representing one specific ultrasound lesio
 * component[width-mm].value[x] only $EuQuantityUrl
 * component[width-mm].valueQuantity = $ucum#mm
 
+// --- Lymph node assessment components ---
+
+// Lymph node changes (yes/no)
+* component contains lymph-changes 0..1
+* component[lymph-changes] ^short = "Lymph node changes"
+* component[lymph-changes] ^definition = "Whether changes in axillary lymph nodes are suspected."
+* component[lymph-changes].code = $sct#300852009 "Lymph node observable (observable entity)"
+* component[lymph-changes].value[x] 1..1
+* component[lymph-changes].value[x] only CodeableConcept
+* component[lymph-changes].valueCodeableConcept from http://hl7.org/fhir/ValueSet/observation-interpretation (extensible)
+
+// Lymph node level (N1/N2/N3)
+* component contains lymph-level 0..1
+* component[lymph-level] ^short = "Lymph node involvement level"
+* component[lymph-level] ^definition = "Regional lymph node involvement level (N1, N2, N3)."
+* component[lymph-level].code = $sct#385382003 "Node category finding (finding)"
+* component[lymph-level].value[x] 1..1
+* component[lymph-level].value[x] only CodeableConcept
+* component[lymph-level].valueCodeableConcept from LymphNodeLevelVS (required)
+
+// Number of altered lymph nodes
+* component contains lymph-count 0..1
+* component[lymph-count] ^short = "Number of altered lymph nodes"
+* component[lymph-count] ^definition = "Number of altered lymph nodes in the axillary region."
+* component[lymph-count].code = $sct#444025001 "Number of lymph nodes examined by microscopy in excised specimen (observable entity)"
+* component[lymph-count].value[x] 1..1
+* component[lymph-count].value[x] only Quantity
+* component[lymph-count].valueQuantity.system = $ucum
+* component[lymph-count].valueQuantity.code = #{1}
+
+// Size of largest altered lymph node (mm)
+* component contains lymph-largest-size 0..1
+* component[lymph-largest-size] ^short = "Largest altered lymph node size"
+* component[lymph-largest-size] ^definition = "Size of the largest altered lymph node in millimeters."
+* component[lymph-largest-size].code = $sct#371479009 "Tumor size, dominant nodule (observable entity)"
+* component[lymph-largest-size].value[x] 1..1
+* component[lymph-largest-size].value[x] only Quantity
+* component[lymph-largest-size].valueQuantity = $ucum#mm
+
 // Tumor size measurement is handled by TumorMeasurementLtLab from ig-lt-lab
