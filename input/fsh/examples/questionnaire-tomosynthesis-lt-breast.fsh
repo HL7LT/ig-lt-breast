@@ -77,7 +77,7 @@ Description: "Structured data-capture form for breast tomosynthesis reporting ba
 * item[1].item[1].item[1].text = "Change entity"
 * item[1].item[1].item[1].type = #coding
 * item[1].item[1].item[1].answerOption[0].valueCoding = $breast-questionnaire-options-cs-url#finding-formation "Formation (mass)"
-* item[1].item[1].item[1].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#finding-deformation "Deformation (architectural distortion)"
+* item[1].item[1].item[1].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#finding-deformation "Architectural deformation"
 * item[1].item[1].item[1].answerOption[2].valueCoding = $breast-questionnaire-options-cs-url#finding-calcification "Calcification"
 
 * item[1].item[1].item[2].linkId = "right-size"
@@ -101,7 +101,7 @@ Description: "Structured data-capture form for breast tomosynthesis reporting ba
 * item[1].item[2].item[1].text = "Change entity"
 * item[1].item[2].item[1].type = #coding
 * item[1].item[2].item[1].answerOption[0].valueCoding = $breast-questionnaire-options-cs-url#finding-formation "Formation (mass)"
-* item[1].item[2].item[1].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#finding-deformation "Deformation (architectural distortion)"
+* item[1].item[2].item[1].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#finding-deformation "Architectural deformation"
 * item[1].item[2].item[1].answerOption[2].valueCoding = $breast-questionnaire-options-cs-url#finding-calcification "Calcification"
 
 * item[1].item[2].item[2].linkId = "left-size"
@@ -118,12 +118,12 @@ Description: "Structured data-capture form for breast tomosynthesis reporting ba
 * item[2].item[0].linkId = "birads-conclusion"
 * item[2].item[0].text = "BI-RADS conclusion"
 * item[2].item[0].type = #coding
-* item[2].item[0].answerOption[0].valueCoding = $breast-questionnaire-options-cs-url#birads-0 "BI-RADS 0 – Incomplete, additional assessment needed"
-* item[2].item[0].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#birads-1 "BI-RADS 1 – Negative"
-* item[2].item[0].answerOption[2].valueCoding = $breast-questionnaire-options-cs-url#birads-2 "BI-RADS 2 – Benign"
-* item[2].item[0].answerOption[3].valueCoding = $breast-questionnaire-options-cs-url#birads-3 "BI-RADS 3 – Probably benign"
-* item[2].item[0].answerOption[4].valueCoding = $breast-questionnaire-options-cs-url#birads-4 "BI-RADS 4 – Suspicious"
-* item[2].item[0].answerOption[5].valueCoding = $breast-questionnaire-options-cs-url#birads-5 "BI-RADS 5 – Highly suggestive of malignancy"
+* item[2].item[0].answerOption[0].valueCoding = $breast-questionnaire-options-cs-url#birads-0 "BI-RADS 0 – Incomplete examination"
+* item[2].item[0].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#birads-1 "BI-RADS 1 – No changes found"
+* item[2].item[0].answerOption[2].valueCoding = $breast-questionnaire-options-cs-url#birads-2 "BI-RADS 2 – Benign changes found"
+* item[2].item[0].answerOption[3].valueCoding = $breast-questionnaire-options-cs-url#birads-3 "BI-RADS 3 – Possibly benign changes"
+* item[2].item[0].answerOption[4].valueCoding = $breast-questionnaire-options-cs-url#birads-4 "BI-RADS 4 – Suspicious malignant finding"
+* item[2].item[0].answerOption[5].valueCoding = $breast-questionnaire-options-cs-url#birads-5 "BI-RADS 5 – Highly probable malignant finding"
 
 * item[2].item[1].linkId = "recommendations"
 * item[2].item[1].text = "Recommendations"
@@ -133,8 +133,8 @@ Description: "Structured data-capture form for breast tomosynthesis reporting ba
 * item[2].item[1].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#rec-additional-mammography "Additional mammography"
 * item[2].item[1].answerOption[2].valueCoding = $breast-questionnaire-options-cs-url#rec-ultrasound "Ultrasound examination"
 * item[2].item[1].answerOption[3].valueCoding = $breast-questionnaire-options-cs-url#rec-mri "MRI examination"
-* item[2].item[1].answerOption[4].valueCoding = $breast-questionnaire-options-cs-url#rec-biopsy "Biopsy"
-* item[2].item[1].answerOption[5].valueCoding = $breast-questionnaire-options-cs-url#rec-consultation "Consultation"
+* item[2].item[1].answerOption[4].valueCoding = $breast-questionnaire-options-cs-url#rec-biopsy "Biopsy indicated"
+* item[2].item[1].answerOption[5].valueCoding = $breast-questionnaire-options-cs-url#rec-consultation "Consultation with breast specialist"
 
 * item[2].item[2].linkId = "facility-name"
 * item[2].item[2].text = "Facility"
@@ -217,11 +217,11 @@ Description: "Tomosynthesis follow-up for BI-RADS 0 – mass found in right brea
 
 * item[2].item[0].linkId = "birads-conclusion"
 * item[2].item[0].text = "BI-RADS conclusion"
-* item[2].item[0].answer[0].valueCoding = $breast-questionnaire-options-cs-url#birads-4 "BI-RADS 4 – Suspicious"
+* item[2].item[0].answer[0].valueCoding = $breast-questionnaire-options-cs-url#birads-4 "BI-RADS 4 – Suspicious malignant finding"
 
 * item[2].item[1].linkId = "recommendations"
 * item[2].item[1].text = "Recommendations"
-* item[2].item[1].answer[0].valueCoding = $breast-questionnaire-options-cs-url#rec-biopsy "Biopsy"
+* item[2].item[1].answer[0].valueCoding = $breast-questionnaire-options-cs-url#rec-biopsy "Biopsy indicated"
 * item[2].item[1].answer[1].valueCoding = $breast-questionnaire-options-cs-url#rec-ultrasound "Ultrasound examination"
 
 * item[2].item[2].linkId = "facility-name"

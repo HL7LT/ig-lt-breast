@@ -21,32 +21,32 @@ This page lists all example instances in the Lithuanian Breast Diagnostics Imple
 | Instance | Profile | Description |
 |---|---|---|
 | [observation-gland-density-fatty-example](Observation-observation-gland-density-fatty-example.html) | BreastGlandDensityLtBreast | ACR A – Almost entirely fatty breast composition. |
-| [observation-nipple-retraction-example](Observation-observation-nipple-retraction-example.html) | BreastNippleInversionLtBreast | Nipple retraction observed. |
+| [observation-nipple-inversion-example](Observation-observation-nipple-inversion-example.html) | BreastNippleInversionLtBreast | Nipple retraction observed. |
 
 #### Mammographic Finding Examples
 
 | Instance | Profile | Description |
 |---|---|---|
-| [observation-mammographic-mass-example](Observation-observation-mammographic-mass-example.html) | MammographicExaminationFindingLtBreast | Mass finding with size and evolution status. |
-| [observation-mammographic-calcification-example](Observation-observation-mammographic-calcification-example.html) | MammographicExaminationFindingLtBreast | Calcification finding. |
-| [observation-mammographic-no-distortion-example](Observation-observation-mammographic-no-distortion-example.html) | MammographicExaminationFindingLtBreast | No architectural distortion. |
-| [observation-mammographic-asymmetry-example](Observation-observation-mammographic-asymmetry-example.html) | MammographicExaminationFindingLtBreast | Focal asymmetric tissue finding. |
+| [observation-mammo-mass-left-uoq-example](Observation-observation-mammo-mass-left-uoq-example.html) | MammographicExaminationFindingLtBreast | Mass finding in left UOQ with size and evolution status. |
+| [observation-mammo-calc-right-liq-example](Observation-observation-mammo-calc-right-liq-example.html) | MammographicExaminationFindingLtBreast | Calcification finding in right LIQ. |
+| [observation-mammo-no-distortion-example](Observation-observation-mammo-no-distortion-example.html) | MammographicExaminationFindingLtBreast | No architectural distortion. |
+| [observation-mammo-asym-bilateral-uiq-example](Observation-observation-mammo-asym-bilateral-uiq-example.html) | MammographicExaminationFindingLtBreast | Bilateral asymmetric tissue finding. |
 
 #### Ultrasound Finding Examples
 
 | Instance | Profile | Description |
 |---|---|---|
-| [observation-ultrasound-cyst-example](Observation-observation-ultrasound-cyst-example.html) | BreastUltrasoundFindingLtBreast | Simple cyst at 2 o'clock position. |
-| [observation-ultrasound-fibroadenoma-example](Observation-observation-ultrasound-fibroadenoma-example.html) | BreastUltrasoundFindingLtBreast | Fibroadenoma with measured dimensions. |
-| [observation-ultrasound-malignant-example](Observation-observation-ultrasound-malignant-example.html) | BreastUltrasoundFindingLtBreast | Suspected malignant lesion. |
+| [observation-lesion-right-10-oclock-cyst-example](Observation-observation-lesion-right-10-oclock-cyst-example.html) | BreastUltrasoundFindingLtBreast | Right breast cyst at 10 o'clock position. |
+| [observation-lesion-left-3-oclock-fibroadenoma-example](Observation-observation-lesion-left-3-oclock-fibroadenoma-example.html) | BreastUltrasoundFindingLtBreast | Left breast fibroadenoma at 3 o'clock. |
+| [observation-lesion-right-6-oclock-malignant-example](Observation-observation-lesion-right-6-oclock-malignant-example.html) | BreastUltrasoundFindingLtBreast | Right breast malignant tumor at 6 o'clock. |
 
 #### Breast History Examples
 
 | Instance | Profile | Description |
 |---|---|---|
-| [observation-breast-history-surgery-example](Observation-observation-breast-history-surgery-example.html) | BreastHistoryAssessmentLtBreast | Prior breast surgery history. |
-| [observation-breast-history-injury-example](Observation-observation-breast-history-injury-example.html) | BreastHistoryAssessmentLtBreast | History of breast injury. |
-| [observation-breast-history-disease-example](Observation-observation-breast-history-disease-example.html) | BreastHistoryAssessmentLtBreast | No breast disease history (negative finding). |
+| [observation-history-surgery-example](Observation-observation-history-surgery-example.html) | BreastHistoryAssessmentLtBreast | Prior breast surgery history. |
+| [observation-history-injury-example](Observation-observation-history-injury-example.html) | BreastHistoryAssessmentLtBreast | History of breast injury. |
+| [observation-history-disease-example](Observation-observation-history-disease-example.html) | BreastHistoryAssessmentLtBreast | No breast disease history (negative finding). |
 
 #### Observation Finding Examples
 
@@ -59,14 +59,14 @@ This page lists all example instances in the Lithuanian Breast Diagnostics Imple
 
 | Instance | Profile | Description |
 |---|---|---|
-| [body-structure-left-breast-uoq-example](BodyStructure-body-structure-left-breast-uoq-example.html) | BodyStructureLtBreast | Left breast, upper outer quadrant. |
-| [body-structure-right-breast-uiq-example](BodyStructure-body-structure-right-breast-uiq-example.html) | BodyStructureLtBreast | Right breast, upper inner quadrant. |
+| [breast-body-structure-left-uoq-example](BodyStructure-breast-body-structure-left-uoq-example.html) | BodyStructureLtBreast | Left breast, upper outer quadrant. |
+| [breast-body-structure-right-uiq-example](BodyStructure-breast-body-structure-right-uiq-example.html) | BodyStructureLtBreast | Right breast, upper inner quadrant. |
 
 #### Workflow and Procedure Examples
 
 | Instance | Profile | Description |
 |---|---|---|
-| [breast-service-request-birads4-example](ServiceRequest-breast-service-request-birads4-example.html) | BreastServiceRequestLtBreast | BI-RADS 4 triggered referral for biopsy. |
+| [servicerequest-birads-referral-cat4-example](ServiceRequest-servicerequest-birads-referral-cat4-example.html) | BreastServiceRequestLtBreast | BI-RADS 4 triggered referral for biopsy. |
 | [procedure-mammography-example](Procedure-procedure-mammography-example.html) | ProcedureLt | Mammography procedure. |
 | [imagingstudy-mammography-example](ImagingStudy-imagingstudy-mammography-example.html) | ImagingStudyLt | Mammography imaging study. |
 | [observation-radiation-dose-example](Observation-observation-radiation-dose-example.html) | ObservationLt | Radiation dose observation (2.5 mGy). |

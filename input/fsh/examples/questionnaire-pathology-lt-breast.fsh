@@ -157,7 +157,7 @@ Description: "ADP Table 7.5 — Pathological histological examination questionna
 * item[7].item[1].type = #coding
 * item[7].item[1].repeats = true
 * item[7].item[1].answerOption[0].valueCoding = $sct#71651007 "Mammography"
-* item[7].item[1].answerOption[1].valueCoding = $sct#241615005 "Breast tomosynthesis"
+* item[7].item[1].answerOption[1].valueCoding = $sct#439324009 "Digital breast tomosynthesis"
 * item[7].item[1].answerOption[2].valueCoding = $sct#16310003 "Ultrasonography"
 
 * item[7].item[2].linkId = "radiology-exam-date"

@@ -217,8 +217,8 @@ Description: "Structured data-capture form for mammogram reporting based on ADP 
 * item[5].item[0].linkId = "dynamics"
 * item[5].item[0].text = "Dynamic changes"
 * item[5].item[0].type = #coding
-* item[5].item[0].answerOption[0].valueCoding = $breast-questionnaire-options-cs-url#dynamics-none "No dynamic changes"
-* item[5].item[0].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#dynamics-negative "Negative dynamic changes"
+* item[5].item[0].answerOption[0].valueCoding = $breast-questionnaire-options-cs-url#dynamics-none "Image without negative dynamics"
+* item[5].item[0].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#dynamics-negative "Negative dynamics observed"
 
 // ---------------------------------------------------------------------------
 // Group 7 – Related changes
@@ -255,12 +255,12 @@ Description: "Structured data-capture form for mammogram reporting based on ADP 
 * item[7].item[0].linkId = "birads-conclusion"
 * item[7].item[0].text = "BI-RADS conclusion"
 * item[7].item[0].type = #coding
-* item[7].item[0].answerOption[0].valueCoding = $breast-questionnaire-options-cs-url#birads-0 "BI-RADS 0 – Incomplete, additional assessment needed"
-* item[7].item[0].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#birads-1 "BI-RADS 1 – Negative"
-* item[7].item[0].answerOption[2].valueCoding = $breast-questionnaire-options-cs-url#birads-2 "BI-RADS 2 – Benign"
-* item[7].item[0].answerOption[3].valueCoding = $breast-questionnaire-options-cs-url#birads-3 "BI-RADS 3 – Probably benign"
-* item[7].item[0].answerOption[4].valueCoding = $breast-questionnaire-options-cs-url#birads-4 "BI-RADS 4 – Suspicious"
-* item[7].item[0].answerOption[5].valueCoding = $breast-questionnaire-options-cs-url#birads-5 "BI-RADS 5 – Highly suggestive of malignancy"
+* item[7].item[0].answerOption[0].valueCoding = $breast-questionnaire-options-cs-url#birads-0 "BI-RADS 0 – Incomplete examination"
+* item[7].item[0].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#birads-1 "BI-RADS 1 – No changes found"
+* item[7].item[0].answerOption[2].valueCoding = $breast-questionnaire-options-cs-url#birads-2 "BI-RADS 2 – Benign changes found"
+* item[7].item[0].answerOption[3].valueCoding = $breast-questionnaire-options-cs-url#birads-3 "BI-RADS 3 – Possibly benign changes"
+* item[7].item[0].answerOption[4].valueCoding = $breast-questionnaire-options-cs-url#birads-4 "BI-RADS 4 – Suspicious malignant finding"
+* item[7].item[0].answerOption[5].valueCoding = $breast-questionnaire-options-cs-url#birads-5 "BI-RADS 5 – Highly probable malignant finding"
 
 * item[7].item[1].linkId = "recommendations"
 * item[7].item[1].text = "Recommendations"
@@ -270,8 +270,8 @@ Description: "Structured data-capture form for mammogram reporting based on ADP 
 * item[7].item[1].answerOption[1].valueCoding = $breast-questionnaire-options-cs-url#rec-additional-mammography "Additional mammography"
 * item[7].item[1].answerOption[2].valueCoding = $breast-questionnaire-options-cs-url#rec-ultrasound "Ultrasound examination"
 * item[7].item[1].answerOption[3].valueCoding = $breast-questionnaire-options-cs-url#rec-mri "MRI examination"
-* item[7].item[1].answerOption[4].valueCoding = $breast-questionnaire-options-cs-url#rec-biopsy "Biopsy"
-* item[7].item[1].answerOption[5].valueCoding = $breast-questionnaire-options-cs-url#rec-consultation "Consultation"
+* item[7].item[1].answerOption[4].valueCoding = $breast-questionnaire-options-cs-url#rec-biopsy "Biopsy indicated"
+* item[7].item[1].answerOption[5].valueCoding = $breast-questionnaire-options-cs-url#rec-consultation "Consultation with breast specialist"
 
 * item[7].item[2].linkId = "conclusion-notes"
 * item[7].item[2].text = "Notes"
@@ -375,7 +375,7 @@ Description: "Screening mammogram example – ACR B density, no findings, BI-RAD
 
 * item[5].item[0].linkId = "dynamics"
 * item[5].item[0].text = "Dynamic changes"
-* item[5].item[0].answer[0].valueCoding = $breast-questionnaire-options-cs-url#dynamics-none "No dynamic changes"
+* item[5].item[0].answer[0].valueCoding = $breast-questionnaire-options-cs-url#dynamics-none "Image without negative dynamics"
 
 // Group 7 – Related changes
 * item[6].linkId = "grp-related-changes"
@@ -399,7 +399,7 @@ Description: "Screening mammogram example – ACR B density, no findings, BI-RAD
 
 * item[7].item[0].linkId = "birads-conclusion"
 * item[7].item[0].text = "BI-RADS conclusion"
-* item[7].item[0].answer[0].valueCoding = $breast-questionnaire-options-cs-url#birads-1 "BI-RADS 1 – Negative"
+* item[7].item[0].answer[0].valueCoding = $breast-questionnaire-options-cs-url#birads-1 "BI-RADS 1 – No changes found"
 
 * item[7].item[1].linkId = "conclusion-notes"
 * item[7].item[1].text = "Notes"

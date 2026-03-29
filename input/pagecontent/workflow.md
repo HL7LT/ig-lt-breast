@@ -18,11 +18,11 @@ After acquisition, the imaging studies are interpreted by a radiologist, usually
 
 The radiologist reviews the imaging data and documents findings such as masses, calcifications, asymmetries, or architectural distortions as structured observations, for example:
 
-- [Breast Observation Finding](StructureDefinition-breast-observation-finding.html),
+- [Breast Observation Finding](StructureDefinition-breast-observation-finding-lt-breast.html),
 - [Breast Ultrasound Findings](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/StructureDefinition-breast-ultrasound-finding.html),
-- [Breast Gland Density](StructureDefinition-breast-gland-density.html).
+- [Breast Gland Density](StructureDefinition-breast-gland-density-lt-breast.html).
 
-The radiologist then assigns a BI-RADS category using a [BI-RADS Assessment](StructureDefinition-birads-assessment.html) (example: [BI-RADS 4](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/Observation-example-birads-cat4.html)) and compiles the results into a structured [imaging diagnostic report](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/StructureDefinition-mammography-lt.html).
+The radiologist then assigns a BI-RADS category using a [BI-RADS Assessment](StructureDefinition-birads-assessment-lt-breast.html) (example: [BI-RADS 4](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/Observation-example-birads-cat4.html)) and compiles the results into a structured [imaging diagnostic report](https://build.fhir.org/ig/HL7LT/ig-lt-breast/en/StructureDefinition-mammography-lt.html).
 
 The diagnostic report includes:
 
