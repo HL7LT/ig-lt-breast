@@ -2,6 +2,7 @@ Instance: observation-history-surgery-example
 InstanceOf: BreastHistoryAssessmentLtBreast
 Usage: #example
 Title: "Observation: Breast Surgery History (example)"
+Description: "History of breast operation — lumpectomy of the left breast UOQ in 2018."
 * status = #final
 * subject = Reference(example-patient-female)
 * encounter = Reference(Encounter/encounter-palpation-example)
@@ -15,6 +16,7 @@ Instance: observation-history-injury-example
 InstanceOf: BreastHistoryAssessmentLtBreast
 Usage: #example
 Title: "Observation: Breast Injury History (example)"
+Description: "History of breast injury to the right breast upper inner quadrant."
 * status = #final
 * subject = Reference(example-patient-female)
 * encounter = Reference(Encounter/encounter-palpation-example)
@@ -27,6 +29,7 @@ Instance: observation-history-disease-example
 InstanceOf: BreastHistoryAssessmentLtBreast
 Usage: #example
 Title: "Observation: No Breast Disease History (example)"
+Description: "Negative finding — no history of malignant tumor of breast."
 * status = #final
 * subject = Reference(example-patient-female)
 * encounter = Reference(Encounter/encounter-palpation-example)

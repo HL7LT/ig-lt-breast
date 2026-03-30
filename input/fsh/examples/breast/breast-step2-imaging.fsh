@@ -2,6 +2,7 @@ Instance: encounter-breast-step2-imaging-example
 InstanceOf: EncounterLt
 Usage: #example
 Title: "Encounter: Breast Imaging Acquisition Step 2 (example)"
+Description: "Ambulatory encounter for breast imaging acquisition including mammography, imaging studies, and radiation dose recording."
 * status = #completed
 * class = $v3-ActCode#AMB "Ambulatory"
 * subject = Reference(example-patient-female)

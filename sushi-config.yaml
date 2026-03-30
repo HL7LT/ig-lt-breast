@@ -81,6 +81,7 @@ parameters:
     - https://tx.hl7.lt/fhir
     - https://tx.hl7.lt/fhir/CodeSystem/breast-questionnaire-options
     - https://tx.hl7.lt/fhir/CodeSystem/snomed-breast-extension
+    - https://tx.hl7.lt/fhir/ValueSet/breast-recommendation
 
   excludettl: true
   shownav: true

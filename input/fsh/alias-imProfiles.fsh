@@ -17,4 +17,6 @@ Alias: $OrderEuImagingUrl                      = http://hl7.eu/fhir/imaging-r5/S
 Alias: $ProcedureEuImagingUrl                  = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImProcedure
 Alias: $StudyInstanceUidIdentifierEuImagingUrl = http://hl7.eu/fhir/imaging-r5/StructureDefinition/im-study-instance-uid-identifier
 
+Alias: $ObservationRadiationDoseEuImagingUrl   = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ObservationRadiationDoseEuImaging
+
 Alias: $CompositionDiagnosticReportReferenceUrl = http://hl7.eu/fhir/imaging-r5/StructureDefinition/im-composition-diagnosticReportReference

@@ -1,5 +1,5 @@
 Profile: TomosynthesisFindingLtBreast
-Parent: Observation
+Parent: ObservationLt
 Id: tomosynthesis-finding-lt-breast
 Title: "Tomosynthesis Examination Finding (LT Breast)"
 Description: "Observation representing tomosynthesis breast findings including finding type, size, cross-section localization in CC and MLO projections, and finding evolution."
@@ -21,6 +21,10 @@ Description: "Observation representing tomosynthesis breast findings including f
 * bodySite from BreastBodySiteVS (required)
 
 // Structured components
+* hasMember MS
+* hasMember only Reference(BiradsAssessmentLtBreast)
+* hasMember ^short = "BI-RADS assessment conclusion for this tomosynthesis examination"
+
 * component ^slicing.discriminator[0].type = #pattern
 * component ^slicing.discriminator[0].path = "code"
 * component ^slicing.rules = #open

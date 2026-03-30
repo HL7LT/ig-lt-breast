@@ -1,5 +1,5 @@
 Profile: BreastNippleInversionLtBreast
-Parent: Observation
+Parent: ObservationLt
 Id: breast-nipple-inversion-lt-breast
 Title: "Breast Nipple Inversion"
 Description: "Observation representing nipple inversion assessment in a patient summary."

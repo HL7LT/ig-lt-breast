@@ -6,7 +6,7 @@ Description: "A ServiceRequest instance recommending a referral to a breast surg
 * status = #active
 * intent = #order
 * priority = #routine
-* code = $sct#306300002 "Referral to breast surgeon (procedure)"
+* code = $breast-questionnaire-options-cs-url#rec-breast-specialist "Breast specialist consultation"
 * occurrenceDateTime = "2025-12-15T09:00:00Z"
 * subject = Reference(example-patient-female)
 * requester = Reference(Practitioner/example-practitioner)

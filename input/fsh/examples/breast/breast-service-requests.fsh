@@ -6,7 +6,7 @@ Description: "An example of a ServiceRequest for breast cancer screening."
 * status = #active
 * intent = #order
 // * category[imaging] = $sct#363679005 "Imaging (procedure)"
-* code = $sct#15886004 "Screening for cancer"
+* code = $breast-questionnaire-options-cs-url#rec-mammographic-control "Mammographic control"
 * subject = Reference(example-patient-female)
 * encounter = Reference(Encounter/encounter-first-visit-example)
 * requester = Reference(Practitioner/example-practitioner)

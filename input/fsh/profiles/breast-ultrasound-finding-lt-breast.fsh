@@ -1,5 +1,5 @@
 Profile: BreastUltrasoundFindingLtBreast
-Parent: Observation
+Parent: ObservationLt
 Id: breast-ultrasound-finding-lt-breast
 Title: "Breast Ultrasound Findings"
 Description: "A radiology observation representing one specific ultrasound lesion with localization, dimensions, and characteristics."

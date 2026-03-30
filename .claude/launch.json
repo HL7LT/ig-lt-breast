@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ig-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "output"],
+      "port": 8765
+    },
+    {
+      "name": "ig-publisher-watch",
+      "runtimeExecutable": "java",
+      "runtimeArgs": ["-Dfile.encoding=UTF-8", "-jar", "input-cache/publisher.jar", "-ig", ".", "-watch"],
+      "port": 0
+    }
+  ]
+}

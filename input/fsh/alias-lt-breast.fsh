@@ -38,5 +38,6 @@ Alias: $breast-parenchyma-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-parenc
 Alias: $breast-duct-condition-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-duct-condition
 Alias: $lymph-node-level-vs-url = https://tx.hl7.lt/fhir/ValueSet/lymph-node-level
 Alias: $breast-biopsy-procedure-type-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-biopsy-procedure-type
+Alias: $breast-recommendation-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-recommendation
 Alias: $breast-tumor-who-classification-vs-url = https://tx.hl7.lt/fhir/ValueSet/breast-tumor-who-classification
 Alias: $snomed-breast-extension-cs-url = https://tx.hl7.lt/fhir/CodeSystem/snomed-breast-extension

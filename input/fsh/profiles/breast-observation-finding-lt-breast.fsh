@@ -1,5 +1,5 @@
 Profile: BreastObservationFindingLtBreast
-Parent: Observation
+Parent: ObservationLt
 Id: breast-observation-finding-lt-breast
 Title: "Breast Observation Finding"
 Description: "Breast observation findings."

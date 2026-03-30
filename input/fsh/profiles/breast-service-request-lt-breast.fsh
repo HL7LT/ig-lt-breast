@@ -8,7 +8,7 @@ Description: "A profile of ServiceRequest used to capture a clinical recommendat
 * subject 1..1 MS
 * subject only Reference(PatientLt)
 * code 1..1 MS
-* code from BreastAssessmentVS (required)
+* code from BreastRecommendationVS (required)
 // Reason Code: The BI-RADS result that necessitated the recommendation is mandatory.
 * reason MS
 * reason from BiradsCategoryVS (required)

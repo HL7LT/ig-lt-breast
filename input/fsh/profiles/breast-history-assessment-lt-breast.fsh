@@ -1,5 +1,5 @@
 Profile: BreastHistoryAssessmentLtBreast
-Parent: Observation
+Parent: ObservationLt
 Id: breast-history-assessment-lt-breast
 Title: "Breast History Assessment"
 Description: "Breast history assessment according to the patient saying."
