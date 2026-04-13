@@ -43,8 +43,8 @@ Description: "Breast-specific imaging composition extending the base imaging com
 * section[findings].entry[parenchyma] ^short = "Ultrasound breast parenchyma structure"
 * section[findings].entry[ductCondition] only Reference(BreastDuctConditionLtBreast)
 * section[findings].entry[ductCondition] ^short = "Breast duct condition (expanded/normal)"
-* section[findings].entry[radiationDose] only Reference($radiation-dose-lt-lab-url)
-* section[findings].entry[radiationDose] ^short = "Radiation dose observation (CTDIvol, DLP)"
+// * section[findings].entry[radiationDose] only Reference($radiation-dose-lt-lab-url)
+// * section[findings].entry[radiationDose] ^short = "Radiation dose observation (CTDIvol, DLP)"
 
 // Impression section — add BI-RADS assessment slice
 * section[impression].entry contains
