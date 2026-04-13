@@ -2,79 +2,78 @@
 
 ## Įvadas ir tikslas
 
-Šis įgyvendinimo vadovas nurodo, kaip nuosekliai pateikti ir keistis struktūrizuotais klinikiniais duomenimis, susijusiais su **Krūties vėžio atrankos ir diagnostikos programa**, naudojant **HL7® FHIR® standartą**.
+Šiame įgyvendinimo vadove nustatoma, kaip nuosekliai pateikti ir keistis struktūrizuotais klinikiniais duomenimis, susijusiais su **krūties vėžio atrankos ir diagnostikos programa**, naudojant **HL7® FHIR® standartą**.
 
-Vadovas remia nacionalinę programą, skirtą **ankstyvai krūties vėžio nustatymui ir diagnostikai**, apibrėžiant sąveikias duomenų struktūras **vaizdinimui, klinikinei interpretacijai, diagnostikos sprendimams, invaziems procedūroms ir patologinių tyrimų ataskaitoms**. Jo tikslas – užtikrinti:
+Vadovas remia nacionalinę **ankstyvo krūties vėžio nustatymo ir diagnostikos programą**, apibrėždamas sąveikias duomenų struktūras, skirtas **vaizdinimui, klinikinei interpretacijai, diagnostiniams sprendimams, invazinėms procedūroms ir patologijos ataskaitoms**. Jo paskirtis – užtikrinti:
 
 * nuoseklų ir aukštos kokybės duomenų rinkimą visose sveikatos priežiūros įstaigose,
 * semantinį sąveikumą tarp **radiologijos, patologijos ir klinikinių sistemų**,
-* struktūrizuotas ataskaitas **programos stebėsenai, kokybės užtikrinimui ir antriniam naudojimui**,
+* struktūrizuotas ataskaitas, skirtas **programos stebėsenai, kokybės užtikrinimui ir antriniam duomenų panaudojimui**,
 * patikimą **ilgalaikį pacientų stebėjimą** per diagnostikos epizodus.
 
-Vadovas sukurtas kaip nacionalinio **ADP projekto** dalis, siekiant palaikyti koordinuotą, duomenimis grindžiamą prevencinių ir ankstyvos diagnostikos programų valdymą Lietuvoje.
+Vadovas parengtas kaip nacionalinio **ADP projekto** dalis, siekiant palaikyti koordinuotą, duomenimis grindžiamą prevencinių ir ankstyvos diagnostikos programų valdymą Lietuvoje.
 
 ## Apimtis
 
-Šis vadovas konkrečiai orientuotas į **krūties vėžio diagnostikos ir atrankos darbo eigą**, kuri iš esmės skiriasi nuo gyvenimo būdo ar apklausomis grindžiamų prevencinių programų.
+Šis vadovas konkrečiai orientuotas į **krūties vėžio atrankos ir diagnostikos darbo eigą**, kuri iš esmės skiriasi nuo gyvenimo būdo ar klausimynais grindžiamų prevencinių programų.
 
-Jis apima šias klinikinius sritis:
+Jis apima šias klinikines sritis:
 
-* **Vaizdinimo gavimas** (mamografija, tomosintezė, ultragarsas),
+* **Vaizdų gavimas** (mamografija, tomosintezė, ultragarsas),
 * **Radiologinė interpretacija ir ataskaitų rengimas** naudojant **BI-RADS**,
-* Aiškus **vertinimo ir darbo eigos sprendimų** modeliavimas,
-* **Tolesnių veiksmų** (papildomų vaizdų, biopsijos) planavimas,
-* **Invazinės diagnostikos procedūros** (vaizdu valdomos biopsijos),
-* **Patologinis histologinis tyrimas ir diagnostinės ataskaitos**.
+* aiškus **vertinimo ir darbo eigos sprendimų** modeliavimas,
+* **tolesni veiksmai** (papildomas vaizdinimas, biopsija),
+* **invazinės diagnostikos procedūros** (vaizdinimo kontrolėje atliekamos biopsijos),
+* **patologinis histologinis tyrimas ir diagnostinės ataskaitos**.
 
-Vadovas modeliuoja krūties vėžio diagnostiką kaip **nuoseklią, sprendimais valdomą, daugiadalykinę darbo eigą**, integruojančią radiologiją ir patologiją į vieną ilgalaikį informacijos modelį.
+Vadove krūties vėžio diagnostika modeliuojama kaip **nuosekli, sprendimais grindžiama, daugiadalykė darbo eiga**, integruojanti radiologiją ir patologiją į vieną tęstinį informacijos modelį.
 
 ## Pagrindiniai modeliavimo principai
 
 Modeliavimo metodas grindžiamas šiais pagrindiniais principais:
 
-1. **Duomenų gavimo ir interpretacijos atskyrimas**
-   Vaizdinimo procedūros generuoja struktūrizuotus duomenų rinkinius, o interpretacija ir diagnozė pateikiamos atskirai kaip diagnostinės ataskaitos ir vertinimai.
+1. **Duomenų gavimo ir interpretacijos atskyrimas**  
+   Vaizdinimo procedūros generuoja struktūrizuotus duomenų rinkinius, o interpretacija ir diagnozė pateikiamos atskirai – kaip diagnostinės ataskaitos ir vertinimai.
 
-2. **Aiškus klinikinio stebėjimo ir darbo eigos logikos atskyrimas**
-   Pavyzdžiui, **BI-RADS vertinimas** atspindi tai, kas stebima, o tolesnės rekomendacijos ir nukreipimai atspindi darbo eigos sprendimus, kilusius iš to vertinimo.
+2. **Aiškus klinikinio stebėjimo ir darbo eigos logikos atskyrimas**  
+   Pavyzdžiui, **BI-RADS vertinimas** atspindi tai, kas nustatyta, o tolesnės rekomendacijos ir siuntimai atspindi darbo eigos sprendimus, kylančius iš šio vertinimo.
 
-3. **Specifinis srities modeliavimas**
-   Krūties vaizdavimas, radiologinės ataskaitos, biopsija ir patologija reikalauja specifinių sričiai profilių, kurie skiriasi nuo gyvenimo būdo, laboratorinių ar bendrų prevencinių modelių.
+3. **Sritinis modeliavimas**  
+   Krūties vaizdinimas, radiologinės ataskaitos, biopsija ir patologija reikalauja sričiai būdingų profilių, kurie skiriasi nuo gyvenimo būdo, laboratorinių ar bendrųjų prevencinių modelių.
 
-4. **Ilgalaikė nuoseklumas**
-   Visi duomenų elementai sukurti taip, kad palaikytų ryšius tarp skirtingų laikotarpių, leidžiant susieti tolesnius vaizdinimus, biopsijas ir patologiją su ankstesniais atrankos ir diagnostikos įvykiais.
+4. **Tęstinumas laike**  
+   Visi duomenų elementai sukurti taip, kad palaikytų susiejimą laike ir leistų susieti tolesnius vaizdinimo tyrimus, biopsijas ir patologijos duomenis su ankstesniais atrankos ir diagnostikos įvykiais.
 
 ## Vadovo turinys
 
-Šis vadovas teikia:
+Šiame vadove pateikiami:
 
-* **FHIR profilius ir plėtinius** krūties vaizdinimui, vertinimui ir diagnostikai,
-* **terminologijos siejimus** naudojant **SNOMED CT, LOINC ir ICD-10-AM**,
-* struktūrizuotus **pavyzdinius egzempliorius**, iliustruojančius realius klinikinius scenarijus,
-* susiejimus iš **klinikinių programos duomenų rinkinių į sąveikius FHIR artefaktus**,
-* ir spragų bei būsimų plėtros poreikių nustatymą.
+* **FHIR profiliai ir plėtiniai**, skirti krūties vaizdinimui, vertinimui ir diagnostikai,
+* **terminologiniai susiejimai** naudojant **SNOMED CT, LOINC ir ICD-10-AM**,
+* struktūrizuoti **pavyzdžiai**, iliustruojantys realius klinikinius scenarijus,
+* susiejimai iš **klinikinių programos duomenų rinkinių į sąveikius FHIR artefaktus**,
+* spragų ir būsimų plėtros poreikių nustatymas.
 
-Šiame etape vadovas apima **pagrindinę darbo eigą** ir **pirmąjį pagrindinių profilių ir pavyzdžių rinkinį**. Tolesnis tikslinimas, terminologijos plėtimas ir klinikinis patvirtinimas bus atliekami vėlesnėse iteracijose.
+Šiame etape vadovas apima **pagrindinę darbo eigą** ir **pirmąjį pagrindinių profilių bei pavyzdžių rinkinį**. Tolesnis tikslinimas, terminologijos plėtimas ir klinikinis validavimas bus atliekami vėlesnėse iteracijose.
 
-## Kodėl naudoti šį vadovą?
+## Kodėl verta naudoti šį vadovą?
 
 Pritaikę šį vadovą, diegėjai ir sveikatos priežiūros įstaigos gali:
 
-1. **Sąveikumas:** Užtikrinti nuoseklius ir palyginamus krūties atrankos ir diagnostikos duomenis visose sistemose.
-2. **Duomenų kokybė:** Pagerinti vaizdinimo ir diagnostikos duomenų nuoseklumą, išsamumą ir klinikinį naudingumą.
-3. **Klinikinis naudingumas:** Palaikyti struktūrizuotas ataskaitas, kokybės užtikrinimą, stebėseną populiacijos lygmeniu ir būsimą klinikinę sprendimų paramą.
-4. **Ilgalaikė priežiūra:** Įgalinti atrankos, diagnostikos, gydymo ir tolesnio stebėjimo ryšius per laiką ir tarp paslaugų teikėjų.
+1. **Sąveikumas:** užtikrinti nuoseklius ir palyginamus krūties atrankos ir diagnostikos duomenis visose sistemose.
+2. **Duomenų kokybė:** pagerinti vaizdinimo ir diagnostikos duomenų nuoseklumą, išsamumą ir klinikinį naudingumą.
+3. **Klinikinis naudingumas:** palaikyti struktūrizuotas ataskaitas, kokybės užtikrinimą, stebėseną populiacijos lygmeniu ir būsimą klinikinių sprendimų paramą.
+4. **Tęstinė priežiūra:** sudaryti galimybę susieti atrankos, diagnostikos, gydymo ir tolesnio stebėjimo duomenis laike ir tarp paslaugų teikėjų.
 
-Naršykite toliau pateiktus skyrius, kad gautumėte prieigą prie profilių, terminologijos siejimų ir išsamių pavyzdžių, reikalingų standartui įgyvendinti.
+Toliau pateiktuose skyriuose rasite profilius, terminologinius susiejimus ir išsamius pavyzdžius, reikalingus standartui įgyvendinti.
 
-
-### IP teiginiai
+### IP pareiškimai
 <!-- { // not yet supported by i18n in IG publisher: % include ip-statements.xhtml %} -->
 
-### Bendraautoriai
+### Prisidėję asmenys
 
-| Vardas                                             | Vaidmuo                       | Organizacija                                    |
-| -------------------------------------------------- | ----------------------------- | ----------------------------------------------- |
-| [Igor Bossenko](https://about.askigor.eu)         | Pagrindinis autorius          | [HELEX Solutions](https://helex.solutions)      |
-| [Kati Laidus](https://www.linkedin.com/in/kati-laidus/) | Bendraautorė             | [HELEX Solutions](https://helex.solutions)      |
-| Martynas Bieliauskas                               | Recenzentas                   | [LMB](https://lmb.lt)                           |
+| Vardas | Vaidmuo | Organizacija |
+|---|---|---|
+| [Igor Bossenko](https://about.askigor.eu) | Pagrindinis autorius | [HELEX Solutions](https://helex.solutions) |
+| [Kati Laidus](https://www.linkedin.com/in/kati-laidus/) | Bendraautorė | [HELEX Solutions](https://helex.solutions) |
+| Martynas Bieliauskas | Recenzentas | [LMB](https://lmb.lt) |
