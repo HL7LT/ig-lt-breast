@@ -7,7 +7,7 @@ This page lists all example instances in the Lithuanian Breast Diagnostics Imple
 | Instance | Profile | Description |
 |---|---|---|
 | [diagnosticreport-breast-report-example](DiagnosticReport-diagnosticreport-breast-report-example.html) | BreastReportLtBreast | Complete breast diagnostic report aggregating composition, BI-RADS, findings, and gland density. |
-| [breast-adp-process-composition-example](Composition-breast-adp-process-composition-example.html) | BreastCompositionLtBreast | Imaging composition summarizing the breast cancer diagnostic process with all required sections. |
+| [composition-breast-diagnostic-example](Composition-composition-breast-diagnostic-example.html) | BreastCompositionLtBreast | Imaging composition summarizing the breast cancer diagnostic process with all required sections. |
 
 #### BI-RADS Assessment Examples
 
