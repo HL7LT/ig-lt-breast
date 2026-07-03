@@ -7,7 +7,7 @@
 | Pavyzdys | Profilis | Aprašymas |
 |---|---|---|
 | [diagnosticreport-breast-report-example](DiagnosticReport-diagnosticreport-breast-report-example.html) | BreastReportLtBreast | Išsami krūties diagnostikos ataskaita, apimanti kompoziciją, BI-RADS įvertinimą, radinius ir liaukos tankį. |
-| [breast-adp-process-composition-example](Composition-breast-adp-process-composition-example.html) | BreastCompositionLtBreast | Vaizdinimo kompozicija, apibendrinanti krūties vėžio diagnostikos procesą su visais reikalingais skyriais. |
+| [composition-breast-diagnostic-example](Composition-composition-breast-diagnostic-example.html) | BreastCompositionLtBreast | Vaizdinimo kompozicija, apibendrinanti krūties vėžio diagnostikos procesą su visais reikalingais skyriais. |
 
 #### BI-RADS įvertinimo pavyzdžiai
 
