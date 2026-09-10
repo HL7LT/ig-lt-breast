@@ -6,6 +6,6 @@ Description: "Regional lymph node involvement level (N1, N2, N3) for breast diag
 * ^status = #draft
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-* $sct#1229966003 "American Joint Committee on Cancer cN1 (qualifier value)"
-* $sct#1229967007 "American Joint Committee on Cancer cN2 (qualifier value)"
-* $sct#1229973008 "American Joint Committee on Cancer cN3 (qualifier value)"
+* $sct#1229973008 "American Joint Committee on Cancer cN1 (qualifier value)"
+* $sct#1229978004 "American Joint Committee on Cancer cN2 (qualifier value)"
+* $sct#1229984001 "American Joint Committee on Cancer cN3 (qualifier value)"
