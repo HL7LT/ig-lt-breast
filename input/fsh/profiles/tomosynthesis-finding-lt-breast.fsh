@@ -56,7 +56,7 @@ Description: "Observation representing tomosynthesis breast findings including f
 * component[evolution] ^short = "Evolution of finding compared to previous studies"
 
 // CC projection cross-section (free text)
-* component[cc-cross-section].code = $sct#399162004 "Craniocaudal projection (qualifier value)"
+* component[cc-cross-section].code = $sct#399162004 "Craniocaudal projection"
 * component[cc-cross-section].value[x] 1..1
 * component[cc-cross-section].value[x] only string
 * component[cc-cross-section] ^short = "Cross-sections in CC projection"
