@@ -157,7 +157,9 @@ Description: "ADP Table 7.5 — Pathological histological examination questionna
 * item[7].item[1].type = #coding
 * item[7].item[1].repeats = true
 * item[7].item[1].answerOption[0].valueCoding = $sct#71651007 "Mammography"
-* item[7].item[1].answerOption[1].valueCoding = $sct#439324009 "Digital breast tomosynthesis"
+// Code corrected: 439324009 is "Mammography in compression view" in SNOMED CT,
+// not what the display beside it said. 450566007 is the concept meant.
+* item[7].item[1].answerOption[1].valueCoding = $sct#450566007 "Digital breast tomosynthesis"
 * item[7].item[1].answerOption[2].valueCoding = $sct#16310003 "Ultrasonography"
 
 * item[7].item[2].linkId = "radiology-exam-date"

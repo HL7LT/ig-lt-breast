@@ -8,7 +8,7 @@ Description: "Breast-specific imaging composition extending the base imaging com
 
 // History section — allow breast history observations
 * section[history].entry ^slicing.discriminator.type = #profile
-* section[history].entry ^slicing.discriminator.path = "$this"
+* section[history].entry ^slicing.discriminator.path = "resolve()"
 * section[history].entry ^slicing.ordered = false
 * section[history].entry ^slicing.rules = #open
 * section[history].entry contains
@@ -20,6 +20,10 @@ Description: "Breast-specific imaging composition extending the base imaging com
 * section[history].entry[breastNipple] ^short = "Nipple appearance assessment"
 
 // Findings section — add breast-specific finding slices alongside the inherited finding slice
+// The inherited generic slice is prohibited here: ImFinding asserts so little that
+// every instance matches it as well as the specific slice below, and a discriminator
+// must identify exactly one. Slicing is open, so a generic EU entry is still allowed.
+* section[findings].entry[finding] 0..0
 * section[findings].entry contains
     breastObservation 0..* and
     mammographicFinding 0..* and
@@ -47,6 +51,10 @@ Description: "Breast-specific imaging composition extending the base imaging com
 // * section[findings].entry[radiationDose] ^short = "Radiation dose observation (CTDIvol, DLP)"
 
 // Impression section — add BI-RADS assessment slice
+// The inherited generic slice is prohibited here: ImFinding asserts so little that
+// every instance matches it as well as the specific slice below, and a discriminator
+// must identify exactly one. Slicing is open, so a generic EU entry is still allowed.
+* section[impression].entry[finding] 0..0
 * section[impression].entry contains
     birads 0..*
 * section[impression].entry[birads] only Reference(BiradsAssessmentLtBreast)
