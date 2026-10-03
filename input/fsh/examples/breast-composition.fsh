@@ -20,7 +20,9 @@ Description: "Imaging composition summarizing the breast cancer ADP diagnostic p
 
 // Required events
 * event[imagingstudy].detail.concept = $dcm#MG "Mammography"
+* event[imagingstudy].detail.reference = Reference(imagingstudy-mammography-example)
 * event[procedure].detail.concept = $sct#71651007 "Mammography (procedure)"
+* event[procedure].detail.reference = Reference(procedure-mammography-example)
 
 // -----------------
 // Sections
@@ -43,7 +45,10 @@ Description: "Imaging composition summarizing the breast cancer ADP diagnostic p
 * section[history].title = "History"
 * section[history].text.status = #generated
 * section[history].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Asymptomatic screening participant.</div>"
-* section[history].entry[+] = Reference(Observation/breast-history-disease-example)
+// This guide defines the instance as observation-history-disease-example, alongside
+// observation-history-injury-example and observation-history-surgery-example. The
+// reference used a "breast-" prefix that matches no instance here.
+* section[history].entry[+] = Reference(Observation/observation-history-disease-example)
 
 // Procedure
 * section[procedure].title = "Procedure"
@@ -63,15 +68,15 @@ Description: "Imaging composition summarizing the breast cancer ADP diagnostic p
 * section[findings].title = "Findings"
 * section[findings].text.status = #generated
 * section[findings].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Suspicious lesion in left breast.</div>"
-* section[findings].entry[finding][+] = Reference(observation-breast-scar-example)
-* section[findings].entry[finding][+] = Reference(observation-breast-skin-formation-example)
+* section[findings].entry[breastObservation][+] = Reference(observation-breast-scar-example)
+* section[findings].entry[breastObservation][+] = Reference(observation-breast-skin-formation-example)
 
 
 // Impression (BI-RADS here)
 * section[impression].title = "Impression"
 * section[impression].text.status = #generated
 * section[impression].text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>BI-RADS 4: Suspicious abnormality.</div>"
-* section[impression].entry[finding][+] = Reference(observation-birads-cat4-example)
+* section[impression].entry[birads][+] = Reference(observation-birads-cat4-example)
 
 
 // Recommendation

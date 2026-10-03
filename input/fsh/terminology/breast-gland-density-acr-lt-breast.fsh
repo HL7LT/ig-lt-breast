@@ -10,6 +10,6 @@ Description: "ACR (BI-RADS) glandular density assessment."
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
 * $sct#129716005 "Almost entirely fat breast composition (finding)"
-* $sct#129717001 "Scattered fibroglandular densities (finding)"
+* $sct#129717001 "Mammographic breast composition showing scattered fibroglandular densities (finding)"
 * $sct#129718006 "Heterogeneously dense breast composition (finding)"
 * $sct#129719003 "Extremely dense breast composition (finding)"

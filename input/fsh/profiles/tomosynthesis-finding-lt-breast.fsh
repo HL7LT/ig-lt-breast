@@ -9,7 +9,9 @@ Description: "Observation representing tomosynthesis breast findings including f
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#imaging "Imaging"
-* code = $sct#439324009 "Digital breast tomosynthesis (procedure)"
+// Code corrected: 439324009 is "Mammography in compression view" in SNOMED CT,
+// not what the display beside it said. 450566007 is the concept meant.
+* code = $sct#450566007 "Digital breast tomosynthesis"
 * subject 1..1
 * subject only Reference(PatientLt)
 * effective[x] 1..1
@@ -63,7 +65,9 @@ Description: "Observation representing tomosynthesis breast findings including f
 * component[cc-cross-section] ^definition = "Free text describing which cross-sectional slices in the craniocaudal (CC) projection show the finding (e.g. slices 42-58)."
 
 // MLO projection cross-section (free text)
-* component[mlo-cross-section].code = $sct#399352003 "Mediolateral oblique projection (qualifier value)"
+// Code corrected: 399352003 is "Lateral-medial projection — a different projection" in SNOMED CT,
+// not what the display beside it said. 399368009 is the concept meant.
+* component[mlo-cross-section].code = $sct#399368009 "Medio-lateral oblique projection"
 * component[mlo-cross-section].value[x] 1..1
 * component[mlo-cross-section].value[x] only string
 * component[mlo-cross-section] ^short = "Cross-sections in MLO projection"

@@ -9,7 +9,13 @@ Description: "Breast duct condition observation as assessed by ultrasound, recor
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#imaging "Imaging"
-* code = $sct#364372004 "Breast duct observable (observable entity)"
+// 364372004 is "Form of breast", not a duct observable. SNOMED CT has no concept for
+// the condition of a lactiferous duct seen on ultrasound — all 21 breast-duct
+// observables concern DCIS or Nottingham scoring. 364370007 "Breast observable" cannot
+// serve as the focus of an expression because it is primitive, so the expression is
+// built on 363787002 "Observable entity". Validated against International 2025-02-01,
+// the edition tx.fhir.org serves. Composed by Igor Bossenko.
+* code = $sct#"363787002:{370130000=723198002,704319004=64633006,246501002=1335950001,370134009=123029007,370132008=117362005}"
 * subject 1..1
 * subject only Reference(PatientLt)
 * effective[x] 1..1

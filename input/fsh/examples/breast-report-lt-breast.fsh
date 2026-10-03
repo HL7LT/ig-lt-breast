@@ -33,6 +33,10 @@ Description: "Example of a complete breast diagnostic report aggregating imaging
 * result[+] = Reference(observation-mammo-mass-left-uoq-example)
 * result[+] = Reference(observation-breast-scar-example)
 * result[+] = Reference(observation-lesion-right-10-oclock-cyst-example)
+// The Composition references these two Observations from its sections, so dgr-1
+// requires them in result as well. They were genuinely absent, not a validator artefact.
+* result[+] = Reference(observation-history-disease-example)
+* result[+] = Reference(observation-breast-skin-formation-example)
 
 // Conclusion
 * conclusion = "BI-RADS 4 right breast – suspicious abnormality. BI-RADS 1 left breast – negative. Biopsy recommended for right breast lesion."
